@@ -1,0 +1,163 @@
+/* Font-weight reminder :
+
+400 : Regular
+500 : Medium
+600 : Semi-bold
+700 : Bold
+800 : Heavy
+900 : Black
+
+*/
+
+@font-face {
+    font-family: 'Lato';
+    src: url('./fonts/Lato-Semibold-webfont.eot');
+    src: url('./fonts/Lato-Semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/Lato-Semibold-webfont.woff2') format('woff2'),
+         url('./fonts/Lato-Semibold-webfont.woff') format('woff'),
+         url('./fonts/Lato-Semibold-webfont.ttf') format('truetype'),
+         url('./fonts/Lato-Semibold-webfont.svg#latosemibold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('./fonts/Lato-SemiboldItalic-webfont.eot');
+    src: url('./fonts/Lato-SemiboldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/Lato-SemiboldItalic-webfont.woff2') format('woff2'),
+         url('./fonts/Lato-SemiboldItalic-webfont.woff') format('woff'),
+         url('./fonts/Lato-SemiboldItalic-webfont.ttf') format('truetype'),
+         url('./fonts/Lato-SemiboldItalic-webfont.svg#latosemibold_italic') format('svg');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('./fonts/Lato-Medium-webfont.eot');
+    src: url('./fonts/Lato-Medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/Lato-Medium-webfont.woff2') format('woff2'),
+         url('./fonts/Lato-Medium-webfont.woff') format('woff'),
+         url('./fonts/Lato-Medium-webfont.ttf') format('truetype'),
+         url('./fonts/Lato-Medium-webfont.svg#latomedium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('./fonts/Lato-MediumItalic-webfont.eot');
+    src: url('./fonts/Lato-MediumItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/Lato-MediumItalic-webfont.woff2') format('woff2'),
+         url('./fonts/Lato-MediumItalic-webfont.woff') format('woff'),
+         url('./fonts/Lato-MediumItalic-webfont.ttf') format('truetype'),
+         url('./fonts/Lato-MediumItalic-webfont.svg#latomedium_italic') format('svg');
+    font-weight: 500;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('./fonts/Lato-BlackItalic-webfont.eot');
+    src: url('./fonts/Lato-BlackItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/Lato-BlackItalic-webfont.woff2') format('woff2'),
+         url('./fonts/Lato-BlackItalic-webfont.woff') format('woff'),
+         url('./fonts/Lato-BlackItalic-webfont.ttf') format('truetype'),
+         url('./fonts/Lato-BlackItalic-webfont.svg#latoblack_italic') format('svg');
+    font-weight: 900;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('./fonts/Lato-Black-webfont.eot');
+    src: url('./fonts/Lato-Black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/Lato-Black-webfont.woff2') format('woff2'),
+         url('./fonts/Lato-Black-webfont.woff') format('woff'),
+         url('./fonts/Lato-Black-webfont.ttf') format('truetype'),
+         url('./fonts/Lato-Black-webfont.svg#latoblack') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('./fonts/Lato-BoldItalic-webfont.eot');
+    src: url('./fonts/Lato-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/Lato-BoldItalic-webfont.woff2') format('woff2'),
+         url('./fonts/Lato-BoldItalic-webfont.woff') format('woff'),
+         url('./fonts/Lato-BoldItalic-webfont.ttf') format('truetype'),
+         url('./fonts/Lato-BoldItalic-webfont.svg#latobold_italic') format('svg');
+    font-weight: 700;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('./fonts/Lato-Bold-webfont.eot');
+    src: url('./fonts/Lato-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/Lato-Bold-webfont.woff2') format('woff2'),
+         url('./fonts/Lato-Bold-webfont.woff') format('woff'),
+         url('./fonts/Lato-Bold-webfont.ttf') format('truetype'),
+         url('./fonts/Lato-Bold-webfont.svg#latobold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('./fonts/Lato-Heavy-webfont.eot');
+    src: url('./fonts/Lato-Heavy-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/Lato-Heavy-webfont.woff2') format('woff2'),
+         url('./fonts/Lato-Heavy-webfont.woff') format('woff'),
+         url('./fonts/Lato-Heavy-webfont.ttf') format('truetype'),
+         url('./fonts/Lato-Heavy-webfont.svg#latoheavy') format('svg');
+    font-weight: 800;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('./fonts/Lato-HeavyItalic-webfont.eot');
+    src: url('./fonts/Lato-HeavyItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/Lato-HeavyItalic-webfont.woff2') format('woff2'),
+         url('./fonts/Lato-HeavyItalic-webfont.woff') format('woff'),
+         url('./fonts/Lato-HeavyItalic-webfont.ttf') format('truetype'),
+         url('./fonts/Lato-HeavyItalic-webfont.svg#latoheavy_italic') format('svg');
+    font-weight: 800;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('./fonts/Lato-Regular-webfont.eot');
+    src: url('./fonts/Lato-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/Lato-Regular-webfont.woff2') format('woff2'),
+         url('./fonts/Lato-Regular-webfont.woff') format('woff'),
+         url('./fonts/Lato-Regular-webfont.ttf') format('truetype'),
+         url('./fonts/Lato-Regular-webfont.svg#latoregular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('./fonts/Lato-Italic-webfont.eot');
+    src: url('./fonts/Lato-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/Lato-Italic-webfont.woff2') format('woff2'),
+         url('./fonts/Lato-Italic-webfont.woff') format('woff'),
+         url('./fonts/Lato-Italic-webfont.ttf') format('truetype'),
+         url('./fonts/Lato-Italic-webfont.svg#latoitalic') format('svg');
+    font-weight: 400;
+    font-style: italic;
+
+}

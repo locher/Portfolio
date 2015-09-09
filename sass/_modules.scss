@@ -1,0 +1,38 @@
+.wrapper-pads{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap:wrap;
+}
+
+.pad-argument{
+	background-color: $gris;
+	text-align: center;
+	margin-bottom: $espace;
+	margin-right: $espace;
+	padding: $padding*.9 $padding*1.2 $padding;
+	width: calc(25% - #{$espace}*3/4);
+
+	&:last-child{
+		margin-right: 0;
+	}
+
+	svg{
+		fill: $rouge;
+		width: 60px;
+		height: 60px;
+		margin-bottom: .8em;
+	}
+
+	h2{
+		font-size: 2.5rem;
+		text-transform: uppercase;
+		font-weight: 800;
+		margin-bottom: .2em;
+	}
+
+	p{
+		text-transform: uppercase;
+		font-weight: 500;
+	}
+
+}

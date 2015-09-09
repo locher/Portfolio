@@ -1,0 +1,24 @@
+%svg-common {
+	background: url(svg/sprite.view-38ea49d4.svg) no-repeat;
+}
+
+.svg-dev--methode {
+	@extend %svg-common;
+	background-position: 0 0;
+}
+
+.svg-dev--methode-dims {
+	width: 95px;
+	height: 95px;
+}
+
+.svg-dev--portfolio {
+	@extend %svg-common;
+	background-position: 100% 0;
+}
+
+.svg-dev--portfolio-dims {
+	width: 95px;
+	height: 95px;
+}
+

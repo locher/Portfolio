@@ -1,6 +1,20 @@
+*{
+	box-sizing: border-box;
+}
+
+html{
+	font-size: 62.5%;
+	background-color: #fff;
+	font-family: Lato, Hevetica, Arial, sans-serif;
+}
+
 body{
 	padding: $espace;
+	font-size: 1.6rem;
+	color: $noir;
 }
+
+//HEADER
 
 header{
 	padding: $padding;
@@ -23,7 +37,65 @@ header{
 		right: 0;
 		bottom: 0;
 		left:0;
-		background-color: $rouge;
-		opacity: .8;
+		background-color: $rougevif;
+		opacity: .85;
 	}
 }
+
+.wrapper-top{
+	display: flex;
+	align-items: center;
+}
+
+.logo{
+	flex:2;
+}
+
+.nav{
+
+	font-size: 1.8rem;
+	font-weight: 300;
+	text-transform: uppercase;
+
+	li{
+		display: inline-block;
+	}
+
+	a{
+		display: block;
+		color: #fff;
+		text-decoration: none;
+		padding: 1em 1.5em;
+	}
+}
+
+header{
+	margin-bottom: $espace;
+}
+
+.big-header{
+	padding: 175px 0;
+	text-align:center;
+	text-transform: uppercase;
+	color: #fff;
+
+	a{
+		@extend %bt;
+		font-size: 2.8rem;
+		margin-top: 1em;
+	}
+}
+
+.big-title{	
+	font-size: 8rem;
+	font-weight: 800;
+}
+
+.sous-title{
+	font-size: 3.5rem;
+	font-weight: 500;
+}
+
+
+
+

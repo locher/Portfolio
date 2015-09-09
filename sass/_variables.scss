@@ -1,6 +1,20 @@
 $rouge: #d55252;
+$rougevif: #d54040;
 $gris: #e3e3e3;
 $noir: #2b2b2b;
 
 $espace: 5px;
 $padding: 45px;
+
+%bt{
+	display: inline-block;
+	color: #fff;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 1em 1.5em .9em;
+	border: 2px solid #fff;
+}
+
+@mixin spritesvg($dest){
+	background: url('img/prod/svg/sprite.view-38ea49d4.svg#{$dest}');
+}
