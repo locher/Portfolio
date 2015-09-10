@@ -17,10 +17,10 @@
 
 		<div class="big-header">
 
-			<div class="big-title">Votre site</div>
-			<div class="sous-title">En tout simplicité</div>
+			<div class="big-title"><?php the_field('gros_titre'); ?></div>
+			<div class="sous-title"><?php the_field('sous-titre'); ?></div>
 
-			<a href="#">Je vous en dis plus</a>
+			<a href="<?php the_field('lien_bouton'); ?>"><?php the_field('texte_bouton'); ?></a>
 
 		</div>	
 	
