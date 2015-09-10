@@ -14,7 +14,3 @@ $padding: 45px;
 	padding: 1em 1.5em .9em;
 	border: 2px solid #fff;
 }
-
-@mixin spritesvg($dest){
-	background: url('img/prod/svg/sprite.view-38ea49d4.svg#{$dest}');
-}
