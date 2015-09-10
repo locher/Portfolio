@@ -29,28 +29,26 @@
 
 	<main role="main">
 
+		<?php 
+			if( have_rows('points_feature') ):
+		?>
+
 		<section class="wrapper-pads">
+
+			<?php while ( have_rows('points_feature') ) : the_row(); ?>
+			<?php $icone = get_sub_field('icone'); ?>
+
 			<div class="pad-argument">
-				<?php echo file_get_contents(get_template_directory_uri()."/img/svg-prod/poigneemain.svg"); ?>
-				<h2>Proximité</h2>
-				<p>Réponses à vos questions en 24h</p>
+				<?php echo file_get_contents($icone[url]); ?>
+				<h2><?php the_sub_field('titre');?></h2>
+				<p><?php the_sub_field('sous-titre');?></p>
 			</div>
-			<div class="pad-argument">
-				<?php echo file_get_contents(get_template_directory_uri()."/img/svg-prod/methode.svg"); ?>
-				<h2>Transparence</h2>
-				<p>Aucun tabou, tout est expliqué</p>
-			</div>
-			<div class="pad-argument">
-				<?php echo file_get_contents(get_template_directory_uri()."/img/svg-prod/poigneemain.svg"); ?>
-				<h2>Ergonomie</h2>
-				<p>sites Facile à utiliser & à mettre à jour</p>
-			</div>
-			<div class="pad-argument">
-				<?php echo file_get_contents(get_template_directory_uri()."/img/svg-prod/portfolio.svg"); ?>
-				<h2>Satisfaction</h2>
-				<p>Tout est réunis pour un projet réussi</p>
-			</div>
+
+			<?php endwhile;?>
+
 		</section>
+
+		<?php endif; ?>
 
 		<?php 
 			$portfolio = new WP_Query(array(
