@@ -17,7 +17,7 @@
 
 		<div class="big-header">
 
-			<div class="big-title"><?php the_title(); ?></div>
+			<h1 class="big-title"><?php the_title(); ?></h1>
 			<div class="sous-title"><?php the_field('sous-titre'); ?></div>
 
 		</div>	

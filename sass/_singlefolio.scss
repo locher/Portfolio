@@ -1,0 +1,60 @@
+.wrapper-big{
+	display: flex;
+}
+
+.slider{
+	background-color: $rouge;
+	width: calc(50% - #{$espace}/2);
+	margin-right: $espace;
+	padding: $padding;
+}
+
+.wrapper-content{
+	display: flex;
+	flex-wrap:wrap;
+	width: calc(50% - #{$espace}/2);
+
+	> div{
+		width: calc(50% - #{$espace}/2);
+		text-align: center;
+
+		&:nth-child(2n+1){
+			margin-right: $espace;
+		}
+
+		&:nth-child(1),
+		&:nth-child(2){
+			margin-bottom: $espace;
+		}
+	}
+
+	h2{
+		font-weight: 900;
+		font-size: 2.5rem;
+		text-transform: uppercase;
+	}
+}
+
+.pad1, .pad2, .pad3{
+	background-color: $gris;
+	padding: $padding;
+}
+
+.wrapper-mini{
+	display: flex;
+	flex-wrap: wrap;
+	background-color: none;
+
+	.content-mini{
+		width: calc(50% - #{$espace});
+		background-color: $gris;
+		margin-right: $espace;
+		margin-bottom: $espace;
+		padding: $padding;
+	}
+
+	.padAvant{
+		background-color: $rouge;
+		margin-bottom: 0;
+	}
+}
