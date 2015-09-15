@@ -7,6 +7,14 @@
 	width: calc(50% - #{$espace}/2);
 	margin-right: $espace;
 	padding: $padding;
+
+	.wrapper-img{
+		max-width: 75%;
+	}
+
+	.img-desktop{
+		height: 350px;
+	}
 }
 
 .wrapper-content{
@@ -32,7 +40,25 @@
 		font-weight: 900;
 		font-size: 2.5rem;
 		text-transform: uppercase;
+		margin-bottom: .5em;
+
+		span{
+			display: block;
+			margin-bottom: .5em;
+		}
+
+		span svg{
+			height: 35px;
+			width: auto;
+			fill: $noir;
+		}
+
+		.couleur svg{
+			height: 50px;
+		}
 	}
+
+
 }
 
 .pad1, .pad2, .pad3{
@@ -44,17 +70,82 @@
 	display: flex;
 	flex-wrap: wrap;
 	background-color: none;
+	font-size: 2rem;
+	text-transform: uppercase;
+	line-height: 1.3em;
+	font-weight: 900;	
 
 	.content-mini{
 		width: calc(50% - #{$espace});
+		height: calc(50% - #{$espace}/2);
 		background-color: $gris;
 		margin-right: $espace;
 		margin-bottom: $espace;
 		padding: $padding;
+
+		p{
+		}
+
+		span{
+			display: block;
+			margin-bottom: .4em;
+
+			svg{
+				height: 35px;
+				width: auto;
+				fill: #fff;
+			}
+		}
 	}
 
 	.padAvant{
 		background-color: $rouge;
 		margin-bottom: 0;
+		color: #fff;
+
+		a{
+			color: inherit;
+		}
 	}
+}
+
+//Couleurs
+
+.single-color{
+	background-color: #fff;
+	padding: 7px;
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 20px;
+	margin-top: 20px;
+	width: 40%;
+
+	&::last-child{
+		margin-right: 0;
+	}
+
+	div{
+		cursor: pointer;
+	}
+}
+
+.couleur-principale{
+	min-height: 100px;
+}
+
+.variantes{
+	display: flex;
+
+	div{
+		flex: 1;
+		min-height: 40px;
+	}
+}
+
+.text-couleur{
+	display: block;
+	font-size: 2rem;
+	text-transform: uppercase;
+	font-weight: 900;
+	margin-top: 15px;
 }

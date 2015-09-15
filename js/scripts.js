@@ -1,11 +1,4 @@
-(function ($, root, undefined) {
-	
-	$(function () {
-		
-		'use strict';
-		
-		// DOM ready, take it away
-		
-	});
-	
-})(jQuery, this);
+jQuery('.single-color').mouseover(function(){
+	alert('bim');
+	console.log('hover');
+});
