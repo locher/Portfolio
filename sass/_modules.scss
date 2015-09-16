@@ -139,6 +139,7 @@
 	margin: 0 auto;
 	background-size: 100%;
 	background-position: top;
+	border-style: solid;
 
 	img{
 		display: none;
@@ -156,6 +157,7 @@
 	border: 10px solid #383838;	
 	border-radius: 7px 7px 0 0;	
 	position: relative;
+	
 
 
 	//Bas gris
@@ -191,14 +193,11 @@
 .img-tablette{
 
 	//Screen
-	width: 37%;
+	width: 35%;
 	height: 170px;
-
 	border-radius: 5px;
-	border-top: 15px solid #eee;
-	border-bottom: 20px solid #eee;
-	border-right: 5px solid #eee;
-	border-left: 5px solid #eee;
+	border-color: #eee;
+	border-width: 12px 4px 15px;
 	right: 7%;
 	bottom: -70px;
 	position: absolute;
@@ -210,13 +209,11 @@
 .img-smartphone{
 
 	//Screen
-	width: 15%;
+	width: 16%;
 	height: 90px;
 	border-radius: 5px;
-	border-top: 10px solid #eee;
-	border-bottom: 15px solid #eee;
-	border-right: 3px solid #eee;
-	border-left: 3px solid #eee;
+	border-color: #eee;
+	border-width: 8px 3px 12px 3px;
 	right: 35%;
 	bottom: -80px;
 	position: absolute;
