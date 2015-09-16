@@ -21,19 +21,19 @@
 		<div class="wrapper-img">
 
 			<?php if($img_desktop): ?>
-				<div class="img-desktop" style="background-image: url('<?php echo $img_desktop['url']; ?>')">
+				<div class="img-desktop img-peripherique" style="background-image: url('<?php echo $img_desktop['url']; ?>')">
 					<img src="<?php echo $img_desktop['url']; ?>">
 				</div>					
 			<?php endif; ?>
 
 			<?php if($img_tablette): ?>
-				<div class="img-tablette" style="background-image: url('<?php echo $img_tablette['url']; ?>')">
+				<div class="img-tablette img-peripherique" style="background-image: url('<?php echo $img_tablette['url']; ?>')">
 					<img src="<?php echo $img_tablette['url']; ?>">
 				</div>					
 			<?php endif; ?>
 
 			<?php if($img_smartphone): ?>
-				<div class="img-smartphone" style="background-image: url('<?php echo $img_smartphone['url']; ?>')">
+				<div class="img-smartphone img-peripherique" style="background-image: url('<?php echo $img_smartphone['url']; ?>')">
 					<img src="<?php echo $img_smartphone['url']; ?>">
 				</div>					
 			<?php endif; ?>

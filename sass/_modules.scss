@@ -133,19 +133,28 @@
 	}
 }
 
+// image global
+.img-peripherique{
+	transition: background-position ease-in-out 4s;
+	margin: 0 auto;
+	background-size: 100%;
+	background-position: top;
+
+	img{
+		display: none;
+	}
+}
+
+
 // Image desktop
 
 .img-desktop{
 
 	//Screen
-	transition: background-position ease-in-out 4s;
 	width: 100%;
 	height: 220px;
-	border: 10px solid #383838;
-	margin: 0 auto;
-	border-radius: 7px 7px 0 0;
-	background-size: 100%;
-	background-position: top;
+	border: 10px solid #383838;	
+	border-radius: 7px 7px 0 0;	
 	position: relative;
 
 
@@ -175,10 +184,6 @@
 		left: calc(50% - 64px);
 		
 	}
-
-	img{
-		display: none;
-	}
 }
 
 //image tablette
@@ -186,12 +191,9 @@
 .img-tablette{
 
 	//Screen
-	transition: background-position ease-in-out 4s;
 	width: 37%;
 	height: 170px;
-	margin: 0 auto;
-	background-size: 100%;
-	background-position: top;
+
 	border-radius: 5px;
 	border-top: 15px solid #eee;
 	border-bottom: 20px solid #eee;
@@ -199,14 +201,8 @@
 	border-left: 5px solid #eee;
 	right: 7%;
 	bottom: -70px;
-
 	position: absolute;
-
 	box-shadow: -10px -10px 30px 0px rgba(#000, .3);
-
-	img{
-		display: none;
-	}
 }
 
 //image smartphone
@@ -214,12 +210,8 @@
 .img-smartphone{
 
 	//Screen
-	transition: background-position ease-in-out 4s;
 	width: 15%;
 	height: 90px;
-	margin: 0 auto;
-	background-size: 100%;
-	background-position: top;
 	border-radius: 5px;
 	border-top: 10px solid #eee;
 	border-bottom: 15px solid #eee;
@@ -227,14 +219,8 @@
 	border-left: 3px solid #eee;
 	right: 35%;
 	bottom: -80px;
-
 	position: absolute;
-
 	box-shadow: -6px -6px 20px 0px rgba(#000, .4);
-
-	img{
-		display: none;
-	}
 }
 
 //

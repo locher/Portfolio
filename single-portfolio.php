@@ -56,7 +56,7 @@
 
 				<div>
 					<div class="wrapper-img">
-						<div class="img-desktop" style="background-image: url('<?php echo $image_desktop['url']; ?>')">
+						<div class="img-desktop img-peripherique" style="background-image: url('<?php echo $image_desktop['url']; ?>')">
 							<img src="<?php echo $image_desktop['url']; ?>">
 						</div>
 					</div>
