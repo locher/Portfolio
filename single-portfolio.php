@@ -46,11 +46,46 @@
 		
 		<div class="wrapper-big">
 
-			<?php 
-				if( have_rows('galerie') ):
-			?>
 
 			<div class="slider" id="slides">
+
+				<?php //Le 1er slide, c'est l'apercu
+
+					$img_desktop = get_field('image_desktop');
+					$img_tablette = get_field('image_tablette');
+					$img_smartphone = get_field('image_smartphone');
+				?>
+
+				<div>
+					<div class="wrapper-img">
+
+						<?php if($img_desktop): ?>
+							<div class="img-desktop img-peripherique" style="background-image: url('<?php echo $img_desktop['url']; ?>')">
+								<img src="<?php echo $img_desktop['url']; ?>">
+							</div>					
+						<?php endif; ?>
+
+						<?php if($img_tablette): ?>
+							<div class="img-tablette img-peripherique" style="background-image: url('<?php echo $img_tablette['url']; ?>')">
+								<img src="<?php echo $img_tablette['url']; ?>">
+							</div>					
+						<?php endif; ?>
+
+						<?php if($img_smartphone): ?>
+							<div class="img-smartphone img-peripherique" style="background-image: url('<?php echo $img_smartphone['url']; ?>')">
+								<img src="<?php echo $img_smartphone['url']; ?>">
+							</div>					
+						<?php endif; ?>
+						
+					</div>
+
+				</div>
+
+				<?php 
+					if( have_rows('galerie') ):
+					//Seulement après on check si y a d'autres images
+				?>
+
 				<?php while ( have_rows('galerie') ) : the_row(); ?>
 				<?php $image_desktop = get_sub_field('image'); ?>
 
@@ -124,6 +159,7 @@
 	<script>
 
 	jQuery('.single-color div').mouseover(function(){
+
 		couleur = jQuery(this).attr('data-color');
 
 		if(couleur){
@@ -133,6 +169,12 @@
 
 	jQuery('#slides').slidesjs();
 
-	</script>
+	resize_screen();
+
+	jQuery(window).resize(function(){
+		resize_screen();
+	});
+
+</script>
 
 <?php get_footer(); ?>
