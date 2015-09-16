@@ -115,6 +115,7 @@
 
 	.wrapper-img{
 		margin-bottom: 100px;
+		position: relative;
 	}
 
 	h2{
@@ -178,8 +179,34 @@
 	img{
 		display: none;
 	}
+}
 
+//image tablette
 
+.img-tablette{
+
+	//Screen
+	transition: background-position ease-in-out 4s;
+	width: 37%;
+	height: 170px;
+	margin: 0 auto;
+	background-size: 100%;
+	background-position: top;
+	border-radius: 5px;
+	border-top: 15px solid #eee;
+	border-bottom: 20px solid #eee;
+	border-right: 5px solid #eee;
+	border-left: 5px solid #eee;
+	right: 10%;
+	bottom: -75px;
+
+	position: absolute;
+
+	box-shadow: -10px -10px 30px 0px rgba(#000, .3);
+
+	img{
+		display: none;
+	}
 }
 
 //
@@ -201,6 +228,11 @@
 
 	.img-desktop{
 		transition: background-position ease-in-out 7s;
+		background-position: bottom;
+	}
+
+	.img-tablette{
+		transition: background-position ease-in-out 4s;
 		background-position: bottom;
 	}
 }
