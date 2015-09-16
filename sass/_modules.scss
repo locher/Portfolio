@@ -240,18 +240,8 @@
 		z-index: 10;
 	}
 
-	.img-desktop{
-		transition: background-position ease-in-out 7s;
-		background-position: bottom;
-	}
-
-	.img-tablette{
-		transition: background-position ease-in-out 4s;
-		background-position: bottom;
-	}
-
-	.img-smartphone{
-		transition: background-position ease-in-out 4s;
+	.img-peripherique{
+		transition: background-position ease-in-out 5s;
 		background-position: bottom;
 	}
 }
