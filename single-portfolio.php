@@ -167,7 +167,12 @@
 		}
 	});
 
-	jQuery('#slides').slidesjs();
+	jQuery('#slides').slidesjs({
+		play: {
+			auto: true,
+			interval: 5000
+		}
+	});
 
 	resize_screen();
 

@@ -52,10 +52,16 @@
 
 <script type="text/javascript">
 
+jQuery(document).ready(function(){
+
 	resize_screen();
 
 	jQuery(window).resize(function(){
 		resize_screen();
 	});
+	
+});
+
+
 
 </script>
