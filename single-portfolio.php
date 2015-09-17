@@ -87,13 +87,29 @@
 				?>
 
 				<?php while ( have_rows('galerie') ) : the_row(); ?>
-				<?php $image_desktop = get_sub_field('image'); ?>
+				<?php $image_desktop = get_sub_field('image_desktop'); ?>
+				<?php $image_tablette = get_sub_field('image_tablette'); ?>
+				<?php $image_smartphone = get_sub_field('image_smartphone'); ?>
 
 				<div>
 					<div class="wrapper-img">
-						<div class="img-desktop img-peripherique" style="background-image: url('<?php echo $image_desktop['url']; ?>')">
-							<img src="<?php echo $image_desktop['url']; ?>">
-						</div>
+						<?php if($image_desktop): ?>
+							<div class="img-desktop img-peripherique" style="background-image: url('<?php echo $image_desktop['url']; ?>')">
+								<img src="<?php echo $image_desktop['url']; ?>">
+							</div>					
+						<?php endif; ?>
+
+						<?php if($image_tablette): ?>
+							<div class="img-tablette img-peripherique" style="background-image: url('<?php echo $image_tablette['url']; ?>')">
+								<img src="<?php echo $image_tablette['url']; ?>">
+							</div>					
+						<?php endif; ?>
+
+						<?php if($image_smartphone): ?>
+							<div class="img-smartphone img-peripherique" style="background-image: url('<?php echo $image_smartphone['url']; ?>')">
+								<img src="<?php echo $image_smartphone['url']; ?>">
+							</div>					
+						<?php endif; ?>
 					</div>
 				</div>
 
