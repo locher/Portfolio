@@ -371,7 +371,8 @@ function portfolio_taxonomy()
         'can_export' => true, // Allows export in Tools > Export
         'taxonomies' => array(
             'category'
-        ) // Add Category and Post Tags support
+        ),
+        'menu_icon' => 'dashicons-screenoptions'
     ));
 }
 
@@ -394,3 +395,21 @@ function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 short
 }
 
 ?>
+
+
+
+<?php 
+
+//Supprimer des parties de l'admin
+
+function custom_menu_page_removing() {
+     remove_menu_page( 'edit.php' );
+     remove_menu_page( 'edit-comments.php' );
+      remove_menu_page( 'index.php' ); 
+      remove_menu_page( 'upload.php' );  
+
+}
+add_action( 'admin_menu', 'custom_menu_page_removing' );
+?>
+
+
