@@ -183,7 +183,7 @@
 		background-size: cover;
 		position: absolute;
 		bottom: calc(-34% - 20px); //pif
-		left: calc(50% - 45% / 2);
+		left: 25%; //50% - la moitié du width
 		
 	}
 }
@@ -215,7 +215,7 @@
 	border-color: #eee;
 	border-width: 8px 3px 12px 3px;
 	right: 35%;
-	bottom: -44%;
+	bottom: -80px;
 	position: absolute;
 	box-shadow: -6px -6px 20px 0px rgba(#000, .4);
 }
