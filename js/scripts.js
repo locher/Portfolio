@@ -16,11 +16,3 @@ resize_screen = function(){
 	jQuery('.img-tablette').css('height',tablette_height);
 	jQuery('.img-smartphone').css('height',smartphone_height);
 }
-
-taille_socle = function(){
-	//récupère la largeur du socle
-	largeur_socle = jQuery('.img-desktop:before').width();
-	//console.log(largeur_socle);
-	//on calcul la hauteur
-	//on applique la hauteur
-}

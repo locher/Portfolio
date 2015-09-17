@@ -53,7 +53,6 @@
 <script type="text/javascript">
 
 	resize_screen();
-	taille_socle();
 
 	jQuery(window).resize(function(){
 		resize_screen();
