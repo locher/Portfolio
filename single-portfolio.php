@@ -204,9 +204,6 @@
 				</div>
 
 				<?php endif; ?>
-
-
-				<div class="pad3">rien</div>
 			</div>
 		</div>
 
@@ -225,7 +222,7 @@
 
 	jQuery('#slides').slidesjs({
 		play: {
-			auto: true,
+			//auto: true,
 			interval: 5000
 		}
 	});

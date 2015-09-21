@@ -1,5 +1,6 @@
 .wrapper-big{
 	display: flex;
+	flex-wrap: wrap;
 }
 
 .slider{
@@ -20,6 +21,7 @@
 }
 
 .wrapper-content{
+
 	display: flex;
 	flex-wrap:wrap;
 	width: calc(50% - #{$espace}/2);
@@ -63,7 +65,7 @@
 
 }
 
-.pad1, .pad2, .pad3{
+.pad1, .pad2{
 	background-color: $gris;
 	padding: $padding;
 	display: flex;
@@ -224,6 +226,101 @@
 	background: url('./img/svg-prod/big-arrow.svg') center center no-repeat;
 	padding: 1em;
 }
+
+//Responsive grille
+
+@include width-below(1400px){
+
+	.slider{
+		width: 100%;
+		margin-right: 0;
+		margin-top: $espace;
+		order: 2;
+	}
+
+	.wrapper-content{
+		width: 100%;
+		margin-right: 0;
+		order: 1;
+
+		> div:nth-child(n){
+			width: calc(100% / 3 - #{$espace} * 2/3);
+			margin-bottom: 0;
+
+			&:last-child{
+				margin-right: 0;
+			}
+		}
+
+		.wrapper-mini{
+			margin-right: $espace;
+
+			.content-mini{
+				width: calc(50% - #{$espace} / 2);
+			}
+
+			.content-mini:nth-child(2n){
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+@include width-below(1050px){
+	.wrapper-content > div:nth-child(n){
+		width: calc(50% - #{$espace} / 2);
+	}
+
+	.pad1.pad1.pad1{
+		width: 100% !important;
+		margin-bottom: $espace;
+		margin-right: 0;
+	}
+}
+
+@include width-below(700px){
+
+	.slider{
+		padding: $padding;
+	}
+
+	.wrapper-content > div:nth-child(n){
+		width: 100%;
+		margin-right: 0;
+	}
+
+	.pad2{
+		margin-top: $espace ;
+	}
+}
+
+@include width-below(300px){
+	.wrapper-content .wrapper-mini .content-mini{
+		width: 100%;
+		height: auto;
+		margin-right: 0;
+	}
+
+	.wrapper-mini .padAvant{
+		margin-bottom: $espace;
+	}
+
+	.pad2{
+		margin-top: 0;
+	}
+
+	.single-color{
+		width: 100%;
+
+	}
+}
+
+
+
+
+
+
+
 
 
 
