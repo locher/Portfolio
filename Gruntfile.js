@@ -9,7 +9,7 @@ module.exports = function(grunt){
 			},
 			'svg': {
 				files: ['Gruntfile.js', 'img/svg-dev/*.svg'],
-				tasks: ['svgmin']
+				tasks: ['svgmin', 'svgstore']
 			}
 		},
 		sass: {
@@ -39,34 +39,6 @@ module.exports = function(grunt){
 				dest: 'style.css'
 			},
 		},
-		svg_sprite: {
-	        prod: {
-	            expand: true,
-			    cwd: 'img',
-			    src: ['svg-dev/*.svg'],
-			    dest: '',
-
-			    options:{
-			    	shape:{
-			    		spacing: {
-			    			padding: 10,
-			    		},
-			    		dest: ''
-			    	},
-			    	mode:{
-			    		view:{
-			    			render:{
-			    				scss:{
-			    					dest: '../../sass/_svg.scss'
-			    				}
-			    			},
-			    			prefix: '.',
-			    			dest: 'img/prod'
-			    		}
-			    	}
-			    }
-	        },
-	    },
 	    svgmin: {
 	        options: {
 	            plugins: [
@@ -83,11 +55,25 @@ module.exports = function(grunt){
                 }]
 	        }
 	    },
+	    svgstore: {
+		    options: {
+		      prefix : 'icon-',
+		      svg: {
+		        viewBox : '0 0 100 100',
+		        xmlns: 'http://www.w3.org/2000/svg'
+		      }
+		    },
+		    your_target: {
+		      files:{
+		      	'img/svg-prod/svgs.svg' : ['img/svg-prod/*.svg'],
+		      },
+		    },
+		},
 	});
 	
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-autoprefixer');
-	grunt.loadNpmTasks('grunt-svg-sprite');
 	grunt.loadNpmTasks('grunt-svgmin');
+	grunt.loadNpmTasks('grunt-svgstore');
 }

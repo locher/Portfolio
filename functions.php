@@ -412,4 +412,3 @@ function custom_menu_page_removing() {
 add_action( 'admin_menu', 'custom_menu_page_removing' );
 ?>
 
-

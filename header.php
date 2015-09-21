@@ -13,17 +13,14 @@
 		<meta name="description" content="<?php bloginfo('description'); ?>">
 
 		<?php wp_head(); ?>
-		<script>
-        // conditionizr.com
-        // configure environment tests
-        conditionizr.config({
-            assets: '<?php echo get_template_directory_uri(); ?>',
-            tests: {}
-        });
-        </script>
 
 	</head>
 	<body <?php body_class(); ?>>
+
+		<div class="svg-wrapper" aria-hidden="true">
+			<?php echo file_get_contents(get_template_directory_uri().'/img/svg-prod/svgs.svg'); ?>
+		</div>
+		
 
 		<div class="wrapper">
 
