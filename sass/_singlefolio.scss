@@ -66,6 +66,13 @@
 .pad1, .pad2, .pad3{
 	background-color: $gris;
 	padding: $padding;
+	display: flex;
+	align-items: center;
+	justify-content:center;
+
+	> div{
+		width: 100%;
+	}
 }
 
 .wrapper-mini{
@@ -84,9 +91,9 @@
 		margin-right: $espace;
 		margin-bottom: $espace;
 		padding: $padding;
-
-		p{
-		}
+		display: flex;
+		align-items:center;
+		justify-content:center;
 
 		span{
 			display: block;

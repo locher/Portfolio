@@ -8,7 +8,7 @@ module.exports = function(grunt){
 				tasks: ['sass:dev', 'autoprefixer']
 			},
 			'svg': {
-				files: ['Gruntfile.js', 'img/svg-dev/*.svg'],
+				files: ['Gruntfile.js', 'img/svg-dev/*.svg', 'img/svg-dev/sprite/*.svg'],
 				tasks: ['svgmin', 'svgstore']
 			}
 		},

@@ -123,31 +123,44 @@
 
 			<div class="wrapper-content">
 				<div class="pad1">
-					<h2>
-						<span>
-							<svg viewBox="0 0 100 100" class="icon">
-							  <use xlink:href="#icon-contexte"></use>
-							</svg>
-						</span>
-					Contexte</h2>
-					<div class="text-content"><?php the_field('contexte'); ?></div>
-						
+					<div>
+						<h2>
+							<span>
+								<svg viewBox="0 0 100 100" class="icon">
+								  <use xlink:href="#icon-contexte"></use>
+								</svg>
+							</span>
+						Contexte</h2>
+						<div class="text-content"><?php the_field('contexte'); ?></div>
+					</div>						
 				</div>
 				<div class="wrapper-mini">
-					<div class="content-mini"><p><?php the_field('texte_info_1'); ?></p></div>
-					<div class="content-mini"><p><?php the_field('texte_info_2'); ?></p></div>
+					<div class="content-mini">
+						<p><?php the_field('texte_info_1'); ?></p>
+					</div>
+					<div class="content-mini">
+						<p><?php the_field('texte_info_2'); ?></p>
+					</div>
 					<div class="content-mini padAvant">
-						<span>
-							<svg viewBox="0 0 100 100" class="icon">
-							  <use xlink:href="#icon-date"></use>
-							</svg>
-						</span>
-						<?php the_field('date_de_creation'); ?></div>
-					<a href="<?php the_field('lien_site'); ?>" class="content-mini padAvant"><span>
-						<svg viewBox="0 0 100 100" class="icon">
-							<use xlink:href="#icon-lien"></use>
-						</svg>
-					</span>Voir le site</a>
+						<div>
+							<span>
+								<svg viewBox="0 0 100 100" class="icon">
+								  <use xlink:href="#icon-date"></use>
+								</svg>
+							</span>
+							<?php the_field('date_de_creation'); ?>
+						</div>
+					</div>
+					<a href="<?php the_field('lien_site'); ?>" class="content-mini padAvant">
+						<div>
+							<span>
+								<svg viewBox="0 0 100 100" class="icon">
+									<use xlink:href="#icon-lien"></use>
+								</svg>
+							</span>
+							Voir le site
+						</div>
+					</a>
 				</div>
 
 				<?php 
@@ -155,36 +168,38 @@
 				?>
 
 				<div class="pad2">
-					<h2>
-						<span class="couleur">
-							<svg viewBox="0 0 100 100" class="icon">
-							  <use xlink:href="#icon-couleurs"></use>
-							</svg>
-						</span>
-						Couleurs</h2>
+					<div>
+						<h2>
+							<span class="couleur">
+								<svg viewBox="0 0 100 100" class="icon">
+								  <use xlink:href="#icon-couleurs"></use>
+								</svg>
+							</span>
+							Couleurs</h2>
 
 
-						<?php while ( have_rows('couleurs') ) : the_row(); ?>
+							<?php while ( have_rows('couleurs') ) : the_row(); ?>
 
-						<div class="single-color">
-							<div>
-								<div class="couleur-principale" data-color="<?php the_sub_field('couleur_principale'); ?>" style="background-color: <?php the_sub_field('couleur_principale'); ?>"></div>
+							<div class="single-color">
+								<div>
+									<div class="couleur-principale" data-color="<?php the_sub_field('couleur_principale'); ?>" style="background-color: <?php the_sub_field('couleur_principale'); ?>"></div>
+								</div>
+								<div class="variantes">
+
+									<?php if(get_sub_field('variante_clair')): ?>
+									<div data-color="<?php the_sub_field('variante_clair'); ?>" style="background-color: <?php the_sub_field('variante_clair'); ?>"></div>
+									<?php endif;?>
+
+									<?php if(get_sub_field('variante_foncee')): ?>
+									<div data-color="<?php the_sub_field('variante_foncee'); ?>" style="background-color: <?php the_sub_field('variante_foncee'); ?>"></div>
+									<?php endif;?>
+								</div>
+
+								<span class="text-couleur"><?php the_sub_field('couleur_principale'); ?></span>
 							</div>
-							<div class="variantes">
 
-								<?php if(get_sub_field('variante_clair')): ?>
-								<div data-color="<?php the_sub_field('variante_clair'); ?>" style="background-color: <?php the_sub_field('variante_clair'); ?>"></div>
-								<?php endif;?>
-
-								<?php if(get_sub_field('variante_foncee')): ?>
-								<div data-color="<?php the_sub_field('variante_foncee'); ?>" style="background-color: <?php the_sub_field('variante_foncee'); ?>"></div>
-								<?php endif;?>
-							</div>
-
-							<span class="text-couleur"><?php the_sub_field('couleur_principale'); ?></span>
+							<?php endwhile;?>
 						</div>
-
-						<?php endwhile;?>
 
 				</div>
 
