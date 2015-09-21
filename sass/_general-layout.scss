@@ -88,26 +88,10 @@ header{
 			transform: translateY(-2px);
 		}
 
-		&::before{
-			transition: all ease-in-out .25s;
-			content: ".";
-			position: absolute;
-			left: 50%;
-			top: 60%;
-			transform: translateX(-50%);
-			font-size: 1.4em;
-			color: transparent;
-		}
-
 		&:hover,
 		&:focus{
 
 			color: rgba(#000, .8);
-
-			&::before{
-				text-shadow: 10px 0px #fff, -10px 0px #fff;
-				color: #fff;
-			}
 
 			svg{
 				fill: rgba(#000, .8);
@@ -117,17 +101,6 @@ header{
 
 	.current-menu-item a{
 		color: rgba(#000, .8);
-
-		&::before{
-			content: ".";
-			position: absolute;
-			left: 50%;
-			top: 60%;
-			transform: translateX(-50%);
-			font-size: 1.4em;
-			text-shadow: 10px 0px #fff, -10px 0px #fff;
-			color: #fff;
-		}
 
 		svg{
 			fill: rgba(#000, .8);

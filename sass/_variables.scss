@@ -14,3 +14,27 @@ $padding: 45px;
 	padding: 1em 1.5em .9em;
 	border: 2px solid #fff;
 }
+
+@mixin anim-points{
+
+	&::before{
+		transition: all ease-in-out .25s;
+		content: ".";
+		position: absolute;
+		left: 50%;
+		top: 60%;
+		transform: translateX(-50%);
+		font-size: 1.4em;
+		color: transparent;
+	}
+
+	&:hover,
+	&:focus{
+
+		&::before{
+			text-shadow: 10px 0px #fff, -10px 0px #fff;
+			color: #fff;
+		}
+		
+	}
+}
