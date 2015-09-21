@@ -72,11 +72,21 @@ header{
 
 	a{
 		transition: all ease .3s;
-		display: block;
+		display: inline-block;
 		color: #fff;
 		text-decoration: none;
 		padding: 1em 1.5em;
 		position: relative;
+
+		svg{
+			transition: fill ease-in-out .25s;
+			display: inline-block;
+			vertical-align: middle;
+			width: 38px;
+			margin-right: 9px;
+			fill: #fff;
+			transform: translateY(-2px);
+		}
 
 		&::before{
 			transition: all ease-in-out .25s;
@@ -98,6 +108,10 @@ header{
 				text-shadow: 10px 0px #fff, -10px 0px #fff;
 				color: #fff;
 			}
+
+			svg{
+				fill: rgba(#000, .8);
+			}
 		}
 	}
 
@@ -113,6 +127,10 @@ header{
 			font-size: 1.4em;
 			text-shadow: 10px 0px #fff, -10px 0px #fff;
 			color: #fff;
+		}
+
+		svg{
+			fill: rgba(#000, .8);
 		}
 	}
 
