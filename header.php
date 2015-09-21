@@ -18,7 +18,7 @@
 	<body <?php body_class(); ?>>
 
 		<div class="svg-wrapper" aria-hidden="true">
-			<?php echo file_get_contents(get_template_directory_uri().'/img/svg-prod/svgs.svg'); ?>
+			<?php echo file_get_contents(get_template_directory_uri().'/img/svg-prod/sprite/svgs.svg'); ?>
 		</div>
 		
 
