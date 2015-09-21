@@ -67,10 +67,33 @@ header{
 	}
 
 	a{
+		transition: all ease .3s;
 		display: block;
 		color: #fff;
 		text-decoration: none;
 		padding: 1em 1.5em;
+		position: relative;
+
+		&::before{
+			transition: all ease-in-out .25s;
+			content: ".";
+			position: absolute;
+			left: 50%;
+			top: 60%;
+			transform: translateX(-50%);
+			font-size: 1.4em;
+			color: transparent;
+		}
+
+		&:hover{
+
+			color: darken($rouge, 35%);
+
+			&::before{
+				text-shadow: 10px 0px #fff, -10px 0px #fff;
+				color: #fff;
+			}
+		}
 	}
 }
 

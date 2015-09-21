@@ -57,6 +57,7 @@
 				?>
 
 				<div>
+
 					<div class="wrapper-img">
 
 						<?php if($img_desktop): ?>
@@ -114,9 +115,11 @@
 				</div>
 
 				<?php endwhile;?>
-			</div>
+
 
 			<?php endif;?>
+
+			</div>
 
 			<div class="wrapper-content">
 				<div class="pad1">
@@ -190,10 +193,15 @@
 		}
 	});
 
-	resize_screen();
 
-	jQuery(window).resize(function(){
+	jQuery(window).load(function(){
+
 		resize_screen();
+
+		jQuery(window).resize(function(){
+			resize_screen();
+		});
+
 	});
 
 </script>
