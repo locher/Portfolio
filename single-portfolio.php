@@ -222,7 +222,7 @@
 
 	jQuery('#slides').slidesjs({
 		play: {
-			//auto: true,
+			auto: true,
 			interval: 5000
 		}
 	});

@@ -118,6 +118,32 @@
 			color: inherit;
 		}
 	}
+
+	a.padAvant{
+		transition: all ease .25s;
+		text-decoration: none;
+
+		svg{
+			transition: all ease .25s;
+		}
+
+		@include anim-points;
+
+		&::before{
+			top: 65%;
+		}
+
+		&:hover{
+
+			color: rgba(#fff, .7);
+
+			svg{
+				fill: rgba(#fff, .7) !important;
+			}
+			
+			
+		}
+	}
 }
 
 //Couleurs
