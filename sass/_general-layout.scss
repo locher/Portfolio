@@ -71,15 +71,34 @@ header{
 	}
 
 	a{
-		transition: all ease .3s;
+		transition: all ease .25s;
 		display: inline-block;
 		color: #fff;
 		text-decoration: none;
 		padding: 1em 1.5em;
 		position: relative;
 
+		&::before{
+			transition: all ease .25s .05s;
+			content:'';
+			position: absolute;
+			height: 2px;
+			width: 0;
+			background-color: #fff;
+			right: 0;
+			bottom: 1em;
+			right: 1.5em;
+			opacity: 0;
+		}
+
+		&:hover::before{
+			width: 24%;
+			opacity: 1;
+			background-color: rgba(#000, .8);
+		}
+
 		svg{
-			transition: fill ease-in-out .25s;
+			transition: fill ease .25s;
 			display: inline-block;
 			vertical-align: middle;
 			width: 38px;
