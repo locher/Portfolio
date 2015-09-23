@@ -28,16 +28,21 @@ img{
 header{
 	padding: $padding;
 	position: relative;
+	overflow: hidden;
 }
 
 .img-background{
 	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
 	position: absolute;
 	top:0;
 	right: 0;
 	bottom: 0;
 	left:0;
 	z-index: -1;
+	animation: background linear 25s;
+	transform: scale(1.6);
 
 	&:after{
 		content:'';

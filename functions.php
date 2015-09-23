@@ -394,11 +394,6 @@ function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 short
     return '<h2>' . $content . '</h2>';
 }
 
-?>
-
-
-
-<?php 
 
 //Supprimer des parties de l'admin
 
@@ -410,5 +405,5 @@ function custom_menu_page_removing() {
 
 }
 add_action( 'admin_menu', 'custom_menu_page_removing' );
-?>
 
+?>
