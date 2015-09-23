@@ -33,6 +33,10 @@
 						</a>
 					</div>
 
+					<div class="bt-menu" aria-hidden="true">
+						<span>Menu</span>
+					</div>
+
 					<nav class="nav" role="navigation">
 						<?php html5blank_nav(); ?>
 					</nav>

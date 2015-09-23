@@ -24,6 +24,15 @@ icones_menu = function(){
 	jQuery('nav .contact a').prepend('<svg viewBox="0 0 100 100" class="icon"><use xlink:href="#icon-contact"></use></svg>');
 }
 
+toggle_menu = function(){
+	jQuery('.bt-menu').click(function(){
+		jQuery(this).toggleClass('open');
+		jQuery('.big-header').toggleClass('open');
+		jQuery(this).parent().find('.nav').toggleClass('open');	
+	});
+}
+
 jQuery(window).load(function(){
 	icones_menu();
+	toggle_menu();
 });

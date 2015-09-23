@@ -41,8 +41,7 @@ header{
 	bottom: 0;
 	left:0;
 	z-index: -1;
-	animation: background linear 25s;
-	transform: scale(1.6);
+	animation: background linear 30s;
 
 	&:after{
 		content:'';
@@ -59,6 +58,7 @@ header{
 .wrapper-top{
 	display: flex;
 	align-items: center;
+	flex-wrap: wrap;
 }
 
 .logo{
@@ -66,13 +66,35 @@ header{
 }
 
 .nav{
-
+	
 	font-size: 1.8rem;
 	font-weight: 500;
 	text-transform: uppercase;
+	
+
+	@include width-below(1099px){
+		transition: all ease .3s;
+		width: 100%;
+		padding-top: 50px;
+		transform: scaleY(0);
+		transform-origin: center top;
+	}
+
+	&.open{
+		transform: scaleY(1);
+	}
 
 	li{
 		display: inline-block;
+
+		@include width-below(1099px){
+			width: 100%;
+			text-align: center;
+
+			a{
+				display: block;
+			}
+		}
 	}
 
 	a{
@@ -83,23 +105,27 @@ header{
 		padding: 1em 1.5em;
 		position: relative;
 
-		&::before{
-			transition: all ease .25s .05s;
-			content:'';
-			position: absolute;
-			height: 2px;
-			width: 0;
-			background-color: #fff;
-			right: 0;
-			bottom: 1em;
-			right: 1.5em;
-			opacity: 0;
-		}
+		@include width-above(1100px){
 
-		&:hover::before{
-			width: 24%;
-			opacity: 1;
-			background-color: rgba(#000, .8);
+			&::before{
+				transition: all ease .25s .05s;
+				content:'';
+				position: absolute;
+				height: 2px;
+				width: 0;
+				background-color: #fff;
+				right: 0;
+				bottom: 1em;
+				right: 1.5em;
+				opacity: 0;
+			}
+
+			&:hover::before{
+				width: 24%;
+				opacity: 1;
+				background-color: rgba(#000, .8);
+			}
+
 		}
 
 		svg{
@@ -130,7 +156,38 @@ header{
 			fill: rgba(#000, .8);
 		}
 	}
+}
 
+.bt-menu{
+
+	font-size: 1.8rem;
+	font-weight: 500;
+	text-transform: uppercase;
+	color: #fff;
+	cursor: pointer;
+
+	@include width-above(1100px){
+		display: none;
+	}
+
+	&::before{
+		transition: all ease .4s;
+		content:'';
+		display: inline-block;
+		margin-right: 7px;
+		height: 7px;
+		width: 7px;
+		background-color: #fff;
+		transform: translateY(-50%);
+		box-shadow: 0 9px #fff, 0px -9px #fff;
+	}
+
+	&.open{
+		&::before{
+			box-shadow: 9px 9px #fff, -9px -9px #fff, -9px 9px #fff, 9px -9px #fff;
+			margin-right: 20px;
+		}
+	}
 }
 
 header{
@@ -142,6 +199,16 @@ header{
 	text-align:center;
 	text-transform: uppercase;
 	color: #fff;
+
+	@include width-below(1099px){
+		transition: padding-top ease .3s;
+		padding-top: 0;
+		margin-top: -150px;
+
+		&.open{
+			padding-top: 200px;
+		}
+	}
 
 	a{
 		@extend %bt;
