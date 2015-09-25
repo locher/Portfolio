@@ -1,0 +1,105 @@
+.about-main{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.about-content{
+	width: calc(50% - #{$espace}/2);
+	margin-right: $espace;
+	padding: $padding;
+	background-color: $gris;
+	background-image: url('img/fond-txt.png');
+	background-size: cover;
+
+	@include width-below(1400px){
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: $espace;
+	}
+}
+
+.about-pads{
+	display: flex;
+	flex-wrap:wrap;
+	width: calc(50% - #{$espace}/2);
+
+	@include width-below(1400px){
+		width: 100%;
+	}
+
+	> div{
+		background-color: $gris;
+		width: calc(50% - #{$espace}/2);
+		margin-right: 0;
+		margin-bottom: 0;
+
+		&:nth-child(2n+1){
+			margin-right: $espace;
+		}
+
+		&:nth-child(1),
+		&:nth-child(2){
+			margin-bottom: $espace;
+		}
+
+		@include width-between(1200px, 1400px){
+			width: calc(25% - #{$espace}*3/4); 
+			margin-right: $espace;
+
+			&:nth-child(1),
+			&:nth-child(2){
+				margin-bottom: 0;
+			}
+		}
+
+		@include width-below(600px){
+			width: 100%; 
+			margin-right: 0;
+			margin-bottom: $espace;
+		}
+	}
+
+	.contact{
+		width: calc(50% - #{$espace}/2);
+		margin-right: 0;
+		transition: background-color ease .25s;
+		padding: $padding;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: $rouge;
+		color: #fff;
+		text-decoration: none;
+		text-align: center;
+
+		@include width-between(1200px, 1400px){
+			width: calc(25% - #{$espace}*3/4); 
+			margin-right: 0;
+		}
+
+		@include width-below(600px){
+			display: none;
+		}
+
+		svg{
+			width: 50px;
+			fill: #fff;
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 10px;
+		}
+
+		span{
+			@extend %h2;
+			display: inline-block;
+			vertical-align: middle;
+			margin-bottom: 0;
+		}
+
+		&:hover{
+			background-color: $rougevif;
+		}
+
+
+	}
+}

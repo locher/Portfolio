@@ -4,7 +4,7 @@
 
 html{
 	font-size: 62.5%;
-	background-color: #fff;
+	background-color: #efefef;
 	font-family: Lato, Hevetica, Arial, sans-serif;
 }
 
@@ -259,12 +259,23 @@ header{
 }
 
 .text-content{
+
+	h2{
+		@extend %h2;
+		margin-bottom: .75em;
+	}
+
 	p{
 		line-height: 1.5em;
+		margin-bottom: 1em;
 
 		strong{
 			font-weight: bold;
 		}
+	}
+
+	p + h2{
+		margin-top: 1.4em;
 	}
 }
 

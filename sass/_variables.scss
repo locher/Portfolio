@@ -1,6 +1,6 @@
 $rouge: #d55252;
 $rougevif: #d54040;
-$gris: #e3e3e3;
+$gris: #ffffff;
 $noir: #2b2b2b;
 
 $espace: 5px;
@@ -41,6 +41,14 @@ $padding: 45px;
 		}
 
 	}
+}
+
+%h2{
+	font-size: 2.5rem;
+	text-transform: uppercase;
+	font-weight: 800;
+	margin-bottom: .35em;
+	line-height: 1.2em;
 }
 
 //Animations
