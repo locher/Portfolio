@@ -37,6 +37,49 @@
 			<h1 class="big-title"><?php the_title(); ?></h1>
 			<div class="sous-title"><?php the_field('sous-titre_page_single');?></div>
 
+			<div class="link-other">				 	
+
+				<?php $prev_post = get_adjacent_post(false,'',false); ?>
+
+				 <?php if ( is_a( $prev_post, 'WP_Post' ) ): ?>
+
+				 	<a href="<?php echo get_permalink( $prev_post->ID ); ?>" class="previous-link">
+				 		<div>
+					 		Projet précédent <br>
+					 		<span><?php echo get_the_title( $prev_post->ID ); ?></span>
+				 		</div>
+				 		
+				 	</a>
+
+				 <?php endif; ?>
+
+				 <?php $next_post = get_adjacent_post(false,'',true); ?>
+
+				 <?php if ( is_a( $next_post, 'WP_Post' ) ): ?>
+
+				 	<a href="<?php echo get_permalink( $next_post->ID ); ?>" class="next-link">
+				 		<div>
+					 		Projet suivant<br>
+					 		<span><?php echo get_the_title( $next_post->ID ); ?></span>	
+				 		</div>			 		
+				 	</a>
+
+				 <?php endif; ?>
+
+
+				
+<!-- 
+				<?php if(get_previous_post()): ?>
+
+				 <p class="next-link">
+				 	<?php previous_post_link('Projet précédent <span>%link</span>'); ?>
+				 	<?php echo get_permalink(get_adjacent_post(false,'',true)); ?> 
+				 </p>
+
+				<?php endif;?> -->
+
+			</div>
+
 		</div>	
 	
 	</header>

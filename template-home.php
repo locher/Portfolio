@@ -20,7 +20,7 @@
 			<div class="big-title"><?php the_field('gros_titre'); ?></div>
 			<div class="sous-title"><?php the_field('sous-titre'); ?></div>
 
-			<a href="<?php the_field('lien_bouton'); ?>"><?php the_field('texte_bouton'); ?></a>
+			<a class="bt" href="<?php the_field('lien_bouton'); ?>"><?php the_field('texte_bouton'); ?></a>
 
 		</div>	
 	
