@@ -18,10 +18,16 @@
 		text-decoration: none;
 		position: absolute;
 		bottom: 0;
+		text-transform: none;
 
 		div{
 			display: inline-block;
 			vertical-align: middle;
+		}
+
+		span{
+			font-weight: 900;
+			text-transform: uppercase;
 		}
 
 		&:hover{
