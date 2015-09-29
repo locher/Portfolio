@@ -1,7 +1,124 @@
+.contact-pads .pad-argument,
+.contact-pads .contact{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
 .form{
 	label{
 		@extend %h2;
 		display: block;
 		margin-bottom: 10px;
+	}
+
+	input[type="email"],
+	textarea{
+		transition: border ease .25s;
+		width: 100%;
+		border: 2px solid $grisfonce;
+		padding: 15px 20px;
+		font-size: 1.6rem;
+		color: $noir;
+
+		&.wpcf7-not-valid{
+			//border: 2px solid red;
+		}
+
+		&:focus{
+			border: 2px solid $rouge;
+		}
+	}
+
+	input[type="email"]{
+		margin-bottom: 1.5em;
+
+		+ span{
+			margin-top: -1em;
+			margin-bottom: .7em;
+		}
+	}
+
+	.wpcf7-not-valid-tip{
+		color: $rouge;
+	}
+
+	textarea{
+		font-family: Lato, Hevetica, Arial, sans-serif;
+		line-height: 1.4em;
+		resize: vertical;
+
+		+ span{
+			margin-top: .2em;
+		}
+	}
+
+	.submit{
+		display: inline-block;
+		margin-top: 20px;
+		border: 2px solid $rouge;
+		position: relative;
+
+		svg{
+			transition: fill ease .25s;
+			width: 30px;
+			fill: $rouge;
+			position: absolute;
+			right: 20px;
+			top: 13px;
+		}
+
+		img{
+			display: none;
+		}
+
+		&:hover{
+			svg{
+				fill: #fff;
+			}
+
+			input{
+				background-color: $rouge;
+				color: #fff;
+			}
+		}
+	}
+
+	input[type="submit"]{
+		transition: all ease .25s;
+		display: inline-block;
+		appearance: none;
+		background: none;
+		border: none;
+		color: $rouge;
+		font-size: 3rem;
+		padding: 15px 25px 10px;
+		text-transform: uppercase;
+		font-family: Lato, Hevetica, Arial, sans-serif;
+		font-weight: bold;
+		padding-right: 65px;	
+	}
+
+	.wpcf7-response-output{
+		margin: 1em 0 0;
+		border:0;
+		display: block;
+		padding: 1em 1.5em;
+		border-radius: 5px;
+	}
+
+	.wpcf7-validation-errors{
+		background-color: $rouge;
+		color: #fff;
+	}
+
+	.wpcf7-mail-sent-ok{
+		background-color: #4cc554;
+		color: #fff;
+
+	}
+
+	p{
+		margin-bottom: 0;
 	}
 }

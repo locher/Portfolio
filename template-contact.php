@@ -31,12 +31,12 @@
 			<?php echo do_shortcode(get_field('formulaire_contact')); ?>
 		</div>
 
-		<div class="about-pads">
+		<div class="about-pads contact-pads">
 
 			<div class="pad-argument">
 				<div>
 					<svg viewBox="0 0 100 100" class="icon">
-						<use xlink:href="#icon-contact"></use>
+						<use xlink:href="#icon-phone"></use>
 					</svg>
 					<h2>Téléphone</h2>
 					<p><?php the_field('telephone'); ?></p>
@@ -46,7 +46,7 @@
 			<div class="pad-argument">
 				<div>
 					<svg viewBox="0 0 100 100" class="icon">
-						<use xlink:href="#icon-contact"></use>
+						<use xlink:href="#icon-mail"></use>
 					</svg>
 					<h2>Mail</h2>
 					<p><?php the_field('mail'); ?></p>
@@ -56,7 +56,7 @@
 			<div class="pad-argument">
 				<div>
 					<svg viewBox="0 0 100 100" class="icon">
-						<use xlink:href="#icon-contact"></use>
+						<use xlink:href="#icon-address"></use>
 					</svg>
 					<h2>Adresse</h2>
 					<p><?php the_field('adresse'); ?></p>
@@ -70,7 +70,7 @@
 					<svg viewBox="0 0 100 100" class="icon">
 						<use xlink:href="#icon-portfolio"></use>
 					</svg>
-					<span>Portfolio</span>
+					<span>Réalisations</span>
 				</div>
 			</a>
 		</div>

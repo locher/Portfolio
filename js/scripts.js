@@ -22,6 +22,7 @@ icones_menu = function(){
 	jQuery('nav .methodologie a').prepend('<svg viewBox="0 0 100 100" class="icon"><use xlink:href="#icon-methode"></use></svg>');
 	jQuery('nav .about a').prepend('<svg viewBox="0 0 100 100" class="icon"><use xlink:href="#icon-user"></use></svg>');
 	jQuery('nav .contact a').prepend('<svg viewBox="0 0 100 100" class="icon"><use xlink:href="#icon-contact"></use></svg>');
+	jQuery('.submit').append('<svg viewBox="0 0 100 100" class="icon"><use xlink:href="#icon-envoyer"></use></svg>');
 }
 
 toggle_menu = function(){
