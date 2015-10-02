@@ -274,9 +274,11 @@
 	jQuery(window).load(function(){
 
 		resize_screen();
+		adapt_hauteur();
 
 		jQuery(window).resize(function(){
 			resize_screen();
+			adapt_hauteur();
 		});
 
 	});

@@ -37,3 +37,35 @@ jQuery(window).load(function(){
 	icones_menu();
 	toggle_menu();
 });
+
+adapt_hauteur = function(){
+	//Récupère position en hauteur du desktop
+
+	var desktop_position = jQuery(".img-desktop").position().top;
+	var desktop_bordure = 10;
+
+	var position_haut = desktop_position - desktop_bordure;
+
+	//Récupère position en hauteur du smartphone
+
+	var smartphone_position = jQuery(".img-smartphone").position().top;
+	var smartphone_bordure = 12;
+	var hauteur_smartphone = jQuery(".img-smartphone").height()
+
+	var position_bas = smartphone_position + smartphone_bordure + hauteur_smartphone;
+
+	//on y ajoute sa hauteur
+
+	//On calcule la hauteur total
+
+	var hauteur_affichage = position_bas - position_haut;
+
+	//On y ajoute un peu de marge
+	hauteur_affichage+= 40;
+	console.log(hauteur_affichage);
+
+	//On balance la hauteur à tous les wrapper parents
+
+	jQuery('.slidesjs-container').height(hauteur_affichage);
+}
+
