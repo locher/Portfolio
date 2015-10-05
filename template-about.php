@@ -28,7 +28,9 @@
 	<main role="main" class="about-main">
 
 		<div class="text-content about-content">
-			<?php the_content();?>
+			<div>
+				<?php the_content();?>
+			</div>
 		</div>
 
 		<div class="about-pads">

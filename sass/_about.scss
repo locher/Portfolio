@@ -8,8 +8,9 @@
 	margin-right: $espace;
 	padding: $padding;
 	background-color: $gris;
-	//background-image: url('img/fond-txt.png');
-	//background-size: cover;
+	display: flex;
+	align-items: center;
+
 
 	@include width-below(1400px){
 		width: 100%;
