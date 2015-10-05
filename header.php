@@ -29,7 +29,7 @@
 
 					<div class="logo">
 						<a href="<?php echo home_url(); ?>">
-							<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img">
+							<?php echo file_get_contents(get_template_directory_uri().'/img/svg-prod/logoVecto.svg'); ?>
 						</a>
 					</div>
 

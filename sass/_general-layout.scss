@@ -29,6 +29,10 @@ header{
 	padding: $padding;
 	position: relative;
 	overflow: hidden;
+
+	@include width-below(500px){
+		padding: $padding*0.7;
+	}
 }
 
 .img-background{
@@ -63,6 +67,27 @@ header{
 
 .logo{
 	flex:2;
+
+	svg{
+		width: 200px;
+		height: auto;		
+
+		@include width-below(400px){
+			width: 150px;
+		}
+
+		@include width-above(1500px){
+			width: 250px;
+		}
+	}
+
+	path{
+		fill: #fff;
+	}
+	
+
+
+
 }
 
 .nav{
@@ -70,6 +95,11 @@ header{
 	font-size: 1.8rem;
 	font-weight: 500;
 	text-transform: uppercase;
+	z-index: 100;
+
+	@include width-between(1099px, 1300px){
+		font-size: 1.5rem;
+	}
 	
 
 	@include width-below(1099px){
@@ -203,10 +233,11 @@ header{
 	@include width-below(1099px){
 		transition: padding-top ease .3s;
 		padding-top: 0;
-		margin-top: -150px;
+		margin-top: -250px;
+		padding: 100px 0;
 
 		&.open{
-			padding-top: 200px;
+			padding-top: 300px;
 		}
 	}
 
@@ -215,6 +246,10 @@ header{
 		font-size: 2.8rem;
 		margin-top: 1em;
 		position: relative;
+
+		@include width-below(600px){
+			font-size: 2rem;
+		}
 
 		em{
 			display: inline-block;
@@ -251,11 +286,37 @@ header{
 .big-title{	
 	font-size: 8rem;
 	font-weight: 800;
+
+	@include width-below(1300px){
+		font-size: 7rem;
+	}
+
+	@include width-below(600px){
+		font-size: 5rem;
+		margin-bottom: .15em;
+	}
+
+	@include width-below(600px){
+		font-size: 4rem;
+	}
+
+	@include width-below(400px){
+		font-size: 3rem;
+	}
 }
 
 .sous-title{
 	font-size: 3.5rem;
+	line-height: 1.1em;
 	font-weight: 500;
+
+	@include width-below(1300px){
+		font-size: 3rem;
+	}
+
+	@include width-below(600px){
+		font-size: 2rem;
+	}
 }
 
 .text-content{

@@ -78,7 +78,7 @@
 		}
 
 		@include width-below(600px){
-			display: none;
+			width: 100%;
 		}
 
 		svg{
