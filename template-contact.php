@@ -65,7 +65,7 @@
 
 
 
-			<a href="<?php echo site_url(); ?>/contact" class="contact">
+			<a href="<?php echo site_url(); ?>/realisations" class="contact">
 				<div>				
 					<svg viewBox="0 0 100 100" class="icon">
 						<use xlink:href="#icon-portfolio"></use>
