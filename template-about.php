@@ -44,7 +44,9 @@
 
 			<div class="pad-argument">
 				<div>
-					<?php echo file_get_contents($icone[url]); ?>
+					<?php if($icone): ?>
+						<?php echo file_get_contents($icone[url]); ?>
+					<?php endif;?>
 					<h2><?php the_sub_field('titre');?></h2>
 					<p><?php the_sub_field('sous-titre');?></p>
 				</div>

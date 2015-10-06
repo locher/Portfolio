@@ -37,7 +37,9 @@
 			<?php $icone = get_sub_field('icone'); ?>
 
 			<div class="pad-argument">
-				<?php echo file_get_contents($icone[url]); ?>
+				<?php if($icone): ?>
+					<?php echo file_get_contents($icone[url]); ?>
+				<?php endif;?>
 				<h2><?php the_sub_field('titre');?></h2>
 				<p><?php the_sub_field('sous-titre');?></p>
 			</div>
