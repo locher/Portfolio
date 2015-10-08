@@ -66,18 +66,6 @@
 
 				 <?php endif; ?>
 
-
-				
-<!-- 
-				<?php if(get_previous_post()): ?>
-
-				 <p class="next-link">
-				 	<?php previous_post_link('Projet précédent <span>%link</span>'); ?>
-				 	<?php echo get_permalink(get_adjacent_post(false,'',true)); ?> 
-				 </p>
-
-				<?php endif;?> -->
-
 			</div>
 
 		</div>	

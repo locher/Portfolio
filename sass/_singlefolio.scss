@@ -106,17 +106,22 @@ a.previous-link{
 	width: calc(50% - #{$espace}/2);
 
 	> div{
-		width: calc(50% - #{$espace}/2);
 		text-align: center;
+	}
 
-		&:nth-child(2n+1){
-			margin-right: $espace;
-		}
+	.pad1{
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: $espace;
+	}
 
-		&:nth-child(1),
-		&:nth-child(2){
-			margin-bottom: $espace;
-		}
+	.wrapper-mini{
+		width: calc(50% - #{$espace}/2);
+		margin-right: $espace;
+	}
+
+	.pad2{
+		width: calc(50% - #{$espace}/2);
 	}
 
 	h2{
@@ -166,15 +171,18 @@ a.previous-link{
 	font-weight: 900;	
 
 	.content-mini{
-		width: calc(50% - #{$espace});
+		width: calc(50% - #{$espace}/2);
 		height: calc(50% - #{$espace}/2);
 		background-color: $gris;
-		margin-right: $espace;
 		margin-bottom: $espace;
 		padding: $padding;
 		display: flex;
 		align-items:center;
 		justify-content:center;
+
+		&:nth-child(2n+1){
+			margin-right: $espace;
+		}
 
 		span{
 			display: block;
@@ -343,6 +351,10 @@ a.previous-link{
 		width: 100%;
 		margin-right: 0;
 		order: 1;
+
+		.pad1{
+			margin-right: $espace;
+		}
 
 		> div:nth-child(n){
 			width: calc(100% / 3 - #{$espace} * 2/3);
