@@ -97,6 +97,13 @@ a.previous-link{
 		position: relative;
 		margin: 0 auto;
 	}
+
+	&:hover{
+		.img-peripherique{
+			transition: background-position ease-in-out 5s;
+			background-position: bottom;
+		}
+	}
 }
 
 .wrapper-content{

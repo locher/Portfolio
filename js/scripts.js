@@ -41,14 +41,14 @@ jQuery(window).load(function(){
 adapt_hauteur = function(){
 	//Récupère position en hauteur du desktop
 
-	var desktop_position = jQuery(".img-desktop").position().top;
+	var desktop_position = jQuery(".img-desktop").offset().top;
 	var desktop_bordure = 10;
 
 	var position_haut = desktop_position - desktop_bordure;
 
 	//Récupère position en hauteur du smartphone
 
-	var smartphone_position = jQuery(".img-smartphone").position().top;
+	var smartphone_position = jQuery(".img-smartphone").offset().top;
 	var smartphone_bordure = 12;
 	var hauteur_smartphone = jQuery(".img-smartphone").height()
 
@@ -62,7 +62,6 @@ adapt_hauteur = function(){
 
 	//On y ajoute un peu de marge
 	hauteur_affichage+= 40;
-	console.log(hauteur_affichage);
 
 	//On balance la hauteur à tous les wrapper parents
 
