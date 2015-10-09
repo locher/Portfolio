@@ -335,6 +335,20 @@ header{
 		}
 	}
 
+	a{
+		transition: color ease .25s;
+		color: inherit;
+		font-weight: bold;
+
+		&:hover{
+			color: $rouge;
+		}
+
+		&:not([href*="plisme.fr"])::after{
+			content:' [...]';
+		}
+	}
+
 	p + h2{
 		margin-top: 1.4em;
 	}
