@@ -272,6 +272,8 @@
 		resize_screen();
 		adapt_hauteur();
 
+		scrollhover();
+
 		jQuery(window).resize(function(){
 			resize_screen();
 			adapt_hauteur();

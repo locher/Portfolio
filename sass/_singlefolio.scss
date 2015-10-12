@@ -98,11 +98,8 @@ a.previous-link{
 		margin: 0 auto;
 	}
 
-	&:hover{
-		.img-peripherique{
-			transition: background-position ease-in-out 5s;
-			//background-position: bottom;
-		}
+	.img-peripherique{
+		transition: background-position ease-in-out 5s;
 	}
 }
 

@@ -120,3 +120,15 @@ adapt_hauteur = function(){
 	}
 }
 
+scrollhover = function(){
+
+	jQuery('.img-peripherique').mouseover(function(){
+		jQuery(this).css('background-position', 'bottom');
+	});
+
+	jQuery('.img-peripherique').mouseout(function(){
+		jQuery(this).css('background-position', 'top');
+	});
+	
+}
+
