@@ -87,8 +87,7 @@
 					$img_smartphone = get_field('image_smartphone');
 				?>
 
-				<div>
-
+				<div class="singleslide">
 					<div class="wrapper-img">
 
 						<?php if($img_desktop): ?>
@@ -147,8 +146,9 @@
 
 				<?php endwhile;?>
 
+				<?php endif;?>
 
-			<?php endif;?>
+			
 
 			</div>
 
@@ -242,6 +242,7 @@
 
 	<script>
 
+	//Récupérer le code couleur au survol et l'afficher
 	jQuery('.single-color div').mouseover(function(){
 
 		couleur = jQuery(this).attr('data-color');
@@ -251,12 +252,19 @@
 		}
 	});
 
-	jQuery('#slides').slidesjs({
-		play: {
-			auto: true,
-			interval: 5000
-		}
-	});
+	//Lance le slider seulement si y a plusieurs slides
+	if(jQuery('.wrapper-img').length > 1){
+
+		jQuery('.singleslide').removeClass('singleslide');
+
+		jQuery('#slides').slidesjs({
+			play: {
+				auto: true,
+				interval: 5000
+			}
+		});
+
+	}
 
 
 	jQuery(window).load(function(){
