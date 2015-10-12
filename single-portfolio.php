@@ -252,22 +252,26 @@
 		}
 	});
 
-	//Lance le slider seulement si y a plusieurs slides
-	if(jQuery('.wrapper-img').length > 1){
 
-		jQuery('.singleslide').removeClass('singleslide');
-
-		jQuery('#slides').slidesjs({
-			play: {
-				auto: true,
-				interval: 5000
-			}
-		});
-
-	}
 
 
 	jQuery(window).load(function(){
+
+		scrollvitesse();
+
+		//Lance le slider seulement si y a plusieurs slides
+		if(jQuery('.wrapper-img').length > 1){
+
+			jQuery('.singleslide').removeClass('singleslide');
+
+			jQuery('#slides').slidesjs({
+				play: {
+					auto: true,
+					interval: 5000
+				}
+			});
+
+		}
 
 		resize_screen();
 		adapt_hauteur();

@@ -31,4 +31,8 @@
 
 	</main>
 
+	<script type="text/javascript">
+		scrollvitesse();
+	</script>
+
 <?php get_footer(); ?>

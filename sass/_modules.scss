@@ -132,14 +132,14 @@
 
 // image global
 .img-peripherique{
-	transition: background-position ease-in-out 4s;
+	transition: background-position ease-in-out;
 	margin: 0 auto;
 	background-size: 100%;
 	background-position: top;
 	border-style: solid;
 
 	img{
-		display: none;
+		//display: none;
 	}
 }
 
@@ -167,7 +167,7 @@
 		bottom: calc(-20% - 10px);
 		left: -10px;
 		border-radius: 0 0 7px 7px;
-
+//
 	}
 	
 	// Socle
@@ -235,7 +235,6 @@
 	}
 
 	.img-peripherique{
-		transition: background-position ease-in-out 5s;
 		background-position: bottom;
 	}
 }

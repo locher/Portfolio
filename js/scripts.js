@@ -120,6 +120,7 @@ adapt_hauteur = function(){
 	}
 }
 
+//Le hover des images sur single folio
 scrollhover = function(){
 
 	jQuery('.img-peripherique').mouseover(function(){
@@ -129,6 +130,20 @@ scrollhover = function(){
 	jQuery('.img-peripherique').mouseout(function(){
 		jQuery(this).css('background-position', 'top');
 	});
-	
+
 }
+
+//harmoniser la vitesse du scroll
+scrollvitesse = function(){
+	var vitesse = 1.14;
+
+	jQuery(".img-peripherique img").each(function(){
+		hauteur_image = jQuery(this).height();
+		duree_scroll = hauteur_image / vitesse;
+		
+		jQuery(this).parent().css('transition-duration', duree_scroll+'ms');
+		jQuery(this).hide();
+	});
+}
+
 
