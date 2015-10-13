@@ -37,6 +37,11 @@ if (function_exists('add_theme_support'))
     add_image_size('catfolio-tablette', 175, '', true); // Small Thumbnail
     add_image_size('catfolio-smartphone', 80, '', true); // Small Thumbnail
 
+    //Le folio sur le slider single projet
+    add_image_size('slider-desktop', 1050, '', true); // Small Thumbnail
+    add_image_size('slider-tablette', 400, '', true); // Small Thumbnail
+    add_image_size('slider-smartphone', 200, '', true); // Small Thumbnail
+
     // Add Support for Custom Backgrounds - Uncomment below if you're going to use
     /*add_theme_support('custom-background', array(
 	'default-color' => 'FFF',

@@ -68,28 +68,43 @@
 				<?php //Le 1er slide, c'est l'apercu
 
 					$img_desktop = get_field('image_desktop');
+					$size_desktop = 'slider-desktop';
+					$thumb_desktop = $img_desktop['sizes'][ $size_desktop ];
+					$width_desktop = $img_desktop['sizes'][ $size_desktop . '-width' ];
+					$height_desktop = $img_desktop['sizes'][ $size_desktop . '-height' ];
+
 					$img_tablette = get_field('image_tablette');
+					$size_tablette = 'slider-tablette';
+					$thumb_tablette = $img_tablette['sizes'][ $size_tablette ];
+					$width_tablette = $img_tablette['sizes'][ $size_tablette . '-width' ];
+					$height_tablette = $img_tablette['sizes'][ $size_tablette . '-height' ];
+
+
 					$img_smartphone = get_field('image_smartphone');
+					$size_smartphone = 'slider-smartphone';
+					$thumb_smartphone = $img_smartphone['sizes'][ $size_smartphone ];
+					$width_smartphone = $img_smartphone['sizes'][ $size_smartphone . '-width' ];
+					$height_smartphone = $img_smartphone['sizes'][ $size_smartphone . '-height' ];
 				?>
 
 				<div class="singleslide">
 					<div class="wrapper-img">
 
 						<?php if($img_desktop): ?>
-							<div class="img-desktop img-peripherique" style="background-image: url('<?php echo $img_desktop['url']; ?>')">
-								<img src="<?php echo $img_desktop['url']; ?>">
+							<div class="img-desktop img-peripherique" style="background-image: url('<?php echo $thumb_desktop; ?>')">
+								<img src="<?php echo $thumb_desktop; ?>">
 							</div>					
 						<?php endif; ?>
 
 						<?php if($img_tablette): ?>
-							<div class="img-tablette img-peripherique" style="background-image: url('<?php echo $img_tablette['url']; ?>')">
-								<img src="<?php echo $img_tablette['url']; ?>">
+							<div class="img-tablette img-peripherique" style="background-image: url('<?php echo $thumb_tablette; ?>')">
+								<img src="<?php echo $thumb_tablette; ?>">
 							</div>					
 						<?php endif; ?>
 
 						<?php if($img_smartphone): ?>
-							<div class="img-smartphone img-peripherique" style="background-image: url('<?php echo $img_smartphone['url']; ?>')">
-								<img src="<?php echo $img_smartphone['url']; ?>">
+							<div class="img-smartphone img-peripherique" style="background-image: url('<?php echo $thumb_smartphone; ?>')">
+								<img src="<?php echo $thumb_smartphone; ?>">
 							</div>					
 						<?php endif; ?>
 						
@@ -103,27 +118,46 @@
 				?>
 
 				<?php while ( have_rows('galerie') ) : the_row(); ?>
-				<?php $image_desktop = get_sub_field('image_desktop'); ?>
-				<?php $image_tablette = get_sub_field('image_tablette'); ?>
-				<?php $image_smartphone = get_sub_field('image_smartphone'); ?>
+
+				<?php //Le 1er slide, c'est l'apercu
+
+					$img_desktop = get_sub_field('image_desktop');
+					$size_desktop = 'slider-desktop';
+					$thumb_desktop = $img_desktop['sizes'][ $size_desktop ];
+					$width_desktop = $img_desktop['sizes'][ $size_desktop . '-width' ];
+					$height_desktop = $img_desktop['sizes'][ $size_desktop . '-height' ];
+
+					$img_tablette = get_sub_field('image_tablette');
+					$size_tablette = 'slider-tablette';
+					$thumb_tablette = $img_tablette['sizes'][ $size_tablette ];
+					$width_tablette = $img_tablette['sizes'][ $size_tablette . '-width' ];
+					$height_tablette = $img_tablette['sizes'][ $size_tablette . '-height' ];
+
+
+					$img_smartphone = get_sub_field('image_smartphone');
+					$size_smartphone = 'slider-smartphone';
+					$thumb_smartphone = $img_smartphone['sizes'][ $size_smartphone ];
+					$width_smartphone = $img_smartphone['sizes'][ $size_smartphone . '-width' ];
+					$height_smartphone = $img_smartphone['sizes'][ $size_smartphone . '-height' ];
+				?>
 
 				<div>
 					<div class="wrapper-img">
 						<?php if($image_desktop): ?>
-							<div class="img-desktop img-peripherique" style="background-image: url('<?php echo $image_desktop['url']; ?>')">
-								<img src="<?php echo $image_desktop['url']; ?>">
+							<div class="img-desktop img-peripherique" style="background-image: url('<?php echo $thumb_desktop; ?>')">
+								<img src="<?php echo $thumb_desktop; ?>">
 							</div>					
 						<?php endif; ?>
 
 						<?php if($image_tablette): ?>
-							<div class="img-tablette img-peripherique" style="background-image: url('<?php echo $image_tablette['url']; ?>')">
-								<img src="<?php echo $image_tablette['url']; ?>">
+							<div class="img-tablette img-peripherique" style="background-image: url('<?php echo $thumb_tablette; ?>')">
+								<img src="<?php echo $thumb_tablette; ?>">
 							</div>					
 						<?php endif; ?>
 
 						<?php if($image_smartphone): ?>
-							<div class="img-smartphone img-peripherique" style="background-image: url('<?php echo $image_smartphone['url']; ?>')">
-								<img src="<?php echo $image_smartphone['url']; ?>">
+							<div class="img-smartphone img-peripherique" style="background-image: url('<?php echo $thumb_smartphone; ?>')">
+								<img src="<?php echo $thumb_smartphone; ?>">
 							</div>					
 						<?php endif; ?>
 					</div>
