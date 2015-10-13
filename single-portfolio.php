@@ -211,6 +211,7 @@
 							<?php the_field('date_de_creation'); ?>
 						</div>
 					</div>
+					<?php if(get_field('lien_site')): ?>
 					<a href="<?php the_field('lien_site'); ?>" class="content-mini padAvant">
 						<div>
 							<span>
@@ -221,6 +222,7 @@
 							Voir le site
 						</div>
 					</a>
+					<?php endif; ?>
 				</div>
 
 				<?php 
