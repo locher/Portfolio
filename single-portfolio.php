@@ -68,23 +68,28 @@
 				<?php //Le 1er slide, c'est l'apercu
 
 					$img_desktop = get_field('image_desktop');
-					$size_desktop = 'slider-desktop';
-					$thumb_desktop = $img_desktop['sizes'][ $size_desktop ];
-					$width_desktop = $img_desktop['sizes'][ $size_desktop . '-width' ];
-					$height_desktop = $img_desktop['sizes'][ $size_desktop . '-height' ];
+					if($img_desktop){
+						$size_desktop = 'slider-desktop';
+						$thumb_desktop = $img_desktop['sizes'][ $size_desktop ];
+						$width_desktop = $img_desktop['sizes'][ $size_desktop . '-width' ];
+						$height_desktop = $img_desktop['sizes'][ $size_desktop . '-height' ];
+					}
 
 					$img_tablette = get_field('image_tablette');
-					$size_tablette = 'slider-tablette';
-					$thumb_tablette = $img_tablette['sizes'][ $size_tablette ];
-					$width_tablette = $img_tablette['sizes'][ $size_tablette . '-width' ];
-					$height_tablette = $img_tablette['sizes'][ $size_tablette . '-height' ];
-
+					if($img_tablette){
+						$size_tablette = 'slider-tablette';
+						$thumb_tablette = $img_tablette['sizes'][ $size_tablette ];
+						$width_tablette = $img_tablette['sizes'][ $size_tablette . '-width' ];
+						$height_tablette = $img_tablette['sizes'][ $size_tablette . '-height' ];
+					}
 
 					$img_smartphone = get_field('image_smartphone');
-					$size_smartphone = 'slider-smartphone';
-					$thumb_smartphone = $img_smartphone['sizes'][ $size_smartphone ];
-					$width_smartphone = $img_smartphone['sizes'][ $size_smartphone . '-width' ];
-					$height_smartphone = $img_smartphone['sizes'][ $size_smartphone . '-height' ];
+					if($img_smartphone){
+						$size_smartphone = 'slider-smartphone';
+						$thumb_smartphone = $img_smartphone['sizes'][ $size_smartphone ];
+						$width_smartphone = $img_smartphone['sizes'][ $size_smartphone . '-width' ];
+						$height_smartphone = $img_smartphone['sizes'][ $size_smartphone . '-height' ];
+					}
 				?>
 
 				<div class="singleslide">
@@ -122,23 +127,28 @@
 				<?php
 
 					$img_desktop = get_sub_field('image_desktop');
-					$size_desktop = 'slider-desktop';
-					$thumb_desktop = $img_desktop['sizes'][ $size_desktop ];
-					$width_desktop = $img_desktop['sizes'][ $size_desktop . '-width' ];
-					$height_desktop = $img_desktop['sizes'][ $size_desktop . '-height' ];
+					if($img_desktop){
+						$size_desktop = 'slider-desktop';
+						$thumb_desktop = $img_desktop['sizes'][ $size_desktop ];
+						$width_desktop = $img_desktop['sizes'][ $size_desktop . '-width' ];
+						$height_desktop = $img_desktop['sizes'][ $size_desktop . '-height' ];
+					}
 
 					$img_tablette = get_sub_field('image_tablette');
-					$size_tablette = 'slider-tablette';
-					$thumb_tablette = $img_tablette['sizes'][ $size_tablette ];
-					$width_tablette = $img_tablette['sizes'][ $size_tablette . '-width' ];
-					$height_tablette = $img_tablette['sizes'][ $size_tablette . '-height' ];
-
+					if($img_tablette){
+						$size_tablette = 'slider-tablette';
+						$thumb_tablette = $img_tablette['sizes'][ $size_tablette ];
+						$width_tablette = $img_tablette['sizes'][ $size_tablette . '-width' ];
+						$height_tablette = $img_tablette['sizes'][ $size_tablette . '-height' ];
+					}
 
 					$img_smartphone = get_sub_field('image_smartphone');
-					$size_smartphone = 'slider-smartphone';
-					$thumb_smartphone = $img_smartphone['sizes'][ $size_smartphone ];
-					$width_smartphone = $img_smartphone['sizes'][ $size_smartphone . '-width' ];
-					$height_smartphone = $img_smartphone['sizes'][ $size_smartphone . '-height' ];
+					if($img_smartphone){
+						$size_smartphone = 'slider-smartphone';
+						$thumb_smartphone = $img_smartphone['sizes'][ $size_smartphone ];
+						$width_smartphone = $img_smartphone['sizes'][ $size_smartphone . '-width' ];
+						$height_smartphone = $img_smartphone['sizes'][ $size_smartphone . '-height' ];
+					}
 				?>
 
 				<div>

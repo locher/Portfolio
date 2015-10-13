@@ -11,24 +11,30 @@
 	<?php while ($portfolio->have_posts()) : $portfolio->the_post(); ?>
 
 	<?php 
+
 		$img_desktop = get_field('image_desktop');
-		$size_desktop = 'catfolio-desktop';
-		$thumb_desktop = $img_desktop['sizes'][ $size_desktop ];
-		$width_desktop = $img_desktop['sizes'][ $size_desktop . '-width' ];
-		$height_desktop = $img_desktop['sizes'][ $size_desktop . '-height' ];
+		if($img_desktop){
+			$size_desktop = 'catfolio-desktop';
+			$thumb_desktop = $img_desktop['sizes'][ $size_desktop ];
+			$width_desktop = $img_desktop['sizes'][ $size_desktop . '-width' ];
+			$height_desktop = $img_desktop['sizes'][ $size_desktop . '-height' ];
+		}
 
 		$img_tablette = get_field('image_tablette');
-		$size_tablette = 'catfolio-tablette';
-		$thumb_tablette = $img_tablette['sizes'][ $size_tablette ];
-		$width_tablette = $img_tablette['sizes'][ $size_tablette . '-width' ];
-		$height_tablette = $img_tablette['sizes'][ $size_tablette . '-height' ];
-
+		if($img_tablette){
+			$size_tablette = 'catfolio-tablette';
+			$thumb_tablette = $img_tablette['sizes'][ $size_tablette ];
+			$width_tablette = $img_tablette['sizes'][ $size_tablette . '-width' ];
+			$height_tablette = $img_tablette['sizes'][ $size_tablette . '-height' ];
+		}
 
 		$img_smartphone = get_field('image_smartphone');
-		$size_smartphone = 'catfolio-smartphone';
-		$thumb_smartphone = $img_smartphone['sizes'][ $size_smartphone ];
-		$width_smartphone = $img_smartphone['sizes'][ $size_smartphone . '-width' ];
-		$height_smartphone = $img_smartphone['sizes'][ $size_smartphone . '-height' ];
+		if($img_smartphone){
+			$size_smartphone = 'catfolio-smartphone';
+			$thumb_smartphone = $img_smartphone['sizes'][ $size_smartphone ];
+			$width_smartphone = $img_smartphone['sizes'][ $size_smartphone . '-width' ];
+			$height_smartphone = $img_smartphone['sizes'][ $size_smartphone . '-height' ];
+		}
 	?>
 
 	<a href="<?php the_permalink(); ?>" class="pad-folio" style="background-color: <?php the_field('couleur_de_fond'); ?>">
