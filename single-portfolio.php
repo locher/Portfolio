@@ -119,7 +119,7 @@
 
 				<?php while ( have_rows('galerie') ) : the_row(); ?>
 
-				<?php //Le 1er slide, c'est l'apercu
+				<?php
 
 					$img_desktop = get_sub_field('image_desktop');
 					$size_desktop = 'slider-desktop';
@@ -143,19 +143,19 @@
 
 				<div>
 					<div class="wrapper-img">
-						<?php if($image_desktop): ?>
+						<?php if($img_desktop): ?>
 							<div class="img-desktop img-peripherique" style="background-image: url('<?php echo $thumb_desktop; ?>')">
 								<img src="<?php echo $thumb_desktop; ?>">
 							</div>					
 						<?php endif; ?>
 
-						<?php if($image_tablette): ?>
+						<?php if($img_tablette): ?>
 							<div class="img-tablette img-peripherique" style="background-image: url('<?php echo $thumb_tablette; ?>')">
 								<img src="<?php echo $thumb_tablette; ?>">
 							</div>					
 						<?php endif; ?>
 
-						<?php if($image_smartphone): ?>
+						<?php if($img_smartphone): ?>
 							<div class="img-smartphone img-peripherique" style="background-image: url('<?php echo $thumb_smartphone; ?>')">
 								<img src="<?php echo $thumb_smartphone; ?>">
 							</div>					
@@ -285,7 +285,7 @@
 
 			jQuery('#slides').slidesjs({
 				play: {
-					auto: true,
+					//auto: true,
 					interval: 5000
 				}
 			});
