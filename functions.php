@@ -27,10 +27,10 @@ if (function_exists('add_theme_support'))
 
     // Add Thumbnail Theme Support
     add_theme_support('post-thumbnails');
-    add_image_size('large', 700, '', true); // Large Thumbnail
-    add_image_size('medium', 250, '', true); // Medium Thumbnail
-    add_image_size('small', 120, '', true); // Small Thumbnail
-    add_image_size('custom-size', 700, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
+    add_image_size('custom-large', 1920, '', true); // Large Thumbnail
+    add_image_size('custom-medium', 1200, '', true); // Medium Thumbnail
+    add_image_size('custom-small', 700, '', true); // Small Thumbnail
+    add_image_size('custom-tiny', 400, '', true); // Small Thumbnail
 
     // Add Support for Custom Backgrounds - Uncomment below if you're going to use
     /*add_theme_support('custom-background', array(
@@ -401,7 +401,7 @@ function custom_menu_page_removing() {
      remove_menu_page( 'edit.php' );
      remove_menu_page( 'edit-comments.php' );
       remove_menu_page( 'index.php' ); 
-      remove_menu_page( 'upload.php' );  
+      //remove_menu_page( 'upload.php' );  
 
 }
 add_action( 'admin_menu', 'custom_menu_page_removing' );

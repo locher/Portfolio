@@ -135,7 +135,7 @@ scrollhover = function(){
 
 //harmoniser la vitesse du scroll
 scrollvitesse = function(){
-	var vitesse = 1.14;
+	var vitesse = 0.5;
 
 	jQuery(".img-peripherique img").each(function(){
 		hauteur_image = jQuery(this).height();
