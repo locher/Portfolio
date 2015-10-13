@@ -32,6 +32,11 @@ if (function_exists('add_theme_support'))
     add_image_size('custom-small', 700, '', true); // Small Thumbnail
     add_image_size('custom-tiny', 400, '', true); // Small Thumbnail
 
+    //Les miniatures des projets (sur home et liste folio)
+    add_image_size('catfolio-desktop', 500, '', true); // Small Thumbnail
+    add_image_size('catfolio-tablette', 175, '', true); // Small Thumbnail
+    add_image_size('catfolio-smartphone', 80, '', true); // Small Thumbnail
+
     // Add Support for Custom Backgrounds - Uncomment below if you're going to use
     /*add_theme_support('custom-background', array(
 	'default-color' => 'FFF',

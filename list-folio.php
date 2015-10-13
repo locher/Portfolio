@@ -12,8 +12,23 @@
 
 	<?php 
 		$img_desktop = get_field('image_desktop');
+		$size_desktop = 'catfolio-desktop';
+		$thumb_desktop = $img_desktop['sizes'][ $size_desktop ];
+		$width_desktop = $img_desktop['sizes'][ $size_desktop . '-width' ];
+		$height_desktop = $img_desktop['sizes'][ $size_desktop . '-height' ];
+
 		$img_tablette = get_field('image_tablette');
+		$size_tablette = 'catfolio-tablette';
+		$thumb_tablette = $img_tablette['sizes'][ $size_tablette ];
+		$width_tablette = $img_tablette['sizes'][ $size_tablette . '-width' ];
+		$height_tablette = $img_tablette['sizes'][ $size_tablette . '-height' ];
+
+
 		$img_smartphone = get_field('image_smartphone');
+		$size_smartphone = 'catfolio-smartphone';
+		$thumb_smartphone = $img_smartphone['sizes'][ $size_smartphone ];
+		$width_smartphone = $img_smartphone['sizes'][ $size_smartphone . '-width' ];
+		$height_smartphone = $img_smartphone['sizes'][ $size_smartphone . '-height' ];
 	?>
 
 	<a href="<?php the_permalink(); ?>" class="pad-folio" style="background-color: <?php the_field('couleur_de_fond'); ?>">
@@ -21,20 +36,20 @@
 		<div class="wrapper-img">
 
 			<?php if($img_desktop): ?>
-				<div class="img-desktop img-peripherique" style="background-image: url('<?php echo $img_desktop['url']; ?>')">
-					<img src="<?php echo $img_desktop['url']; ?>">
+				<div class="img-desktop img-peripherique" style="background-image: url('<?php echo $thumb_desktop; ?>')">
+					<img src="<?php echo $thumb_desktop; ?>" width="<?php echo $width_desktop; ?>" height="<?php echo $height_desktop; ?>">
 				</div>					
 			<?php endif; ?>
 
 			<?php if($img_tablette): ?>
-				<div class="img-tablette img-peripherique" style="background-image: url('<?php echo $img_tablette['url']; ?>')">
-					<img src="<?php echo $img_tablette['url']; ?>">
+				<div class="img-tablette img-peripherique" style="background-image: url('<?php echo $thumb_tablette; ?>')">
+					<img src="<?php echo $thumb_tablette; ?>">
 				</div>					
 			<?php endif; ?>
 
 			<?php if($img_smartphone): ?>
-				<div class="img-smartphone img-peripherique" style="background-image: url('<?php echo $img_smartphone['url']; ?>')">
-					<img src="<?php echo $img_smartphone['url']; ?>">
+				<div class="img-smartphone img-peripherique" style="background-image: url('<?php echo $thumb_smartphone; ?>')">
+					<img src="<?php echo $thumb_smartphone; ?>">
 				</div>					
 			<?php endif; ?>
 			
