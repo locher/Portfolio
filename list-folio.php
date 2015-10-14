@@ -76,6 +76,7 @@
 jQuery(window).load(function(){
 
 	resize_screen();
+	scrollvitesse();
 
 	jQuery(window).resize(function(){
 		resize_screen();
