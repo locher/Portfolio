@@ -17,6 +17,10 @@
 		margin-right: 0;
 		margin-bottom: $espace;
 	}
+
+	@include width-below(1400px){
+		padding: $padding $padding/2;
+	}
 }
 
 .about-pads{

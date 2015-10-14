@@ -31,7 +31,7 @@ header{
 	overflow: hidden;
 
 	@include width-below(500px){
-		padding: $padding*0.7;
+		padding: $padding*0.5;
 	}
 }
 
@@ -238,6 +238,17 @@ header{
 
 		&.open{
 			padding-top: 300px;
+		}
+	}
+
+	@include width-below(500px){
+		transition: padding-top ease .3s;
+		padding-top: 0;
+		margin-top: -300px;
+		padding: 50px 0;
+
+		&.open{
+			padding-top: 350px;
 		}
 	}
 

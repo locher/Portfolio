@@ -100,6 +100,10 @@
 		margin-right: 0;
 	}
 
+	@include width-below(425px){
+		padding: $padding*.7 $padding*0.8 $padding*.6;
+	}
+
 	// Pour que le hover ait une transition
 	&::after{
 		transition: background-color ease-in-out .2s;
@@ -114,7 +118,7 @@
 	}	
 
 	.wrapper-img{
-		margin-bottom: 120px;
+		margin-bottom: 35%;
 		position: relative;
 	}
 

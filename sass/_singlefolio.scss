@@ -96,6 +96,10 @@ a.previous-link{
 		max-width: 85%;
 		position: relative;
 		margin: 0 auto;
+
+		@include width-below(500px){
+			max-width: 100%;
+		}
 	}
 
 	.img-peripherique{
@@ -397,12 +401,16 @@ a.previous-link{
 @include width-below(700px){
 
 	.slider{
-		padding: $padding;
+		padding: $padding/2;
 	}
 
 	.wrapper-content > div:nth-child(n){
 		width: 100%;
 		margin-right: 0;
+	}
+
+	.pad1, .pad2{
+		padding: $padding/2;
 	}
 
 	.pad2{
