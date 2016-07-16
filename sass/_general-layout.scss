@@ -6,6 +6,7 @@ html{
 	font-size: 62.5%;
 	background-color: #efefef;
 	font-family: Lato, Hevetica, Arial, sans-serif;
+	font-weight: 500;
 }
 
 body{
@@ -33,29 +34,36 @@ header{
 	@include width-below(500px){
 		padding: $padding*0.5;
 	}
+	
+	min-height: calc(100vh - 2 * #{$espace});
+	display: flex;
+	flex-direction: column;
 }
 
 .img-background{
-	background-size: cover;
-	background-position: center center;
-	background-repeat: no-repeat;
+	z-index: -2;
 	position: absolute;
 	top:0;
 	right: 0;
 	bottom: 0;
 	left:0;
-	z-index: -1;
-	animation: background linear 30s;
+	background-image: linear-gradient(to left, #e74677, $rouge);;
+	
 
 	&:after{
 		content:'';
+		background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat;
 		position: absolute;
 		top:0;
 		right: 0;
 		bottom: 0;
 		left:0;
-		background-color: $rougevif;
-		opacity: .85;
+		animation: background linear 15s;
+		filter: grayscale(100%);
+		opacity: .2;
+		z-index: -1;
 	}
 }
 
@@ -63,38 +71,30 @@ header{
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
+	margin-bottom: -100px;
 }
 
 .logo{
 	flex:2;
-
-	svg{
-		width: 200px;
-		height: auto;		
-
-		@include width-below(400px){
-			width: 150px;
-		}
-
-		@include width-above(1500px){
-			width: 250px;
-		}
-	}
-
-	path{
-		fill: #fff;
+	text-decoration: none;
+	color: #fff;
+	text-transform: uppercase;
+	
+	.site-title{
+		font-size: 5.5rem;
+		font-weight: 900;
 	}
 	
-
-
-
+	.baseline{
+		font-weight: 500;
+		font-size: 1.8rem;
+	}
 }
 
 .nav{
 	
-	font-size: 1.8rem;
-	font-weight: 500;
-	text-transform: uppercase;
+	font-size: 1.75rem;
+	font-weight: 800;
 	z-index: 100;
 
 	@include width-between(1099px, 1300px){
@@ -162,7 +162,8 @@ header{
 			transition: fill ease .25s;
 			display: inline-block;
 			vertical-align: middle;
-			width: 38px;
+			width: 33px;
+			height: 33px;
 			margin-right: 9px;
 			fill: #fff;
 			transform: translateY(-2px);
@@ -225,10 +226,10 @@ header{
 }
 
 .big-header{
-	padding: 175px 0;
+	padding: 100px 0;
 	text-align:center;
-	text-transform: uppercase;
 	color: #fff;
+	margin: auto;
 
 	@include width-below(1099px){
 		transition: padding-top ease .3s;
@@ -254,49 +255,19 @@ header{
 
 	.bt{
 		@extend %bt;
-		font-size: 2.8rem;
-		margin-top: 1em;
+		font-size: 2.25rem;
+		margin-top: 1.5em;
 		position: relative;
 
 		@include width-below(600px){
 			font-size: 2rem;
 		}
-
-		em{
-			display: inline-block;
-			transition: all ease .25s;
-		}
-
-		&::before{
-			transition: all ease .25s;
-			content:'';
-			display: block;
-			position: absolute;
-			width: 10px;
-			background-color: rgba(#fff, 0);
-			left: 0;
-			top:0;
-			bottom: 0;
-			z-index: -1;
-		}
-
-		&:hover{
-
-			&::before{
-				width: 100%;
-				background-color: rgba(#fff, .25);
-			}
-
-			em{
-				transform: rotate(90deg);
-			}
-		}
 	}
 }
 
 .big-title{	
-	font-size: 8rem;
-	font-weight: 800;
+	font-size: 8.5rem;
+	font-weight: 900;
 
 	@include width-below(1300px){
 		font-size: 7rem;
@@ -319,7 +290,7 @@ header{
 .sous-title{
 	font-size: 3.5rem;
 	line-height: 1.1em;
-	font-weight: 500;
+	font-weight: 800;
 
 	@include width-below(1300px){
 		font-size: 3rem;
