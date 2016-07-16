@@ -145,13 +145,13 @@ header{
 				width: 0;
 				background-color: #fff;
 				right: 0;
-				bottom: 1em;
+				bottom: 0;
 				right: 1.5em;
 				opacity: 0;
 			}
 
 			&:hover::before{
-				width: 24%;
+				width: calc(100% - 3em);
 				opacity: 1;
 				background-color: rgba(#fff, .6);
 			}
@@ -169,23 +169,21 @@ header{
 			transform: translateY(-2px);
 		}
 
-		&:hover,
-		&:focus{
-
-			color: rgba(#fff, .6);
-
-			svg{
-				fill: rgba(#fff, .6);
-			}
-		}
 	}
 
 	.current-menu-item a{
-		color: rgba(#fff, .6);
-
-		svg{
-			fill: rgba(#fff, .6);
-		}
+			&::before{
+				transition: all ease .25s .05s;
+				content:'';
+				position: absolute;
+				height: 2px;
+				background-color: #fff;
+				right: 0;
+				bottom: 0;
+				right: 1.5em;
+				width: calc(100% - 3em);
+				opacity: 1;
+			}
 	}
 }
 
