@@ -43,19 +43,25 @@
 
 			<?php if($img_desktop): ?>
 				<div class="img-desktop img-peripherique" style="background-image: url('<?php echo $thumb_desktop; ?>')">
-					<img src="<?php echo $thumb_desktop; ?>" width="<?php echo $width_desktop; ?>" height="<?php echo $height_desktop; ?>">
+					<div class="wrapper-peripherique">
+						<img src="<?php echo $thumb_desktop; ?>" width="<?php echo $width_desktop; ?>" height="<?php echo $height_desktop; ?>">
+					</div>
 				</div>					
 			<?php endif; ?>
 
 			<?php if($img_tablette): ?>
 				<div class="img-tablette img-peripherique" style="background-image: url('<?php echo $thumb_tablette; ?>')">
-					<img src="<?php echo $thumb_tablette; ?>">
+					<div class="wrapper-peripherique">
+						<img src="<?php echo $thumb_tablette; ?>">
+					</div>
 				</div>					
 			<?php endif; ?>
 
 			<?php if($img_smartphone): ?>
 				<div class="img-smartphone img-peripherique" style="background-image: url('<?php echo $thumb_smartphone; ?>')">
-					<img src="<?php echo $thumb_smartphone; ?>">
+					<div class="wrapper-peripherique">
+						<img src="<?php echo $thumb_smartphone; ?>">
+					</div>	
 				</div>					
 			<?php endif; ?>
 			
