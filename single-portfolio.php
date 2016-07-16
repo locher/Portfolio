@@ -1,7 +1,10 @@
 <?php get_header(); ?>
-
-		<style>
-			.img-background::after,
+		
+		<style>			
+			.img-background{
+				background-color: <?php the_field('couleur_de_fond'); ?>;
+			}
+			
 			.slider,
 			.padAvant{
 				background-color: <?php the_field('couleur_de_fond'); ?> !important;
