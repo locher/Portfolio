@@ -24,6 +24,12 @@ img{
 	display: none;
 }
 
+.content{
+	background-color: #fff;
+	padding: $padding;
+	text-align: center;
+}
+
 //HEADER
 
 header{
@@ -375,7 +381,9 @@ header{
 
 	p{
 		line-height: 1.5em;
-		margin-bottom: 1em;
+		max-width: 800px;
+		margin: 0 auto 1em;
+		font-size: 1.5rem;
 
 		strong{
 			font-weight: bold;
