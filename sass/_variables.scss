@@ -3,7 +3,7 @@ $gris: #ffffff;
 $grisfonce: #efefef;
 $noir: #2b2b2b;
 
-$espace: 8px;
+$espace: 7px;
 $padding: 45px;
 
 //Mixins
@@ -53,16 +53,4 @@ $padding: 45px;
 	font-weight: 800;
 	margin-bottom: .35em;
 	line-height: 1.2em;
-}
-
-//Animations
-
-@keyframes background{
-	from{
-		//transform: scale(1.2);
-	}
-
-	to{
-		//transform: scale(1);
-	}
 }

@@ -141,7 +141,7 @@ scrollvitesse = function(){
 		hauteur_image = jQuery(this).height();
 		duree_scroll = hauteur_image / vitesse;
 		
-		jQuery(this).parent().parent().find('.img-peripherique').css('transition-duration', duree_scroll+'ms');
+		jQuery(this).parent().parent().parent().find('.img-peripherique').css('transition-duration', duree_scroll+'ms');
 		jQuery(this).hide();
 	});
 }

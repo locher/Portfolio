@@ -97,6 +97,29 @@ function html5blank_nav()
 	);
 }
 
+function offre_nav()
+{
+	wp_nav_menu(
+	array(
+		'menu'            => 'offres',
+		'container'       => 'div',
+		'container_class' => 'menu-{menu slug}-container',
+		'container_id'    => '',
+		'menu_class'      => 'menu',
+		'menu_id'         => '',
+		'echo'            => true,
+		'fallback_cb'     => 'wp_page_menu',
+		'before'          => '',
+		'after'           => '',
+		'link_before'     => '',
+		'link_after'      => '',
+		'items_wrap'      => '<ul>%3$s</ul>',
+		'depth'           => 0,
+		'walker'          => ''
+		)
+	);
+}
+
 // Load HTML5 Blank scripts (header.php)
 function html5blank_header_scripts()
 {
@@ -387,6 +410,35 @@ function portfolio_taxonomy()
 }
 
 add_action('init', 'portfolio_taxonomy'); // Add our HTML5 Blank Custom Post Type
+
+// Offres
+function offres_taxonomy()
+{
+    register_taxonomy_for_object_type('category', 'offres'); // Register Taxonomies for Category
+    register_post_type('offres', // Register Custom Post Type
+        array(
+        'labels' => array(
+            'name' => __('Offres', 'html5blank'),
+            'singular_name' => __('Offre', 'html5blank')
+        ),
+        'public' => true,
+        'hierarchical' => false,
+        'has_archive' => true,
+        'supports' => array(
+            'title',
+            'editor',
+            'excerpt',
+            'thumbnail'
+        ), // Go to Dashboard Custom HTML5 Blank post for supports
+        'can_export' => true, // Allows export in Tools > Export
+        'taxonomies' => array(
+            'category'
+        ),
+        'menu_icon' => 'dashicons-megaphone'
+    ));
+}
+
+add_action('init', 'offres_taxonomy'); // Add our HTML5 Blank Custom Post Type
 
 /*------------------------------------*\
 	ShortCode Functions

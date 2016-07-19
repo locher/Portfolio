@@ -199,8 +199,6 @@
 			<a href="<?php the_field('lien_site'); ?>" class="more-bt">Voir le site</a>
 		<?php endif; ?>
 			
-		</div>
-	
 	</main>
 
 	<script>

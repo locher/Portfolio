@@ -11,10 +11,52 @@
 	<!-- /header -->
 
 	<main role="main">
+		
+		<section class="offre-wrapper">
+			<div class="section-title">
+				<h2>Compétences</h2>
+				<p>Vous avez un besoin ? Nous avons des solutions</p>
+			</div>
+			
+			<div class="img-args">
+				<img src="<?php echo get_template_directory_uri(); ?>/img/peripheriques.png" alt="">
+			
+			
+				<div class="argu">
+					
+					<?php 
+						$offres = new WP_Query(array(
+							'post_type'=>'offres'
+						));
+					?>
+
+					<?php if ($offres->have_posts()): ?>
+					<?php while ($offres->have_posts()) : $offres->the_post(); ?>
+				
+					<div>
+						<h3><?php the_title();?></h3>
+						<p><?php the_excerpt();?></p>
+						<a href="<?php the_permalink();?>">+ d'info</a>
+					</div>
+					
+					<?php endwhile;?>
+					<?php endif; ?>
+					<?php wp_reset_query(); ?>
+					
+				</div>
+			
+			</div>
+			
+		</section>
 
 		<?php 
 			if( have_rows('points_feature') ):
 		?>
+		
+		<div class="section-title">
+			<h2>Méthodologie</h2>
+			<p>Prout prout</p>
+		</div>
 
 		<section class="wrapper-pads">
 
