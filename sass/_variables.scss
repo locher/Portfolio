@@ -53,4 +53,8 @@ $padding: 45px;
 	font-weight: 800;
 	margin-bottom: .35em;
 	line-height: 1.2em;
+	
+	@include width-below(600px){
+		font-size: 3.5rem;
+	}
 }

@@ -411,6 +411,10 @@ header{
 		font-size: 5rem;
 		font-weight: 900;
 		margin-bottom: 5px;
+		
+		@include width-below(600px){
+			font-size: 3.5rem;
+		}
 	}
 	
 	p{
