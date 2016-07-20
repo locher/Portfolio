@@ -564,11 +564,19 @@ header{
 		&:hover{
 			color: $rouge;
 		}
+		
+		@include width-below(800px){
+			border-bottom-width: 3px;
+		}
 	}
 
 	.current-menu-item a,
 	.current-menu a{
 		border-bottom: 6px solid $rouge;
 		color: $rouge;
+		
+		@include width-below(800px){
+			border-bottom-width: 3px;
+		}
 	}
 }
