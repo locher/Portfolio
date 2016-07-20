@@ -86,7 +86,7 @@
 	}
 
 	//Sous 1400px, portofolio sur 3 colonnes 
-	@include width-below(1400px){
+	@include width-between(1150px, 1400px){
 		width: calc(100%/3 - #{$espace}*2/3);
 
 		&:nth-child(3n){
@@ -95,7 +95,7 @@
 	}
 
 	//Sous 1150px, portofolio sur 2 colonnes 
-	@include width-below(1150px){
+	@include width-between(700px, 1150px){
 		width: calc(100%/2 - #{$espace}/2);
 
 		&:nth-child(2n){
