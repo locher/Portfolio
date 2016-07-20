@@ -1,4 +1,11 @@
 <?php /* Template Name: Homepage */ get_header(); ?>
+		
+		<a class="ico-scroll" id="bt-scroll" >
+				<div class="icons-scroll">
+					<svg viewBox="0 0 100 100" height="30px" width="30px" class="icon"><use xlink:href="#icon-mouse"></use></svg>
+				</div>
+				
+		</a>
 
 		<div class="big-header">
 
@@ -12,7 +19,7 @@
 	</header>
 	<!-- /header -->
 
-	<main role="main">
+	<main role="main" id="main">
 		
 		<section class="offre-wrapper">
 			<div class="section-title">
@@ -77,5 +84,11 @@
 		<?php include('list-folio.php'); ?>
 
 	</main>
+	
+	<script>
+jQuery('#bt-scroll').click(function(){
+	console.log('clic');
+	jQuery(document).scrollTo(jQuery('#main'), 400);
+});</script>
 
 <?php get_footer(); ?>

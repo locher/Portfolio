@@ -81,8 +81,7 @@ body:not(.single-portfolio) .img-background{
 .wrapper-top{
 	display: flex;
 	align-items: center;
-	flex-wrap: wrap;
-	margin-bottom: -100px;
+	flex-wrap: wrap;	
 }
 
 .logo{
@@ -94,11 +93,27 @@ body:not(.single-portfolio) .img-background{
 	.site-title{
 		font-size: 5.5rem;
 		font-weight: 900;
+		
+		@include width-below(1000px){
+			font-size: 4.5rem;
+		}
+		
+		@include width-below(400px){
+			font-size: 3.5rem;
+		}
 	}
 	
 	.baseline{
 		font-weight: 500;
 		font-size: 1.8rem;
+		
+		@include width-below(1000px){
+			font-size: 1.45rem;
+		}
+		
+		@include width-below(400px){
+			text-transform: none;
+		}
 	}
 }
 
@@ -108,27 +123,27 @@ body:not(.single-portfolio) .img-background{
 	font-weight: 800;
 	z-index: 100;
 
-	@include width-between(1099px, 1300px){
+	@include width-below(1200px){
 		font-size: 1.5rem;
 	}
 	
 
-	@include width-below(1099px){
+	@include width-below(950px){
 		transition: all ease .3s;
 		width: 100%;
 		padding-top: 50px;
-		transform: scaleY(0);
+		display: none;
 		transform-origin: center top;
 	}
 
 	&.open{
-		transform: scaleY(1);
+		display: block;
 	}
 
 	li{
 		display: inline-block;
 
-		@include width-below(1099px){
+		@include width-below(950px){
 			width: 100%;
 			text-align: center;
 
@@ -146,7 +161,7 @@ body:not(.single-portfolio) .img-background{
 		padding: 1em 1.5em;
 		position: relative;
 
-		@include width-above(1100px){
+		@include width-above(950px){
 
 			&::before{
 				transition: all ease .25s .05s;
@@ -160,11 +175,15 @@ body:not(.single-portfolio) .img-background{
 				right: 1.5em;
 				opacity: 0;
 			}
+			
+			@include width-above(951px){
 
-			&:hover::before{
-				width: calc(100% - 3em);
-				opacity: 1;
-				background-color: rgba(#fff, .6);
+				&:hover::before{
+					width: calc(100% - 3em);
+					opacity: 1;
+					background-color: rgba(#fff, .6);
+				}
+				
 			}
 
 		}
@@ -181,32 +200,36 @@ body:not(.single-portfolio) .img-background{
 		}
 
 	}
+	
+	@include width-above(951px){
 
-	.current-menu-item a{
-			&::before{
-				transition: all ease .25s .05s;
-				content:'';
-				position: absolute;
-				height: 2px;
-				background-color: #fff;
-				right: 0;
-				bottom: 0;
-				right: 1.5em;
-				width: calc(100% - 3em);
-				opacity: 1;
-			}
+		.current-menu-item a{
+				&::before{
+					transition: all ease .25s .05s;
+					content:'';
+					position: absolute;
+					height: 2px;
+					background-color: #fff;
+					right: 0;
+					bottom: 0;
+					right: 1.5em;
+					width: calc(100% - 3em);
+					opacity: 1;
+				}
+		}
+		
 	}
 }
 
 .bt-menu{
 
 	font-size: 1.8rem;
-	font-weight: 500;
-	text-transform: uppercase;
+	font-weight: 900;
+	
 	color: #fff;
 	cursor: pointer;
 
-	@include width-above(1100px){
+	@include width-above(951px){
 		display: none;
 	}
 
@@ -240,28 +263,6 @@ header{
 	color: #fff;
 	margin: auto;
 
-	@include width-below(1099px){
-		transition: padding-top ease .3s;
-		padding-top: 0;
-		margin-top: -250px;
-		padding: 100px 0;
-
-		&.open{
-			padding-top: 300px;
-		}
-	}
-
-	@include width-below(500px){
-		transition: padding-top ease .3s;
-		padding-top: 0;
-		margin-top: -300px;
-		padding: 50px 0;
-
-		&.open{
-			padding-top: 350px;
-		}
-	}
-
 	.bt{
 		@extend %bt;
 		font-size: 2.25rem;
@@ -278,21 +279,13 @@ header{
 	font-size: 8.5rem;
 	font-weight: 900;
 
-	@include width-below(1300px){
+	@include width-below(1000px){
 		font-size: 7rem;
 	}
 
 	@include width-below(600px){
 		font-size: 5rem;
 		margin-bottom: .15em;
-	}
-
-	@include width-below(600px){
-		font-size: 4rem;
-	}
-
-	@include width-below(400px){
-		font-size: 3rem;
 	}
 }
 
@@ -301,7 +294,7 @@ header{
 	line-height: 1.1em;
 	font-weight: 800;
 
-	@include width-below(1300px){
+	@include width-below(1000px){
 		font-size: 3rem;
 	}
 

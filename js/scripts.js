@@ -145,5 +145,3 @@ scrollvitesse = function(){
 		jQuery(this).hide();
 	});
 }
-
-

@@ -109,13 +109,3 @@
 	</style>
 
 		<span class="img-background"></span>
-		
-		<?php if ( is_front_page()) : ?>
-		
-			<div class="ico-scroll">
-				<div class="icons-scroll">
-					<svg viewBox="0 0 100 100" height="30px" width="30px" class="icon"><use xlink:href="#icon-mouse"></use></svg>
-				</div>
-				
-			</div>
-		<?php endif;?>
