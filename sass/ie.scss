@@ -1,0 +1,87 @@
+@import "reset";
+@import "breakpoints";
+
+@import "variables";
+
+.ie9{
+	.logo,
+	.nav{
+		display: inline-block;
+		vertical-align: middle;
+	}
+	
+	.nav{
+		position: absolute;
+		right: 0;
+	}
+	
+	.header{
+		background: $rouge;
+		background-image: linear-gradient(to left, adjust-hue($rouge, -18deg), $rouge) !important
+	}
+	
+	.ico-scroll .icons-scroll::before,
+	.ico-scroll .icons-scroll::after{
+		display: none;
+	}
+	
+	.argu div{
+		position: static;
+		margin: 0 auto;
+		text-align: center !important;
+	}
+
+	.img-args{
+		max-width: 100%;
+		
+		img{
+			max-width: 1000px;
+		}
+	}
+	
+	.pad-folio,
+	.pad-argument{
+		display: inline-block;
+		width: calc((100% - 5*#{$espace}) / 4);
+		
+		//Sous 1400px, portofolio sur 3 colonnes 
+		@include width-between(1150px, 1400px){
+			width: calc((100% - 4*#{$espace}) / 3);
+
+			&:nth-child(3n){
+				margin-right: 0;
+			}
+		}
+
+		//Sous 1150px, portofolio sur 2 colonnes 
+		@include width-between(700px, 1150px){
+			width: calc((100% - 3*#{$espace}) / 2);
+
+			&:nth-child(2n){
+				margin-right: 0;
+			}
+		}
+
+		//Sous 700px, portofolio sur 1 colonne 
+		@include width-below(700px){
+			width: 100%;
+			margin-right: 0;
+		}
+	}
+	
+	.about-content,
+	.about-pads{
+		display: table-cell;
+		width: 50%;
+		vertical-align: top;
+	}
+	
+	a.contact{
+		display: none;
+	}
+	
+	.pad-argument{
+		display: table-cell;
+		width: 33%;
+	}
+}

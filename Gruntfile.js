@@ -25,6 +25,14 @@ module.exports = function(grunt){
 					style: 'expanded',
 				},
 			},
+			dev: {
+				files: {
+					'ie.css': 'sass/ie.scss',
+				},
+				options:{
+					style: 'expanded',
+				},
+			},
 		},
 		autoprefixer: {
 			options: {
