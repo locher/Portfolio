@@ -48,6 +48,15 @@
 		font-weight: 500;
 		line-height: 1.25em;
 	}
+	
+	a{
+		transition: color ease .2s;
+		color: $rouge;
+		
+		&:hover{
+			color: adjust-hue($rouge, -18deg);
+		}
+	}
 }
 
 // LE PORTFOLIO

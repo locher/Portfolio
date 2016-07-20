@@ -428,7 +428,8 @@ function offres_taxonomy()
             'title',
             'editor',
             'excerpt',
-            'thumbnail'
+            'thumbnail',
+			'page-attributes'
         ), // Go to Dashboard Custom HTML5 Blank post for supports
         'can_export' => true, // Allows export in Tools > Export
         'taxonomies' => array(

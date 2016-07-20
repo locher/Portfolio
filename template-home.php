@@ -27,7 +27,9 @@
 					
 					<?php 
 						$offres = new WP_Query(array(
-							'post_type'=>'offres'
+							'post_type'=>'offres',
+							'order_by' => 'menu_order',
+							'order' => 'asc'
 						));
 					?>
 

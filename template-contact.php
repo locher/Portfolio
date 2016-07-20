@@ -24,7 +24,7 @@
 						<use xlink:href="#icon-phone"></use>
 					</svg>
 					<h2>Téléphone</h2>
-					<p><?php the_field('telephone'); ?></p>
+					<p><a href="tel:<?php the_field('telephone'); ?>"><?php the_field('telephone'); ?></a></p>
 				</div>
 			</div>
 
@@ -34,7 +34,7 @@
 						<use xlink:href="#icon-mail"></use>
 					</svg>
 					<h2>Mail</h2>
-					<p><?php the_field('mail'); ?></p>
+					<p><a href="mailto:<?php the_field('mail'); ?>"><?php the_field('mail'); ?></a></p>
 				</div>
 			</div>
 
