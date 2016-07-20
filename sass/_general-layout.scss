@@ -425,7 +425,16 @@ header{
 	text-align: center;
 	background: linear-gradient(to bottom, #fff, $grisfonce);
 	padding: 1.5*$padding $padding 175px;
-	margin-bottom: $padding;
+	margin-bottom: 75px;
+	
+	@include width-below(1000px){
+		margin-bottom: 100px;
+	}
+	
+	@include width-below(950px){
+		margin-bottom: 0;
+		padding-bottom: $padding;
+	}
 	
 	.img-args{
 		position: relative;
@@ -434,42 +443,59 @@ header{
 	
 	.img-args img{
 		max-width: 50%;
+		
+		@include width-below(950px){
+			max-width: 90%;
+		}
 	}
 }
 
 .argu{
 	
 	div{
-		position:absolute;
-		max-width: 25%;
-		z-index: 1000;
-		padding: $padding/2;
 		
-		&:nth-child(1){
-			text-align: right;
-			top: 10%;
-			left: 4%;
+		@include width-above(949px){
 			
-			h3::after{
-				right: 0;
+			position:absolute;
+			max-width: 25%;
+			z-index: 1000;
+			padding: $padding/2;
+
+			&:nth-child(1){
+				text-align: right;
+				top: 4%;
+				left: 4%;
+
+				@include width-below(1250px){
+					top:0;
+					left: 2%;
+				}
+
+				h3::after{
+					right: 0;
+				}
+
 			}
-			
+
+			&:nth-child(2){
+				text-align: left;
+				right: calc(-.5% + #{$padding}/2);
+				top: calc(52.9% - #{$padding}/2);
+			}
+
+			&:nth-child(3){
+				text-align: right;
+				right: calc(58% - #{$padding}/2;
+				top: 95.5%;
+
+				h3::after{
+					right: 0;
+				}
+			}
 		}
 		
-		&:nth-child(2){
-			text-align: left;
-			right: calc(-.5% + #{$padding}/2);
-			top: calc(52.9% - #{$padding}/2);
-		}
-		
-		&:nth-child(3){
-			text-align: right;
-			right: calc(58% - #{$padding}/2;
-			top: 95.5%;
-				
-			h3::after{
-				right: 0;
-			}
+		@include width-below(950px){
+			margin-top: $padding;
 		}
 
 	}
