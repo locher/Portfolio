@@ -88,7 +88,6 @@
 	
 	<script>
 jQuery('#bt-scroll').click(function(){
-	console.log('clic');
 	jQuery(document).scrollTo(jQuery('#main'), 400);
 });</script>
 

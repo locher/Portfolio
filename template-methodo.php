@@ -57,7 +57,7 @@
 		
 		<div class="section-title">
 			<h2>Méthodologie</h2>
-			<p>Prout prout</p>
+			<p>Comment se passe un projet ?</p>
 		</div>
 
 		<section class="wrapper-pads">

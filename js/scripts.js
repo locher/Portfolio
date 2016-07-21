@@ -146,9 +146,15 @@ scrollvitesse = function(){
 	});
 }
 
+//Animations
 
-	
-window.sr = ScrollReveal({mobile: false});
-
-//home header
-sr.reveal('a.pad-folio');
+window.sr = ScrollReveal({mobile:false});
+sr.reveal('.wrapper-top');
+sr.reveal('.big-header h1');
+sr.reveal('.sous-title');
+sr.reveal('.pad-argument', 50);
+sr.reveal('.infos > *', 50);
+sr.reveal('.nav_secondary li', 50);
+sr.reveal('.wrapper-folio a', { delay: 100, distance: '100px' });
+sr.reveal('.offre-wrapper > *', 100);
+sr.reveal('.content > *', 100);
