@@ -159,3 +159,4 @@ sr.reveal('.nav_secondary li', 50);
 sr.reveal('.wrapper-folio a', { delay: 100, distance: '100px' });
 sr.reveal('.offre-wrapper > *', 100);
 sr.reveal('.content > *', 100);
+sr.reveal('.footer', 200);

@@ -1,0 +1,16 @@
+.footer{
+	background-color: #fff;
+	padding: 15px $padding 12px;
+	text-align: center;
+	font-size: 1.3rem;
+	
+	a{
+		transition: color ease .2s;
+		color: #727272;
+		text-decoration: none;
+		
+		&:hover{
+			color: $rouge;
+		}
+	}
+}
