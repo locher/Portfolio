@@ -152,6 +152,7 @@ window.sr = ScrollReveal({mobile:false});
 sr.reveal('.wrapper-top');
 sr.reveal('.big-header h1');
 sr.reveal('.sous-title');
+sr.reveal('.big-title');
 sr.reveal('.pad-argument', 50);
 sr.reveal('.infos > *', 50);
 sr.reveal('.nav_secondary li', 50);
