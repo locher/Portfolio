@@ -20,13 +20,6 @@ module.exports = function(grunt){
 			dev: {
 				files: {
 					'style.css': 'sass/styles.scss',
-				},
-				options:{
-					style: 'expanded',
-				},
-			},
-			dev: {
-				files: {
 					'ie.css': 'sass/ie.scss',
 				},
 				options:{

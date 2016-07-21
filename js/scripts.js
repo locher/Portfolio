@@ -145,3 +145,10 @@ scrollvitesse = function(){
 		jQuery(this).hide();
 	});
 }
+
+
+	
+window.sr = ScrollReveal({mobile: false});
+
+//home header
+sr.reveal('a.pad-folio');
