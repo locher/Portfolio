@@ -28,7 +28,7 @@
 			</div>
 			
 			<div class="img-args">
-				<img src="<?php echo get_template_directory_uri(); ?>/img/peripheriques.png" alt="">
+				<img src="<?php echo get_template_directory_uri(); ?>/img/peripherique_home.png" alt="">
 			
 				<div class="argu">
 					
