@@ -1,6 +1,6 @@
 			<!-- footer -->
 			<footer class="footer" role="contentinfo">
-
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>mentions-legales">Mentions légales</a>
 			</footer>
 			<!-- /footer -->
 
@@ -8,8 +8,6 @@
 		<!-- /wrapper -->
 
 		<?php wp_footer(); ?>
-
-		<?php include_once("analytics.php") ?>
 
 	</body>
 </html>

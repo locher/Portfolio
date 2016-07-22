@@ -3,6 +3,7 @@
 .wrapper-pads{
 	display: flex;
 	flex-wrap:wrap;
+	justify-content: center;
 }
 
 .pad-argument{
@@ -39,7 +40,6 @@
 
 	h2{
 		font-size: 2.5rem;
-		text-transform: uppercase;
 		font-weight: 800;
 		margin-bottom: .35em;
 	}
@@ -47,6 +47,15 @@
 	p{
 		font-weight: 500;
 		line-height: 1.25em;
+	}
+	
+	a{
+		transition: color ease .2s;
+		color: $rouge;
+		
+		&:hover{
+			color: adjust-hue($rouge, -18deg);
+		}
 	}
 }
 
@@ -77,7 +86,7 @@
 	}
 
 	//Sous 1400px, portofolio sur 3 colonnes 
-	@include width-below(1400px){
+	@include width-between(1150px, 1400px){
 		width: calc(100%/3 - #{$espace}*2/3);
 
 		&:nth-child(3n){
@@ -86,7 +95,7 @@
 	}
 
 	//Sous 1150px, portofolio sur 2 colonnes 
-	@include width-below(1150px){
+	@include width-between(700px, 1150px){
 		width: calc(100%/2 - #{$espace}/2);
 
 		&:nth-child(2n){
@@ -123,13 +132,14 @@
 	}
 
 	h2{
-		@extend %h2;
 		color: #fff;
+		font-size: 2.5rem;
+		font-weight: 900;
+		margin-bottom: .2em;
 	}
 
 	p{
-		text-transform: uppercase;
-		font-weight: 500;
+		font-weight: 800;
 		color: #fff;
 	}
 }
@@ -243,7 +253,7 @@
 	z-index: 0;
 
 	&::after{
-		background-color: rgba(#000, .3);
+		background-color: rgba(#000, .15);
 	}
 
 	.wrapper-img,

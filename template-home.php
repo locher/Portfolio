@@ -1,4 +1,11 @@
 <?php /* Template Name: Homepage */ get_header(); ?>
+		
+		<a class="ico-scroll" id="bt-scroll" >
+				<div class="icons-scroll">
+					<svg viewBox="0 0 100 100" height="30px" width="30px" class="icon"><use xlink:href="#icon-mouse"></use></svg>
+				</div>
+				
+		</a>
 
 		<div class="big-header">
 
@@ -12,7 +19,45 @@
 	</header>
 	<!-- /header -->
 
-	<main role="main">
+	<main role="main" id="main">
+		
+		<section class="offre-wrapper">
+			<div class="section-title">
+				<h2>Les offres</h2>
+				<p>Vous avez un besoin ? Nous avons des solutions</p>
+			</div>
+			
+			<div class="img-args">
+				<img src="<?php echo get_template_directory_uri(); ?>/img/peripherique_home.png" alt="">
+			
+				<div class="argu">
+					
+					<?php 
+						$offres = new WP_Query(array(
+							'post_type'=>'offres',
+							'order_by' => 'menu_order',
+							'order' => 'asc'
+						));
+					?>
+
+					<?php if ($offres->have_posts()): ?>
+					<?php while ($offres->have_posts()) : $offres->the_post(); ?>
+				
+					<div>
+						<h3><?php the_title();?></h3>
+						<p><?php the_excerpt();?></p>
+						<a href="<?php the_permalink();?>">+ d'info</a>
+					</div>
+					
+					<?php endwhile;?>
+					<?php endif; ?>
+					<?php wp_reset_query(); ?>
+					
+				</div>
+			
+			</div>
+			
+		</section>
 
 		<?php 
 			if( have_rows('points_feature') ):
@@ -40,5 +85,10 @@
 		<?php include('list-folio.php'); ?>
 
 	</main>
+	
+	<script>
+jQuery('#bt-scroll').click(function(){
+	jQuery(document).scrollTo(jQuery('#main'), 400);
+});</script>
 
 <?php get_footer(); ?>

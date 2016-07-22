@@ -1,0 +1,107 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.ie9 .logo,
+.ie9 .nav {
+  display: inline-block;
+  vertical-align: middle; }
+
+.ie9 .nav {
+  position: absolute;
+  right: 0; }
+
+.ie9 .header {
+  background: #e84a4a;
+  background-image: linear-gradient(to left, #e84a79, #e84a4a) !important; }
+
+.ie9 .ico-scroll .icons-scroll::before,
+.ie9 .ico-scroll .icons-scroll::after {
+  display: none; }
+
+.ie9 .argu div {
+  position: static;
+  margin: 0 auto;
+  text-align: center !important; }
+
+.ie9 .img-args {
+  max-width: 100%; }
+  .ie9 .img-args img {
+    max-width: 1000px; }
+
+.ie9 .pad-folio,
+.ie9 .pad-argument {
+  display: inline-block;
+  width: calc((100% - 5*7px) / 4); }
+  @media only screen and (min-width: 1150px) and (max-width: 1399px) {
+    .ie9 .pad-folio,
+    .ie9 .pad-argument {
+      width: calc((100% - 4*7px) / 3); }
+      .ie9 .pad-folio:nth-child(3n),
+      .ie9 .pad-argument:nth-child(3n) {
+        margin-right: 0; } }
+  @media only screen and (min-width: 700px) and (max-width: 1149px) {
+    .ie9 .pad-folio,
+    .ie9 .pad-argument {
+      width: calc((100% - 3*7px) / 2); }
+      .ie9 .pad-folio:nth-child(2n),
+      .ie9 .pad-argument:nth-child(2n) {
+        margin-right: 0; } }
+  @media only screen and (max-width: 700px) {
+    .ie9 .pad-folio,
+    .ie9 .pad-argument {
+      width: 100%;
+      margin-right: 0; } }
+
+.ie9 .about-content,
+.ie9 .about-pads {
+  display: table-cell;
+  width: 50%;
+  vertical-align: top; }
+
+.ie9 a.contact {
+  display: none; }
+
+.ie9 .pad-argument {
+  display: table-cell;
+  width: 33%; }
+
+/*# sourceMappingURL=ie.css.map */

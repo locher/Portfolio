@@ -1,7 +1,16 @@
 <?php 
 	$portfolio = new WP_Query(array(
-		'post_type'=>'portfolio'
+		'post_type'=>'portfolio',
 	));
+
+	if ( is_front_page()){
+
+	$portfolio = new WP_Query(array(
+		'post_type'=>'portfolio',
+		'posts_per_page' => '8'
+	));
+			
+	}
 ?>
 
 <?php if ($portfolio->have_posts()): ?>

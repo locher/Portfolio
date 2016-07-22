@@ -1,21 +1,25 @@
-$rouge: #d55252;
-$rougevif: #d54040;
+$rouge: #e84a4a;
 $gris: #ffffff;
 $grisfonce: #efefef;
 $noir: #2b2b2b;
 
-$espace: 5px;
+$espace: 7px;
 $padding: 45px;
 
 //Mixins
 
 %bt{
+	transition: border ease .25s;
 	display: inline-block;
 	color: #fff;
-	text-transform: uppercase;
 	text-decoration: none;
 	padding: 1em 1.5em .9em;
 	border: 2px solid #fff;
+	font-weight: 800;
+	
+	&:hover{
+		border: 2px solid rgba(#fff, .5);
+	}
 }
 
 @mixin anim-points{
@@ -45,21 +49,12 @@ $padding: 45px;
 }
 
 %h2{
-	font-size: 2.5rem;
-	text-transform: uppercase;
+	font-size: 5rem;
 	font-weight: 800;
 	margin-bottom: .35em;
 	line-height: 1.2em;
-}
-
-//Animations
-
-@keyframes background{
-	from{
-		transform: scale(1.5);
-	}
-
-	to{
-		transform: scale(1);
+	
+	@include width-below(600px){
+		font-size: 3.5rem;
 	}
 }

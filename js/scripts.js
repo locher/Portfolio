@@ -18,9 +18,9 @@ resize_screen = function(){
 }
 
 icones_menu = function(){
+	jQuery('nav .accueil a').prepend('<svg viewBox="0 0 100 100" class="icon"><use xlink:href="#icon-home"></use></svg>');
 	jQuery('nav .realisation a').prepend('<svg viewBox="0 0 100 100" class="icon"><use xlink:href="#icon-portfolio"></use></svg>');
-	jQuery('nav .methodologie a').prepend('<svg viewBox="0 0 100 100" class="icon"><use xlink:href="#icon-methode"></use></svg>');
-	jQuery('nav .about a').prepend('<svg viewBox="0 0 100 100" class="icon"><use xlink:href="#icon-user"></use></svg>');
+	jQuery('nav .methodologie a').prepend('<svg viewBox="0 0 100 100" class="icon"><use xlink:href="#icon-responsive"></use></svg>');
 	jQuery('nav .contact a').prepend('<svg viewBox="0 0 100 100" class="icon"><use xlink:href="#icon-contact"></use></svg>');
 }
 
@@ -141,9 +141,22 @@ scrollvitesse = function(){
 		hauteur_image = jQuery(this).height();
 		duree_scroll = hauteur_image / vitesse;
 		
-		jQuery(this).parent().parent().find('.img-peripherique').css('transition-duration', duree_scroll+'ms');
+		jQuery(this).parent().parent().parent().find('.img-peripherique').css('transition-duration', duree_scroll+'ms');
 		jQuery(this).hide();
 	});
 }
 
+//Animations
 
+window.sr = ScrollReveal({mobile:false});
+sr.reveal('.wrapper-top');
+sr.reveal('.big-header h1');
+sr.reveal('.sous-title');
+sr.reveal('.big-title');
+sr.reveal('.pad-argument', 50);
+sr.reveal('.infos > *', 50);
+sr.reveal('.nav_secondary li', 50);
+sr.reveal('.wrapper-folio a', { delay: 100, distance: '100px' });
+sr.reveal('.offre-wrapper > *', 100);
+sr.reveal('.content > *', 100);
+sr.reveal('.footer', 200);

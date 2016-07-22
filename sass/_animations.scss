@@ -1,0 +1,18 @@
+@include width-above(900px){
+
+.wrapper-top,
+.big-header h1,
+big-title,
+.sous-title,
+.pad-argument,
+.infos > *,
+.nav_secondary li,
+.wrapper-folio a,
+.offre-wrapper > *,
+.content,
+.footer{
+	visibility: hidden;
+}
+	
+		
+}
