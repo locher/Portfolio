@@ -530,12 +530,18 @@ header{
 	}
 	
 	a{
+		transition: all ease .2s;
 		@extend %bt;
 		margin-top: 1em;
-		color: #fff;
-		background-color: $rouge;
-		border-color: transparent;
-		border-radius: 50px;
+		color: $rouge;
+		border-color: $rouge;
+		
+		&:hover{
+			color: adjust-hue($rouge, -18deg);
+			border-color: adjust-hue($rouge, -18deg);
+			background-color: #fff;
+			border-width: 3px;
+		}
 	}
 	
 }

@@ -79,8 +79,10 @@
 
 		&:hover{
 			cursor: pointer;
-			background-color: $rouge;
-			color: #fff;
+			color: adjust-hue($rouge, -18deg);
+			border-color: adjust-hue($rouge, -18deg);
+			background-color: #fff;
+			border-width: 3px;
 		}
 	}
 
