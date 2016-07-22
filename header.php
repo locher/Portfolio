@@ -36,6 +36,8 @@
 		<![endif]-->
 
 		<?php wp_head(); ?>
+		
+		<?php include('piwik.php'); ?>
 
 	</head>
 	<body <?php body_class(); ?>>
