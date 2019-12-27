@@ -188,17 +188,6 @@ body:not(.single-portfolio) .img-background{
 
 		}
 
-		svg{
-			transition: fill ease .25s;
-			display: inline-block;
-			vertical-align: middle;
-			width: 33px;
-			height: 33px;
-			margin-right: 9px;
-			fill: #fff;
-			transform: translateY(-2px);
-		}
-
 	}
 	
 	@include width-above(951px){

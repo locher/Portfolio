@@ -1,7 +1,6 @@
 {
   "name": "themblanc",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,5 +15,14 @@
     "grunt-svg-sprite": "^1.2.9",
     "grunt-svgmin": "^2.0.1",
     "grunt-svgstore": "^0.5.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://locher@github.com/locher/themeloc15.git"
+  },
+  "bugs": {
+    "url": "https://github.com/locher/themeloc15/issues"
+  },
+  "homepage": "https://github.com/locher/themeloc15#readme",
+  "description": ""
 }

@@ -29,11 +29,6 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="<?php bloginfo('description'); ?>">
-		
-		<!--[if lte IE 9]>
-			<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/ie.css">
-			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
 
 		<?php wp_head(); ?>
 		

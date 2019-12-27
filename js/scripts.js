@@ -17,13 +17,6 @@ resize_screen = function(){
 	jQuery('.img-smartphone').css('height',smartphone_height);
 }
 
-icones_menu = function(){
-	jQuery('nav .accueil a').prepend('<svg viewBox="0 0 100 100" class="icon"><use xlink:href="#icon-home"></use></svg>');
-	jQuery('nav .realisation a').prepend('<svg viewBox="0 0 100 100" class="icon"><use xlink:href="#icon-portfolio"></use></svg>');
-	jQuery('nav .methodologie a').prepend('<svg viewBox="0 0 100 100" class="icon"><use xlink:href="#icon-responsive"></use></svg>');
-	jQuery('nav .contact a').prepend('<svg viewBox="0 0 100 100" class="icon"><use xlink:href="#icon-contact"></use></svg>');
-}
-
 toggle_menu = function(){
 	jQuery('.bt-menu').click(function(){
 		jQuery(this).toggleClass('open');
@@ -33,7 +26,6 @@ toggle_menu = function(){
 }
 
 jQuery(window).load(function(){
-	icones_menu();
 	toggle_menu();
 });
 
