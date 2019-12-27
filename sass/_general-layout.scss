@@ -145,53 +145,6 @@ body:not(.single-portfolio) .img-background{
 		text-decoration: none;
 		padding: 1em 1.5em;
 		position: relative;
-
-		@include width-above(950px){
-
-			&::before{
-				transition: all ease .25s .05s;
-				content:'';
-				position: absolute;
-				height: 2px;
-				width: 0;
-				background-color: #fff;
-				right: 0;
-				bottom: 0;
-				right: 1.5em;
-				opacity: 0;
-			}
-			
-			@include width-above(951px){
-
-				&:hover::before{
-					width: calc(100% - 3em);
-					opacity: 1;
-					background-color: rgba(#fff, .6);
-				}
-				
-			}
-
-		}
-
-	}
-	
-	@include width-above(951px){
-
-		.current-menu-item a{
-				&::before{
-					transition: all ease .25s .05s;
-					content:'';
-					position: absolute;
-					height: 2px;
-					background-color: #fff;
-					right: 0;
-					bottom: 0;
-					right: 1.5em;
-					width: calc(100% - 3em);
-					opacity: 1;
-				}
-		}
-		
 	}
 }
 
