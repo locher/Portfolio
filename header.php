@@ -53,7 +53,6 @@
 						<?php else : ?>
 							<p class="site-title"><?php bloginfo( 'name' ); ?></p>
 						<?php endif;?>
-						<p class="baseline"><?php bloginfo('description'); ?></p>
 					</a>
 
 					<div class="bt-menu" aria-hidden="true">

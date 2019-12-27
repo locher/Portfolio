@@ -50,8 +50,8 @@ table {
   right: 0; }
 
 .ie9 .header {
-  background: #e84a4a;
-  background-image: linear-gradient(to left, #e84a79, #e84a4a) !important; }
+  background: #E84A4A;
+  background-image: linear-gradient(to left, #e84a79, #E84A4A) !important; }
 
 .ie9 .ico-scroll .icons-scroll::before,
 .ie9 .ico-scroll .icons-scroll::after {

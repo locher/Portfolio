@@ -68,14 +68,14 @@ header{
 		right: 0;
 		bottom: 0;
 		left:0;
-		filter: grayscale(100%);
-		opacity: .2;
+		opacity: .4;
 		z-index: -1;
+		mix-blend-mode: multiply;
 	}
 }
 
 body:not(.single-portfolio) .img-background{
-	background-image: linear-gradient(to left, adjust-hue($rouge, -18deg), $rouge);
+	background-image: linear-gradient(to left, adjust-hue($rouge, -5deg), $rouge);
 }
 
 .wrapper-top{
@@ -91,29 +91,14 @@ body:not(.single-portfolio) .img-background{
 	text-transform: uppercase;
 	
 	.site-title{
-		font-size: 5.5rem;
+		font-size: 4rem;
 		font-weight: 900;
-		
-		@include width-below(1000px){
-			font-size: 4.5rem;
-		}
-		
-		@include width-below(400px){
-			font-size: 3.5rem;
-		}
-	}
-	
-	.baseline{
-		font-weight: 500;
-		font-size: 1.8rem;
-		
-		@include width-below(1000px){
-			font-size: 1.45rem;
-		}
-		
-		@include width-below(400px){
-			text-transform: none;
-		}
+		border: 2px solid #ffffff;
+		display: inline-block;
+		padding: 10px 10px 5px 10px;
+		width: 55px;
+		overflow: hidden;
+		letter-spacing: 50px;
 	}
 }
 
@@ -267,6 +252,7 @@ header{
 .big-title{	
 	font-size: 8.5rem;
 	font-weight: 900;
+	text-transform: uppercase;
 
 	@include width-below(1000px){
 		font-size: 7rem;
