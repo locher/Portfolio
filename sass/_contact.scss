@@ -11,10 +11,6 @@
 
 .form{
 	
-	@include width-below(600px){
-		text-align: center;
-	}
-	
 	label{
 		font-weight: 900;
 		font-size: 2rem;
@@ -23,7 +19,8 @@
 	}
 
 	input[type="email"],
-	textarea{
+	textarea,
+	input[type="text"]{
 		transition: border ease .25s;
 		width: 100%;
 		border: 2px solid $grisfonce;
@@ -41,7 +38,8 @@
 		}
 	}
 
-	input[type="email"]{
+	input[type="email"],
+	textarea{
 		margin-bottom: 1.5em;
 
 		+ span{

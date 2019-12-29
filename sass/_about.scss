@@ -4,33 +4,16 @@
 }
 
 .about-content{
-	width: calc(50% - #{$espace}/2);
-	margin-right: $espace;
 	padding: $padding;
 	background-color: $gris;
 	display: flex;
 	align-items: center;
-
-
-	@include width-below(1400px){
-		width: 100%;
-		margin-right: 0;
-		margin-bottom: $espace;
-	}
-
-	@include width-below(1400px){
-		padding: $padding $padding/2;
-	}
+	width: 100%;
 }
 
 .about-pads{
 	display: flex;
 	flex-wrap:wrap;
-	width: calc(50% - #{$espace}/2);
-
-	@include width-below(1400px){
-		width: 100%;
-	}
 
 	> div{
 		background-color: $gris;
@@ -65,8 +48,6 @@
 	}
 
 	.contact{
-		width: calc(50% - #{$espace}/2);
-		margin-right: 0;
 		transition: background-color ease .25s;
 		padding: $padding;
 		display: flex;
@@ -76,23 +57,6 @@
 		color: #fff;
 		text-decoration: none;
 		text-align: center;
-
-		@include width-between(1200px, 1400px){
-			width: calc(25% - #{$espace}*3/4); 
-			margin-right: 0;
-		}
-
-		@include width-below(600px){
-			width: 100%;
-		}
-
-		svg{
-			width: 50px;
-			fill: #fff;
-			display: inline-block;
-			vertical-align: middle;
-			margin-right: 10px;
-		}
 
 		span{
 			font-weight: 900;
