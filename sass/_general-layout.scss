@@ -15,7 +15,7 @@ body {
 	color: $noir;
 }
 
-.home {
+.home, .page-template-template-portfolio{
 	padding-bottom: 0;
 }
 
@@ -38,6 +38,7 @@ img {
 header {
 	padding: $padding;
 	overflow: hidden;
+	position: relative;
 	@include width-below(500px) {
 		padding: $padding*0.5;
 	}
