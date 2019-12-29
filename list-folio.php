@@ -29,14 +29,6 @@
 			$height_desktop = $img_desktop['sizes'][ $size_desktop . '-height' ];
 		}
 
-		$img_tablette = get_field('image_tablette');
-		if($img_tablette){
-			$size_tablette = 'catfolio-tablette';
-			$thumb_tablette = $img_tablette['sizes'][ $size_tablette ];
-			$width_tablette = $img_tablette['sizes'][ $size_tablette . '-width' ];
-			$height_tablette = $img_tablette['sizes'][ $size_tablette . '-height' ];
-		}
-
 		$img_smartphone = get_field('image_smartphone');
 		if($img_smartphone){
 			$size_smartphone = 'catfolio-smartphone';
@@ -54,14 +46,6 @@
 				<div class="img-desktop img-peripherique" style="background-image: url('<?php echo $thumb_desktop; ?>')">
 					<div class="wrapper-peripherique">
 						<img src="<?php echo $thumb_desktop; ?>" width="<?php echo $width_desktop; ?>" height="<?php echo $height_desktop; ?>">
-					</div>
-				</div>					
-			<?php endif; ?>
-
-			<?php if($img_tablette): ?>
-				<div class="img-tablette img-peripherique" style="background-image: url('<?php echo $thumb_tablette; ?>')">
-					<div class="wrapper-peripherique">
-						<img src="<?php echo $thumb_tablette; ?>">
 					</div>
 				</div>					
 			<?php endif; ?>

@@ -127,7 +127,7 @@ scrollhover = function(){
 
 //harmoniser la vitesse du scroll
 scrollvitesse = function(){
-	var vitesse = 0.5;
+	var vitesse = 0.25;
 
 	jQuery(".img-peripherique img").each(function(){
 		hauteur_image = jQuery(this).height();
@@ -141,7 +141,7 @@ scrollvitesse = function(){
 //Animations
 
 window.sr = ScrollReveal({mobile:false});
-sr.reveal('.wrapper-top');
+//sr.reveal('.wrapper-top');
 sr.reveal('.big-header h1');
 sr.reveal('.sous-title');
 sr.reveal('.big-title');
