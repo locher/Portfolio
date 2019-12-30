@@ -40,8 +40,8 @@ adapt_hauteur = function(){
 		hauteur_desktop = jQuery('.img-desktop').height();
 		hauteur_desktop *= 1.5;
 
-		jQuery('.slidesjs-container').height(hauteur_desktop);
-		jQuery('.singleslide').height(hauteur_desktop);
+		//jQuery('.slidesjs-container').height(hauteur_desktop);
+		//jQuery('.singleslide').height(hauteur_desktop);
 
 }
 
