@@ -9,7 +9,7 @@ $padding: 45px;
 //Mixins
 
 %bt{
-	transition: border ease .25s;
+	transition: all ease .35s;
 	display: inline-block;
 	color: #fff;
 	text-decoration: none;
@@ -18,7 +18,8 @@ $padding: 45px;
 	font-weight: 800;
 	
 	&:hover{
-		border: 2px solid rgba(#fff, .5);
+		border: 2px solid rgba(#fff, .8);
+		color: rgba(#fff, .8);
 	}
 }
 
