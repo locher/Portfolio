@@ -3,6 +3,11 @@
 	flex-wrap: wrap;
 }
 
+.text-content{
+	max-width: 900px;
+	margin: auto;
+}
+
 //Bt suivant / précédent
 
 .link-other{
@@ -98,16 +103,11 @@ a.previous-link{
 .slider{
 	max-width: 1050px;
 	margin: 0 auto;
-	padding: $padding*1.5 $padding*2;
 	position: relative;
 	
-	@include width-below(850px){
-		padding-left: 0;
-		padding-right: 0;
-	}
 
 	.img-peripherique{
-		transition: background-position ease-in-out 5s;
+		transition: background-position ease-in-out 3s;
 	}
 }
 
@@ -125,10 +125,10 @@ a.previous-link{
 
 		a{
 			transition: background-color ease-in-out .4s;
-			background-color: rgba(#000, .3);
+			background-color: rgba(#000, .2);
 			display: block;
-			width: 12px;
-			height: 12px;
+			width: 8px;
+			height: 8px;
 			border-radius: 100%;
 			text-indent: -999px;
 			overflow: hidden;
@@ -154,6 +154,7 @@ a.previous-link{
 	background: url('./img/svg-prod/big-arrow.svg') center center no-repeat;
 	transform: rotate(180deg);
 	padding: 1em;
+	z-index: 90;
 }
 
 .slidesjs-next{
@@ -167,6 +168,10 @@ a.previous-link{
 	height: 34px;
 	background: url('./img/svg-prod/big-arrow.svg') center center no-repeat;
 	padding: 1em;
+	z-index: 90;
+}
+.slidesjs-container{
+	margin: 4rem 0;
 }
 
 // 
@@ -209,9 +214,4 @@ a.previous-link{
 		top: 7px;
 		margin-right: 5px;
 	}
-}
-
-.more-bt{
-	background-color: $rouge;
-	@extend %bt;
 }

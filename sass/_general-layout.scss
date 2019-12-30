@@ -31,7 +31,6 @@ img {
 .content {
 	background-color: #fff;
 	padding: $padding;
-	text-align: center;
 }
 
 //HEADER
@@ -42,7 +41,7 @@ header {
 	@include width-below(500px) {
 		padding: $padding*0.5;
 	}
-	min-height: calc(75vh);
+	min-height: calc(85vh);
 	display: flex;
 	flex-direction: column;
 }
@@ -310,7 +309,7 @@ header {
 	p {
 		line-height: 1.5em;
 		max-width: 800px;
-		margin: 0 auto 1em;
+		margin: 0 0 1em;
 		font-size: 1.5rem;
 		strong {
 			font-weight: bold;

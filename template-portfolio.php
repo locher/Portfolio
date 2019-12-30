@@ -3,7 +3,7 @@
 		<div class="big-header">
 
 			<h1 class="big-title"><?php the_title(); ?></h1>
-			<div class="sous-title">Panel de différents projets</div>
+			<div class="sous-title">Panel de quelques projets</div>
 
 		</div>	
 	
