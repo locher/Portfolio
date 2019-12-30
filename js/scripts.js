@@ -74,9 +74,11 @@ scrollvitesse = function(){
 //Animations
 
 window.sr = ScrollReveal({mobile:false});
-sr.reveal('.wrapper-top > *', {delay: 200}, 300);
+sr.reveal('.logo', {delay: 0});
+sr.reveal('.bt-menu', {delay: 100});
 sr.reveal('.big-title', {delay: 400});
 sr.reveal('.sous-title', {delay: 500});
+sr.reveal('.bt', {delay: 650});
 sr.reveal('.infos > *',{delay: 600},  50);
 
 

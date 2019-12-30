@@ -17,7 +17,7 @@ body {
 
 .home, .page-template-template-portfolio{
 	padding-bottom: 0;
-}
+}.nav
 
 img {
 	max-width: 100%;
@@ -120,19 +120,20 @@ body:not(.single-portfolio) .img-background {
 }
 
 .nav {
-	transition: all ease .4s;
+	transition: opacity ease .4s;
 	background-color: $rouge;
 	position: fixed;
 	height: 100vh;
 	top: -1000px;
-	left: 0;
+	left: -1000px;
+	opacity: 0;
 	width: 100vw;
 	font-size: 4rem;
 	font-weight: 900;
 	z-index: 95;
 	text-align: center;
 	display: flex;
-	border: $espace solid $grisfonce;
+	//border: $espace solid $grisfonce;
 	ul {
 		margin: auto;
 	}
@@ -150,6 +151,8 @@ body:not(.single-portfolio) .img-background {
 
 .nav.open {
 	top: 0;
+	left: 0;
+	opacity: 1;
 }
 
 .bt-menu {
