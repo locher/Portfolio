@@ -134,7 +134,7 @@ function html5blank_header_scripts()
 		wp_register_script('scrollreveal', get_template_directory_uri() . '/js/lib/scrollreveal.min.js', array('jquery'), '1.0.0', 1); // Custom scripts
         wp_enqueue_script('scrollreveal'); // Enqueue it!
 		
-		wp_register_script('myscripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0', 1); // Custom scripts
+		wp_register_script('myscripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '2.0.0', 1); // Custom scripts
         wp_enqueue_script('myscripts'); // Enqueue it!
     }
 }
@@ -151,7 +151,7 @@ function html5blank_conditional_scripts()
 // Load HTML5 Blank styles
 function html5blank_styles()
 {
-    wp_register_style('html5blank', get_template_directory_uri() . '/style.css', array(), '2.0', 'all');
+    wp_register_style('html5blank', get_template_directory_uri() . '/style.css', array(), '2.01', 'all');
     wp_enqueue_style('html5blank'); // Enqueue it!
 }
 
