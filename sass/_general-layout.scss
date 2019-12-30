@@ -82,27 +82,41 @@ body:not(.single-portfolio) .img-background {
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
+	position: fixed;
+	left: $padding+$espace;
+	right: $padding+$espace;
+	z-index: 100;
 }
 
 .logo {
 	flex: 2;
-	position: relative;
-	z-index: 103;
 	text-transform: uppercase;
-	.site-title {
-		font-size: 4rem;
-		font-weight: 900;
-		border: 2px solid #ffffff;
-		display: inline-block;
-		padding: 10px 10px 5px 10px;
-		width: 55px;
-		overflow: hidden;
-		letter-spacing: 50px;
-	}
+	
+	
 	a {
 		text-decoration: none;
 		color: #fff;
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+		border: 2px solid #ffffff;
+		width: 55px;
+		height: 55px;
+		overflow: hidden;
+		padding: 10px 10px 5px 10px;
+		line-height: 1;
+		position: relative;
 	}
+	
+	.site-title {
+		font-size: 4rem;
+		font-weight: 900;
+		display: inline-block;
+		letter-spacing: 50px;
+		line-height: .8em;
+	}
+	
+	
 }
 
 .nav {
@@ -115,7 +129,7 @@ body:not(.single-portfolio) .img-background {
 	width: 100vw;
 	font-size: 4rem;
 	font-weight: 900;
-	z-index: 100;
+	z-index: 95;
 	text-align: center;
 	display: flex;
 	border: $espace solid $grisfonce;
