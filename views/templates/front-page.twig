@@ -1,0 +1,69 @@
+{% extends "base.twig" %}
+
+{% block contentHeader %}
+
+	<a class="ico-scroll" id="bt-scroll" >
+		<div class="icons-scroll">
+			<svg viewBox="0 0 100 100" height="30px" width="30px" class="icon"><use xlink:href="#icon-mouse"></use></svg>
+		</div>
+		
+	</a>
+
+	<div class="big-header">
+		<h1>
+			<span class="big-title">
+				{{ post.meta('gros_titre') }}
+			</span> 
+			<span class="sous-title">
+				{{ post.meta('sous-titre') }}
+			</span>
+		</h1>
+		<div class="bt-wrapper">
+			<a class="bt" href="#portfolio">{{ post.meta('texte_bouton') }}</a>
+		</div>
+	</div>
+
+{% endblock %}
+
+{% block content %}
+
+{% if portfolio is not empty %}
+
+	<section class="wrapper-folio" id="portfolio">
+
+	{% for ref in portfolio %}
+
+		<a href="{{ ref.link }}" class="pad-folio" style="background-color: {{ ref.meta('couleur_de_fond') }}">
+
+		<div class="wrapper-img">
+
+			{% if ref.galerie is not empty %}
+					
+				<img src="{{ Image(ref.meta('galerie').0).src('folio-mini-crop') }}" alt="{{ ref.meta('image_desktop').0.alt }}">
+
+			{% endif %}				
+			
+		</div>
+
+		{% if ref.titre_home is not empty %}
+			<h2>{{ ref.meta('titre_home') }}</h2>
+		{% else %}
+			<h2>{{ ref.meta('sous-titre_page_single') }}</h2>
+		{% endif %}
+
+
+		{% if ref.sous_titre_home is not empty %}
+			<p>{{ ref.meta('sous_titre_home') }}</p>
+		{% else %}
+			<p>{{ ref.title }}</p>
+		{% endif %}
+		
+	</a>
+
+	{% endfor %}
+
+	</section>
+
+{% endif %}
+
+{% endblock %}

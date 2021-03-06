@@ -1,0 +1,23 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+		<div class="big-header">
+
+			<h1 class="big-title">{{ post.title }}</h1>
+			
+		</div>	
+	
+	</header>
+
+	<!-- /header -->
+
+<main role="main" class="content">
+
+	<div class="text-content">
+		{{ post.content }}
+	</div>
+		
+</main>
+
+{% endblock %}

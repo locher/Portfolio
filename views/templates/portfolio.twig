@@ -1,0 +1,111 @@
+{% extends "base.twig" %}
+
+{% block contentHeader %}
+
+{% if post.couleur_de_fond is not empty %}
+
+<style>
+	.img-background{
+		background-color: {{ post.meta('couleur_de_fond') }};
+	}
+</style>
+
+{% endif %}
+
+<div class="big-header">
+
+	<h1 class="big-title">{{ post.title }}</h1>
+	<div class="sous-title">{{ post.meta('sous-titre_page_single') }}</div>
+
+	<div class="infos">
+		<div class="date_site">
+			<span>
+				<svg viewBox="0 0 100 100" width="30" height="30" class="icon">
+				  <use xlink:href="#icon-date"></use>
+				</svg>
+			</span>
+			{{ post.meta('date_de_creation') }}
+		</div>
+
+
+		{% if post.lien_site is not empty %}
+
+		<a href="{{ post.meta('lien_site') }}" class="lien_site">
+			<div>
+				<span>
+					<svg viewBox="0 0 100 100" width="30" height="30" class="icon">
+						<use xlink:href="#icon-lien"></use>
+					</svg>
+				</span>
+				<span class="text-link">Voir le site</span>
+			</div>
+		</a>
+
+		{% endif %}
+
+	</div>
+
+	<div class="link-other">
+
+
+		<a href="#" class="previous-link">
+			<div>
+				Projet précédent <br>
+				<span>titre</span>
+			</div>
+
+		</a>
+
+		<a href="#" class="next-link">
+			<div>
+				Projet suivant<br>
+				<span><titre</span>
+			</div>
+		</a>
+
+
+	</div>
+
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<main role="main" class="content">
+
+	{% if post.contexte is not empty %}
+
+	<div class="text-content">
+
+		<h2>Contexte</h2>
+
+		<div class="text-content">
+			{{ post.meta('contexte') }}
+		</div>
+
+	</div>
+
+	{% endif %}
+
+	{% if post.galerie is not empty %}
+
+	<div class="gallery">
+
+		<span class="img-background">
+            <img src="{{ post.thumbnail.src('header') }}" srcset="{{ post.thumbnail.src('header') }} 1920w, {{ post.thumbnail.src('header-mobile')}} 960w " alt="">
+        </span>
+		
+		{% for image in post.meta('galerie') %}
+
+			<img loading="lazy" src="{{ Image(image).src('folio-fullsize') }}" srcset="{{ Image(image).src('folio-fullsize') }} 1440w, {{ Image(image).src('folio-fullsize-mobile') }} 800w" alt="{{ image.alt }}">
+
+		{% endfor %}
+
+	</div>
+
+	{% endif %}
+
+</main>
+
+{% endblock %}

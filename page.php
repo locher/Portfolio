@@ -1,27 +1,6 @@
-<?php get_header(); ?>
-		
-		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+<?php
 
-		<div class="big-header">
+$context = \Timber\Timber::get_context();
+$context['post'] = new \Timber\Post();
 
-			<h1 class="big-title"><?php the_title();?></h1>
-			
-		</div>	
-	
-	</header>
-	<!-- /header -->
-
-	<main role="main" class="content">
-	
-
-		
-		<div class="text-content">
-			<?php the_content();?>
-		</div>
-		
-</main>
-		
-		<?php endwhile; endif; ?>
-		
-
-<?php get_footer(); ?>
+\Timber\Timber::render('templates/page.twig', $context);

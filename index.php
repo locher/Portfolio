@@ -1,19 +1,6 @@
-<?php get_header(); ?>
+<?php
 
-	<main role="main">
-		<!-- section -->
-		<section>
+$context = \Timber\Timber::get_context();
+$context['posts'] = new \Timber\PostQuery();
 
-			<h1><?php _e( 'Latest Posts', 'html5blank' ); ?></h1>
-
-			<?php get_template_part('loop'); ?>
-
-			<?php get_template_part('pagination'); ?>
-
-		</section>
-		<!-- /section -->
-	</main>
-
-<?php get_sidebar(); ?>
-
-<?php get_footer(); ?>
+\Timber\Timber::render('templates/index.twig', $context);
