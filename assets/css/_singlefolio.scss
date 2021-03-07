@@ -8,6 +8,24 @@
 	margin: auto;
 }
 
+.single-portfolio{
+
+	.big-title{
+		font-size: 5rem;
+		max-width: 600px;
+
+		@include width-below(600px){
+			font-size: 4rem;
+		}
+	}
+
+	.sous-title{
+		font-size: 2.5rem;
+		margin-top: .5em;
+	}
+
+}
+
 //Bt suivant / précédent
 
 .link-other{
@@ -97,103 +115,17 @@ a.previous-link{
 	
 }
 
-
-// Slider
-
-.slider{
-	max-width: 1050px;
-	margin: 0 auto;
-	position: relative;
-	
-
-	.img-peripherique{
-		transition: background-position ease-in-out 3s;
-	}
-}
-
-.slidesjs-pagination{
-
-	text-align: center;
-
-	li{
-		display: inline-block;
-		margin-right: 7px;
-
-		&:last-child{
-			margin-right: 0;
-		}
-
-		a{
-			transition: background-color ease-in-out .4s;
-			background-color: rgba(#000, .2);
-			display: block;
-			width: 8px;
-			height: 8px;
-			border-radius: 100%;
-			text-indent: -999px;
-			overflow: hidden;
-
-
-			&.active{
-				background-color: rgba(#000, .5);
-			}
-		}
-		
-	}
-}
-
-.slidesjs-previous{
-	position: absolute;
-	top: calc(50% - 17px);
-	left: $padding;
-	text-indent: -999px;
-	overflow: hidden;
-	display: block;
-	width: 19px;
-	height: 34px;
-	background: url('./img/svg-prod/big-arrow.svg') center center no-repeat;
-	transform: rotate(180deg);
-	padding: 1em;
-	z-index: 90;
-}
-
-.slidesjs-next{
-	position: absolute;
-	top: calc(50% - 17px);
-	right: $padding;
-	text-indent: -999px;
-	overflow: hidden;
-	display: block;
-	width: 19px;
-	height: 34px;
-	background: url('./img/svg-prod/big-arrow.svg') center center no-repeat;
-	padding: 1em;
-	z-index: 90;
-}
-.slidesjs-container{
-	margin: 4rem 0;
-}
-
 // 
 
 .infos{
 	
 	margin-top: 30px;
-	font-weight: 800;
 	font-size: 1.75rem;
-	
-	.lien_site{
-		margin-left: 40px;
-	}
-	
-	.lien_site,
-	.date_site{
-		display: inline-block;
-	}
 	
 	a{
 		color: #fff;
 		text-decoration: none;
+		display: inline-block;
 	}
 	
 	.text-link{
@@ -202,16 +134,40 @@ a.previous-link{
 		border-bottom: 1px solid #fff;
 	}
 	
-	.lien_site:hover .text-link{
+	.lien-site:hover .text-link{
 		border-bottom: 3px solid #fff;
 	}
 	
 	svg{
 		fill: #fff;
 		width: 25px;
-		height: 25px;
+		height: auto;
 		position: relative;
 		top: 7px;
 		margin-right: 5px;
 	}
+}
+
+.date-site{
+	text-transform: uppercase;
+	font-weight: 400;
+}
+
+.lien-site{
+	font-weight: 500;
+	margin-top: 1em;
+}
+
+.gallery{
+	margin-top: $padding*1.5;
+	text-align: center;
+	max-width: 1100px;
+	margin-left: auto;
+	margin-right: auto;
+
+	img + img,
+	picture + picture{
+		margin-top: $padding;
+	}
+
 }

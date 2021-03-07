@@ -38,11 +38,13 @@
                     
                 </div>
 
+                {% block contentHeader %}
+
                 <div class="img-background">
                     <img src="{{ post.thumbnail.src('header') }}" srcset="{{ post.thumbnail.src('header') }} 1920w, {{ post.thumbnail.src('header-mobile')}} 960w " alt="">
                 </div>
-
-                {% block contentHeader %}{% endblock %}
+                
+                {% endblock %}
 
             </header>
 

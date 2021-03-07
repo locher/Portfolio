@@ -2,6 +2,10 @@
 
 {% block contentHeader %}
 
+    <div class="img-background">
+        <img src="{{ post.thumbnail.src('header') }}" srcset="{{ post.thumbnail.src('header') }} 1920w, {{ post.thumbnail.src('header-mobile')}} 960w " alt="">
+    </div>
+
 	<a class="ico-scroll" id="bt-scroll" >
 		<div class="icons-scroll">
 			<svg viewBox="0 0 100 100" height="30px" width="30px" class="icon"><use xlink:href="#icon-mouse"></use></svg>
