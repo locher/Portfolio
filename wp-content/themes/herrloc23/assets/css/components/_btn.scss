@@ -1,0 +1,41 @@
+.btn{
+  a{
+    transition: all ease-out .4s;
+    background-image: linear-gradient(90deg, var(--color-pink) 0%, var(--color-primary) 50%, var(--color-pink) 100%);
+    background-size: 200% 100%;
+    background-position: left bottom;
+    border-radius: var(--radius-secondary);
+    color: var(--color-white);
+    padding: .8em 1.2em;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-flex;
+    box-shadow: 0 0 5rem transparent;
+
+    &:hover{
+      background-position: right bottom;
+      box-shadow: 0 0 5rem rgba(var(--color-pink--rgb), .7);
+    }
+  }
+}
+
+.btn--border{
+  a{
+    --size: .7rem;
+    position: relative;
+
+    &::after{
+      content: '';
+      position: absolute;
+      padding: var(--size);
+      border: var(--border);
+      border-radius: var(--radius-primary);
+      top: calc(var(--size) * -1);
+      right: calc(var(--size) * -1);
+      bottom: calc(var(--size) * -1);
+      left: calc(var(--size) * -1);
+    }
+  }
+}
+
+

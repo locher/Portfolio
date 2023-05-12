@@ -1,0 +1,28 @@
+// Config
+@import "config/reset";
+
+@import "config/variables";
+@import "config/mixins";
+
+@import "config/font";
+@import "config/base";
+@import "config/typo";
+
+// Components
+
+@import "components/header";
+@import "components/footer";
+@import "components/logo";
+@import "components/burger";
+@import "components/menu";
+@import "components/btn";
+@import "components/skills";
+@import "components/home-header";
+@import "components/folio-list";
+@import "components/folio-block";
+@import "components/infocursor";
+
+// Flexible
+
+// Pages
+@import "pages/frontpage";

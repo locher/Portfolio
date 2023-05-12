@@ -1,0 +1,13 @@
+{
+	"name": "hloc/folio",
+	"title": "Portfolio",
+	"description": "Afficher des éléments du Portfolio",
+	"category": "hloc",
+	"icon": "admin-comments",
+	"keywords": ["folio", "portfolio"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "folio.php"
+	},
+	"align": "full"
+}

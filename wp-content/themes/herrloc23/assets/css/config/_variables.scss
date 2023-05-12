@@ -1,0 +1,43 @@
+:root {
+  // Colors
+  --color-red: #E84A4A;
+  --color-red--rgb: 232, 74, 74;
+  --color-pink: #E84A72;
+  --color-pink--rgb: 232, 74, 114;
+  //--color-red: #12135b;
+  //--color-pink: #1d1eb6;
+  --color-white: #fdf5f5;
+  --color-brown: #EAE2E2;
+
+  --color-primary: var(--color-red);
+  --color-secondary: var(--color-brown);
+
+  --main-gradient: linear-gradient(90deg, var(--color-pink) 0%, var(--color-primary) 100%);
+  --main-gradient-hover: linear-gradient(90deg, var(--color-pink) 99%, var(--color-primary) 100%);
+
+  //Fonts
+  --font-sansserif: 'Wotfard';
+  --font-serif: 'Source Serif Pro';
+
+  --font-primary: var(--font-sansserif);
+  --font-secondary: var(--font-serif);
+
+  //Font size
+  --p-font-size: clamp(1.8rem, calc(.3rem + 1vw), 2.8rem);
+  --h1-font-size: clamp(3.2rem, calc(1rem + 4vw), 13rem);
+  --h2-font-size: clamp(2.5rem, calc(1rem + 2.5vw), 7rem);
+  --h3-font-size: clamp(2.1rem, calc(1rem + 1vw), 3rem);
+
+  //Margins
+  --margin-fluid: clamp(4rem, calc(1rem + 7vh), 10rem);
+
+  // Borders radius
+  --radius-primary: 1rem;
+  --radius-secondary: .6rem;
+
+  // Border
+  --border: 2px solid var(--color-primary);
+
+  // Grid
+  --gap: clamp(3rem, 2vw, 5rem);
+}

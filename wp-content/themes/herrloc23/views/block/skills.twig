@@ -1,0 +1,13 @@
+<section class="wrapper">
+    <ul class="skills">
+        {% for skill in fields.skills %}
+            <li class="skill">
+                <span class="skill__abbr">{{ skill.meta('abbreviation') }}</span>
+                <h2 class="skill__title">{{ skill.title }}</h2>
+                <div class="skill__content">
+                    {{ skill.meta('excerpt') }}
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+</section>

@@ -1,0 +1,60 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "hloc/header-image",
+  "version": "0.1.0",
+  "title": "Header Image",
+  "category": "hloc",
+  "keywords": [
+    "Header",
+    "Haut de page",
+    "top"
+  ],
+  "icon": "cover-image",
+  "description": "",
+  "supports": {
+    "html": false,
+    "reusable": false
+  },
+  "attributes": {
+    "backgroundImage": {
+      "type": "Object",
+      "default": null
+    },
+    "backgroundImageOverlay": {
+      "type": "string",
+      "default": "blue"
+    },
+    "backgroundImageOpacity": {
+      "type": "integer",
+      "default": 40
+    },
+    "example": {
+      "attributes": {
+        "backgroundImageOverlay": "blue",
+        "backgroundImageOpacity": 40,
+        "backgroundImage": {
+          "desktop": "https://s.w.org/images/core/5.3/MtBlanc1.jpg"
+        }
+      },
+      "innerBlocks": [
+        {
+          "name": "core/heading",
+          "attributes": {
+            "content": "Exemple de titre"
+          }
+        },
+        {
+          "name": "core/paragraph",
+          "attributes": {
+            "content": "Exemple de sous-titre"
+          }
+        }
+      ]
+    }
+  },
+  "textdomain": "idx",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

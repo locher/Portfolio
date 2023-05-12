@@ -1,0 +1,17 @@
+<nav class="header__nav" id="menu" role="navigation">
+    
+    <button aria-controls="menuMain" class="burger" aria-expanded="false">
+        <span aria-hidden="true" class="burger__bars"></span>
+        <span class="burger__title">{{__('Menu','hloc')}}</span>
+    </button>
+    
+
+    <ul id="menuMain" class="header__menu">
+        {% for el in menus.main.items %}
+            <li class="{{ el.class }}">
+                <a href="{{ el.link }}">{{ el.name }}</a>
+            </li>
+        {% endfor %}
+        <span class="header__menu__hover disable" aria-hidden="true" id="hoverElt"></span>
+    </ul>
+</nav>

@@ -1,0 +1,115 @@
+// Normal statement
+
+.folio{
+  position: relative;
+  overflow: hidden;
+
+  a{
+    display: block;
+    text-decoration: none;
+  }
+
+  &__content{
+    transition: color ease .4s;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    color: var(--color-primary);
+  }
+
+  &__title{
+    flex:1;
+    font-family: var(--font-secondary);
+    font-weight: 300;
+    font-size: clamp(3.2rem, calc(1rem + 4vw), 12rem);
+    padding-top: clamp(3rem, calc(2rem + 3vw), 10rem);
+    padding-bottom: clamp(3rem, calc(2rem + 3vw), 10rem);
+    line-height: 1;
+  }
+
+  &__thumbnail{
+    transition: all ease-in-out .3s;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 100%;
+    z-index: 1;
+
+    img{
+      transition: all ease .4s;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      opacity: 0;
+      filter: saturate(0);
+      z-index: 2;
+      mix-blend-mode: multiply;
+    }
+
+    &::after{
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
+      background: var(--main-gradient);
+      z-index: 1;
+    }
+  }
+
+  &__details{
+    text-transform: uppercase;
+    text-align: right;
+
+    &__skill{
+      display: flex;
+      list-style-type: none;
+      font-size: .8em;
+    }
+
+    &__type{
+      font-weight: 600;
+    }
+
+    li + li::before{
+      content: '\00a0-\00a0';
+    }
+  }
+}
+
+// Borders management
+
+.folio{
+  .folio__content{
+    border-top: 2px solid var(--color-primary);
+  }
+}
+
+.folio:hover + .folio{
+  .folio__content{
+    border-top-color: transparent;
+  }
+}
+
+// Hover Statement
+
+.folio{
+  a:hover{
+    .folio {
+      &__content {
+        color: var(--color-white);
+      }
+
+      &__thumbnail {
+        top: 0;
+        img {
+          opacity: .4;
+        }
+      }
+    }
+  }
+}

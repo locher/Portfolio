@@ -1,0 +1,32 @@
+.portfolio{
+  &__header{
+    display: flex;
+    align-items: center;
+
+    &__title{
+      line-height: 1em;
+      text-transform: uppercase;
+    }
+
+    &__description{
+      line-height: 1em;
+      display: flex;
+      align-items: center;
+
+      &::before{
+        content: '';
+        display: block;
+        height: 0.8rem;
+        width: 0.8rem;
+        background-color: var(--color-primary);
+        border-radius: 1rem;
+        margin-left: 1em;
+        margin-right: 1em;
+      }
+    }
+  }
+}
+
+.folios{
+  margin-top: var(--margin-fluid);
+}

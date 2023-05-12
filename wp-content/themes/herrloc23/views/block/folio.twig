@@ -1,0 +1,17 @@
+<section class="portfolio">
+
+    <header class="wrapper portfolio__header" data-anim="top">
+        <h2 class="portfolio__header__title">{{ fields.header.titre }}</h2>
+        {% if fields.header.description is not empty %}
+            <p class="portfolio__header__description">
+                {{ fields.header.description }}
+            </p>
+        {% endif %}
+    </header>
+
+    <ul class="folios">
+        {% for folio in fields.folio %}
+            {% include('template-parts/folio-in-list.twig') %}
+        {% endfor %}
+    </ul>
+</section>

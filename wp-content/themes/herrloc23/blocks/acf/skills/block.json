@@ -1,0 +1,13 @@
+{
+	"name": "hloc/skills",
+	"title": "Skills",
+	"description": "Afficher les compétences",
+	"category": "hloc",
+	"icon": "admin-comments",
+	"keywords": ["testimonial", "quote"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "skills.php"
+	},
+	"align": "full"
+}

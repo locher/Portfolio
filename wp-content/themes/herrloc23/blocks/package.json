@@ -1,0 +1,38 @@
+{
+	"name": "herrloc-blocks",
+	"version": "0.1.0",
+	"description": "Herrloc Blocks",
+	"author": "Loïc Herr",
+	"license": "GPL-2.0-or-later",
+	"main": "build/index.js",
+	"scripts": {
+		"build": "wp-scripts build",
+		"format": "wp-scripts format",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"packages-update": "wp-scripts packages-update",
+		"plugin-zip": "wp-scripts plugin-zip",
+		"start": "wp-scripts start"
+	},
+	"devDependencies": {
+		"@wordpress/data": "^8.0.0",
+		"@wordpress/dom-ready": "^3.23.0",
+		"@wordpress/edit-post": "^7.0.0",
+		"@wordpress/scripts": "^24.6.0"
+	},
+	"dependencies": {
+		"@wordpress/block-editor": "^10.5.0",
+		"@wordpress/block-library": "^8.0.0",
+		"@wordpress/blocks": "^12.0.0",
+		"@wordpress/components": "^22.1.0",
+		"@wordpress/compose": "^6.0.0",
+		"@wordpress/core-data": "^6.8.0",
+		"@wordpress/element": "^4.20.0",
+		"@wordpress/i18n": "^4.23.0",
+		"@wordpress/icons": "^9.14.0",
+		"@wordpress/keycodes": "^3.23.0",
+		"@wordpress/media-utils": "^4.13.0",
+		"classnames": "^2.3.2",
+		"react-native": "^0.70.6"
+	}
+}

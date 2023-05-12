@@ -1,0 +1,1 @@
+{"version":3,"file":"header-image/index.css","mappings":";;;AAAA;EACC;AACD;;AAEA;EACE;AACF,C","sources":["webpack://herrloc-blocks/./src/header-image/editor.scss"],"sourcesContent":[".wp-block-create-block-header-image {\n\tborder: 1px dotted #f00;\n}\n\n.components-panel .components-range-control{\n  width: 100%;\n}\n"],"names":[],"sourceRoot":""}

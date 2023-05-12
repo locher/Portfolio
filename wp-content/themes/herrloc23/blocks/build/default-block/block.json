@@ -1,0 +1,19 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "hloc/header",
+  "version": "0.1.0",
+  "title": "Header home",
+  "category": "hloc",
+  "keywords": [],
+  "icon": "smiley",
+  "description": "Permet d'ajouter un titre, un sous-titre et un lien",
+  "supports": {
+    "html": false
+  },
+  "attributes": {},
+  "textdomain": "hloc",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

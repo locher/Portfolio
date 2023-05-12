@@ -1,0 +1,53 @@
+/*!****************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/header-image/style.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************/
+.f-headerImg {
+  position: relative;
+  margin-bottom: -100px;
+}
+.f-headerImg--white {
+  background-color: var(--color-white);
+}
+.f-headerImg--blue {
+  background-color: var(--color-primary);
+}
+.f-headerImg--darkblue {
+  background-color: var(--color-primary-dark);
+}
+.f-headerImg--purple {
+  background-color: var(--color-secondary);
+}
+.f-headerImg--dark {
+  background-color: var(--color-black);
+}
+.f-headerImg__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.f-headerImg__bg img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.f-headerImg__content {
+  position: relative;
+  color: var(--color-white);
+  padding: 200px 50px;
+}
+@media (min-width: 768px) {
+  .f-headerImg__content {
+    padding-left: clamp(20px, 15vw, 400px) !important;
+  }
+}
+.f-headerImg__content h1, .f-headerImg__content h2 {
+  font-weight: 900;
+}
+.f-headerImg__content p {
+  font-size: 25px;
+}
+
+/*# sourceMappingURL=style-index.css.map*/

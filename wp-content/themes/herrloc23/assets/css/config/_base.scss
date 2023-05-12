@@ -1,0 +1,29 @@
+html {
+}
+
+body {
+  font-size: var(--p-font-size);
+  font-family: var(--font-primary), 'Arial', sans-serif;
+  font-weight: 400;
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  padding-top: calc(max(3vw, 2rem));
+  padding-bottom: calc(max(3vw, 2rem));
+}
+
+.wrapper {
+  width: 100%;
+  max-width: max(500px, 90vw);
+  padding-left: var(--gap);
+  padding-right: var(--gap);
+  margin-left: auto;
+  margin-right: auto;
+
+  &--tiny{
+    max-width: max(500px, calc(90vw / 12 * 10));
+  }
+}
+
+.global-wrapper{
+  overflow-x: clip;
+}

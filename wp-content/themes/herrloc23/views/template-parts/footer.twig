@@ -1,0 +1,23 @@
+<footer class="footer wrapper">
+    <div class="footer__contact">
+        <button class="footer__contact__link emailFooter">{{ site.admin_email }}</button>
+    </div>
+
+    <div class="footer__menus">
+        <ul>
+            {% for el in menus.main.items %}
+                <li>
+                    <a href="{{ el.link }}">{{ el.name }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+
+        <ul>
+            {% for el in menus.footer.items %}
+                <li>
+                    <a href="{{ el.link }}">{{ el.name }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</footer>

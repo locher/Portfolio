@@ -1,0 +1,13 @@
+{
+  "require-dev": {
+    "kint-php/kint": "^3.3"
+  },
+  "config": {
+    "allow-plugins": {
+      "composer/installers": true
+    }
+  },
+  "require": {
+    "timber/timber": "^1.22"
+  }
+}
