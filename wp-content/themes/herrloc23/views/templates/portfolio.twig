@@ -1,0 +1,15 @@
+{% extends "base.twig" %}
+
+{% block content %}
+    <div class="wrapper page-title">
+        <h1>{{ post.title }}</h1>
+    </div>
+
+    <section>
+        <ul class="folios">
+            {% for folio in portfolio %}
+                {% include('template-parts/folio-in-list.twig') %}
+            {% endfor %}
+        </ul>
+    </section>
+{% endblock %}

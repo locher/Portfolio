@@ -28,6 +28,51 @@
             "min": "",
             "max": "",
             "elements": ""
+        },
+        {
+            "key": "field_645e458d3c6d0",
+            "label": "Contenu",
+            "name": "content",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "excerpt": "Résumé",
+                "content": "Contenu"
+            },
+            "default_value": "excerpt",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "horizontal",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_645e45e53c6d1",
+            "label": "Compétence",
+            "name": "skills_taxo",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Afficher les compétences",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
         }
     ],
     "location": [
@@ -48,5 +93,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1683294890
+    "modified": 1683902153
 }

@@ -88,3 +88,31 @@ if(headerHome){
         ease: "power4"
     })
 }
+
+// Folio
+
+const folio = document.querySelector('.folios')
+
+if (folio){
+    gsap.from(folio, {
+        duration: 2,
+        delay: .3,
+        y: '-80px',
+        opacity: 0,
+        ease: "power4"
+    })
+}
+
+// Titre
+
+const pageTitle = document.querySelector('.page-title')
+
+if(pageTitle){
+    gsap.from(pageTitle, {
+        duration: 2.5,
+        delay: .2,
+        y: '-80px',
+        opacity: 0,
+        ease: "power4"
+    })
+}

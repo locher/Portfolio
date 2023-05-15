@@ -5,8 +5,16 @@
                 <span class="skill__abbr">{{ skill.meta('abbreviation') }}</span>
                 <h2 class="skill__title">{{ skill.title }}</h2>
                 <div class="skill__content">
-                    {{ skill.meta('excerpt') }}
+                    {{ fields.content == 'excerpt' ? skill.meta('excerpt') : skill.meta('description') }}
                 </div>
+
+                {% if fields.skills_taxo and skill.terms('skills') is not empty %}
+                <ul class="skill__list">
+                    {% for skill in skill.terms('skills') %}
+                        <li class="skill__list__single">{{ skill.title }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
             </li>
         {% endfor %}
     </ul>

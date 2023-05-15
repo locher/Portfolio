@@ -6,7 +6,7 @@
 
 function hloc_styles()
 {
-    wp_register_style('starterTheme', get_template_directory_uri() . '/dist/styles.min.css', array(), '1.0', 'all');
+    wp_register_style('starterTheme', get_template_directory_uri() . '/dist/styles.css', array(), '1.0', 'all');
     wp_enqueue_style('starterTheme');
 }
 

@@ -18,6 +18,7 @@ add_action( 'init', function(){
 	register_block_type( __DIR__ . '/build/header-image' );
 	register_block_type( __DIR__ . '/build/header-home' );
 	register_block_type( __DIR__ . '/build/button' );
+	register_block_type( __DIR__ . '/build/title-page' );
 	register_block_type( __DIR__ . '/acf/skills' );
 	register_block_type( __DIR__ . '/acf/folio' );
 } );
@@ -36,7 +37,8 @@ function idx_allowed_block_types(): array
 		'hloc/skills',
 		'hloc/header',
 		'hloc/button',
-		'hloc/folio'
+		'hloc/folio',
+		'hloc/page-title'
 	);
 
 }
