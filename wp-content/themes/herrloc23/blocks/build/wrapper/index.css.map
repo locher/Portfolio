@@ -1,0 +1,1 @@
+{"version":3,"file":"wrapper/index.css","mappings":";;;AAAA;EACC;EACA;EACA;AACD,C","sources":["webpack://herrloc-blocks/./src/wrapper/editor.scss"],"sourcesContent":[".wrapper{\n\tpadding: 2em;\n\tbackground-color: #f1f1f1;\n\tborder-radius: 8px;\n}\n"],"names":[],"sourceRoot":""}

@@ -78,7 +78,7 @@ __webpack_require__.r(__webpack_exports__);
 function save(props) {
   var blockProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps.save();
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", {
-    className: "wrapper page-title ".concat(blockProps.className)
+    className: "wrapper page-title v-hidden ".concat(blockProps.className)
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InnerBlocks.Content, null));
 }
 

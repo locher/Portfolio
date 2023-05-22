@@ -19,14 +19,15 @@ add_action( 'init', function(){
 	register_block_type( __DIR__ . '/build/header-home' );
 	register_block_type( __DIR__ . '/build/button' );
 	register_block_type( __DIR__ . '/build/title-page' );
+	register_block_type( __DIR__ . '/build/wrapper' );
 	register_block_type( __DIR__ . '/acf/skills' );
 	register_block_type( __DIR__ . '/acf/folio' );
 } );
 
 // Allow list
-add_filter( 'allowed_block_types_all', 'idx_allowed_block_types' );
+add_filter( 'allowed_block_types_all', 'idx_allowed_block_types');
 
-function idx_allowed_block_types(): array
+function idx_allowed_block_types()
 {
 	return array(
 		'core/image',
@@ -38,7 +39,9 @@ function idx_allowed_block_types(): array
 		'hloc/header',
 		'hloc/button',
 		'hloc/folio',
-		'hloc/page-title'
+		'hloc/page-title',
+		'contact-form-7/contact-form-selector',
+		'hloc/wrapper'
 	);
 
 }

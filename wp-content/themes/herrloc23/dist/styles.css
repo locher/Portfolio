@@ -53,6 +53,7 @@ p, h1, h2, h3, h4, h5, h6 {
   --color-pink--rgb: 232, 74, 114;
   --color-white: #fdf5f5;
   --color-brown: #EAE2E2;
+  --color-green: #4ae894;
   --color-primary: var(--color-red);
   --color-secondary: var(--color-brown);
   --main-gradient: linear-gradient(90deg, var(--color-pink) 0%, var(--color-primary) 100%);
@@ -93,9 +94,16 @@ body {
 .wrapper--tiny {
   max-width: max(500px, 75vw);
 }
+.wrapper p {
+  max-width: 90rem;
+}
 
 .global-wrapper {
   overflow-x: clip;
+}
+
+.v-hidden {
+  visibility: hidden;
 }
 
 .header {
@@ -334,6 +342,8 @@ body {
   display: inline-flex;
   -webkit-box-shadow: 0 0 5rem transparent;
           box-shadow: 0 0 5rem transparent;
+  border: 0;
+  cursor: pointer;
 }
 .btn a:hover {
   background-position: right bottom;
@@ -639,6 +649,115 @@ body {
 }
 .page-title h1, .page-title h2, .page-title h3, .page-title h4 {
   font-size: var(--h1-font-size);
+}
+
+.wp-block-contact-form-7-contact-form-selector {
+  margin-top: calc(var(--margin-fluid) / 2);
+}
+.wp-block-contact-form-7-contact-form-selector label {
+  display: block;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: var(--border);
+  border-radius: var(--radius-primary);
+  padding: clamp(2rem, 2vw, 3.5rem);
+  margin-bottom: clamp(2rem, 2vw, 5rem);
+}
+.wp-block-contact-form-7-contact-form-selector label span {
+  display: block;
+}
+.wp-block-contact-form-7-contact-form-selector label span:last-child {
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-weight: 600;
+}
+.wp-block-contact-form-7-contact-form-selector label input, .wp-block-contact-form-7-contact-form-selector label textarea {
+  border: 0;
+  background: none;
+  color: inherit;
+  outline: 0;
+  width: 100%;
+  font-size: 1.2em;
+}
+.wp-block-contact-form-7-contact-form-selector .wpcf7-not-valid-tip {
+  margin-top: 1em;
+}
+.wp-block-contact-form-7-contact-form-selector .form-submit {
+  --padding: .4rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: var(--border);
+  border-radius: var(--radius-primary);
+  padding: var(--padding);
+}
+.wp-block-contact-form-7-contact-form-selector .form-submit input {
+  -webkit-transition: all ease-out 0.4s;
+  transition: all ease-out 0.4s;
+  background-image: -webkit-gradient(linear, left top, right top, from(var(--color-pink)), color-stop(50%, var(--color-primary)), to(var(--color-pink)));
+  background-image: linear-gradient(90deg, var(--color-pink) 0%, var(--color-primary) 50%, var(--color-pink) 100%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+  border-radius: var(--radius-secondary);
+  color: var(--color-white);
+  padding: 0.8em 1.2em;
+  text-decoration: none;
+  font-weight: 500;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-shadow: 0 0 5rem transparent;
+          box-shadow: 0 0 5rem transparent;
+  border: 0;
+  cursor: pointer;
+}
+.wp-block-contact-form-7-contact-form-selector .form-submit input:hover {
+  background-position: right bottom;
+  -webkit-box-shadow: 0 0 5rem rgba(var(--color-pink--rgb), 0.7);
+          box-shadow: 0 0 5rem rgba(var(--color-pink--rgb), 0.7);
+}
+.wp-block-contact-form-7-contact-form-selector .form-submit .wpcf7-spinner {
+  -webkit-transition: margin ease 0.3s, opacity ease 0.2s;
+  transition: margin ease 0.3s, opacity ease 0.2s;
+  background: none;
+  border: 2px solid var(--color-primary);
+  width: 3rem;
+  height: 3rem;
+  opacity: 1;
+}
+.wp-block-contact-form-7-contact-form-selector .form-submit .wpcf7-spinner::before {
+  background-color: var(--color-primary);
+}
+
+form:not(.submitting) .form-submit .wpcf7-spinner {
+  margin: 0;
+  width: 0;
+  opacity: 0;
+  border: 0;
+}
+
+.wpcf7 form .wpcf7-response-output {
+  padding: 0;
+  margin: 0;
+  margin-top: clamp(2rem, 2vw, 5rem);
+  border: var(--border);
+  border-radius: var(--radius-primary);
+  padding: clamp(2rem, 2vw, 5rem);
+}
+
+.wpcf7 form.sent .wpcf7-response-output {
+  border-color: var(--color-green);
+  color: var(--color-green);
+}
+
+.wpcf7 form.invalid .wpcf7-response-output {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
 }
 
 .home .skills {

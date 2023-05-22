@@ -5,7 +5,7 @@ export default function save( props ) {
 
 	return (
 	<section
-		className={ `wrapper page-title ${ blockProps.className }` }
+		className={ `wrapper page-title v-hidden ${ blockProps.className }` }
 	>
 		<InnerBlocks.Content />
 	</section>

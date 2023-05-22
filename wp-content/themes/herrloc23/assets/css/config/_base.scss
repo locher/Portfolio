@@ -22,8 +22,16 @@ body {
   &--tiny{
     max-width: max(500px, calc(90vw / 12 * 10));
   }
+
+  p{
+    max-width: 90rem;
+  }
 }
 
 .global-wrapper{
   overflow-x: clip;
+}
+
+.v-hidden{
+  visibility: hidden;
 }

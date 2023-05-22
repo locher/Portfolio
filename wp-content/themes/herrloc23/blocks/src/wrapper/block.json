@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "hloc/wrapper",
+	"version": "0.1.0",
+	"title": "Wrapper",
+	"category": "hloc",
+	"keywords": [],
+	"icon": "archive",
+	"description": "",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"isTiny": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"textdomain": "hloc",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

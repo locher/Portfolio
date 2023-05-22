@@ -1,7 +1,0 @@
-{% if post.meta('blocs') is not empty %}
-
-    {% for block in post.meta('blocs') %}
-        {% include 'components/' ~ block.acf_fc_layout ~ '.twig' %}
-    {% endfor %}
-
-{% endif %}
