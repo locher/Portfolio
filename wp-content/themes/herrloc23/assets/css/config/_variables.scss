@@ -4,8 +4,6 @@
   --color-red--rgb: 232, 74, 74;
   --color-pink: #E84A72;
   --color-pink--rgb: 232, 74, 114;
-  //--color-red: #12135b;
-  //--color-pink: #1d1eb6;
   --color-white: #fdf5f5;
   --color-brown: #EAE2E2;
   --color-green: #4ae894;
@@ -31,6 +29,7 @@
 
   //Margins
   --margin-fluid: clamp(4rem, calc(1rem + 7vh), 10rem);
+  --margin-fluid--tiny: clamp(2rem, calc(1rem + 4vh), 7rem);
 
   // Borders radius
   --radius-primary: 1rem;

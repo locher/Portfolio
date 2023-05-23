@@ -67,6 +67,7 @@ p, h1, h2, h3, h4, h5, h6 {
   --h2-font-size: clamp(2.5rem, calc(1rem + 2.5vw), 7rem);
   --h3-font-size: clamp(2.1rem, calc(1rem + 1vw), 3rem);
   --margin-fluid: clamp(4rem, calc(1rem + 7vh), 10rem);
+  --margin-fluid--tiny: clamp(2rem, calc(1rem + 4vh), 7rem);
   --radius-primary: 1rem;
   --radius-secondary: .6rem;
   --border: 2px solid var(--color-primary);
@@ -593,7 +594,7 @@ body {
 }
 
 .folios {
-  margin-top: var(--margin-fluid);
+  margin-top: var(--margin-fluid--tiny);
 }
 
 .cursor-wrapper {
@@ -649,6 +650,8 @@ body {
 }
 .page-title h1, .page-title h2, .page-title h3, .page-title h4 {
   font-size: var(--h1-font-size);
+  line-height: 1em;
+  max-width: 90rem;
 }
 
 .wp-block-contact-form-7-contact-form-selector {
@@ -760,6 +763,42 @@ form:not(.submitting) .form-submit .wpcf7-spinner {
   color: var(--color-primary);
 }
 
+.folio-galerie {
+  background-color: var(--color-brown);
+  border-radius: var(--radius-primary);
+  padding: clamp(2rem, 5vw, 7rem);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  list-style-type: none;
+  gap: var(--gap);
+}
+.folio-galerie__single {
+  padding: 3.5rem 0.5rem 0.5rem;
+  background-color: var(--color-white);
+  border-radius: var(--radius-primary);
+  position: relative;
+  -webkit-box-shadow: 0 0 7rem rgba(0, 0, 0, 0.14);
+          box-shadow: 0 0 7rem rgba(0, 0, 0, 0.14);
+}
+.folio-galerie__single img {
+  border-radius: 0 0 var(--radius-secondary) var(--radius-secondary);
+}
+.folio-galerie__single::before {
+  --size: .8rem;
+  --gap: 1.5;
+  content: "";
+  display: block;
+  height: var(--size);
+  width: var(--size);
+  background-color: var(--color-brown);
+  border-radius: 100%;
+  position: absolute;
+  top: 1.4rem;
+  right: 2rem;
+  -webkit-box-shadow: calc(var(--size) * var(--gap) * -1) 0 0 var(--color-brown), calc(var(--size) * var(--gap) * -1 * 2) 0 0 var(--color-brown);
+          box-shadow: calc(var(--size) * var(--gap) * -1) 0 0 var(--color-brown), calc(var(--size) * var(--gap) * -1 * 2) 0 0 var(--color-brown);
+}
+
 .home .skills {
   margin-left: 30%;
 }
@@ -767,5 +806,54 @@ form:not(.submitting) .form-submit .wpcf7-spinner {
 .page:not(.home) .skills {
   margin-top: 15%;
   padding-bottom: 15%;
+}
+
+.single-folio__details {
+  list-style-type: none;
+  margin-bottom: var(--margin-fluid);
+}
+.single-folio__details__skills__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+  font-size: 0.8em;
+}
+.single-folio__details__skills__list li:not(:first-child)::before {
+  content: " - ";
+}
+
+.single-folio__details__type {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.2em;
+}
+
+.single-folio__details__website {
+  margin-top: 0.5em;
+  text-transform: uppercase;
+}
+.single-folio__details__website a {
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+  color: inherit;
+  text-decoration: none;
+  font-weight: 500;
+}
+.single-folio__details__website a:hover {
+  color: var(--color-pink);
+}
+
+.single-folio__content p + p {
+  margin-top: 0.7em;
+}
+
+.single-folio__screenshot {
+  margin-top: calc(var(--margin-fluid) * 2);
+  margin-bottom: calc(var(--margin-fluid) * 2);
 }
 /*# sourceMappingURL=maps/styles.css.map */

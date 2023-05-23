@@ -1,0 +1,50 @@
+.single-folio__details{
+  list-style-type: none;
+  margin-bottom: var(--margin-fluid);
+  &__skills__list{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: .8em;
+
+    li:not(:first-child){
+      &::before{
+        content: '\00a0-\00a0';
+      }
+    }
+  }
+}
+
+.single-folio__details__type{
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.2em;
+}
+
+.single-folio__details__website{
+  margin-top: .5em;
+  text-transform: uppercase;
+
+  a{
+    transition: all ease .3s;
+    color: inherit;
+    text-decoration: none;
+    font-weight: 500;
+
+    &:hover{
+      color: var(--color-pink);
+    }
+  }
+}
+
+.single-folio__content{
+  p + p{
+    margin-top: .7em;
+  }
+}
+
+.single-folio__screenshot{
+  margin-top: calc(var(--margin-fluid) * 2);
+  margin-bottom: calc(var(--margin-fluid) * 2);
+}

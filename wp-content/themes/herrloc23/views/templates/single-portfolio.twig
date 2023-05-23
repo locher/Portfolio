@@ -1,0 +1,55 @@
+{% extends "base.twig" %}
+
+{% block content %}
+    <div class="wrapper wrapper--tiny page-title v-hidden">
+        <h1>{{ post.title }}</h1>
+    </div>
+
+    <ul class="single-folio__details wrapper wrapper--tiny">
+        {% if post.terms('skills') is not empty %}
+        <li class="single-folio__details__skills">
+            <ul class="single-folio__details__skills__list">
+                {% for skill in post.terms('skills') %}
+                    <li>{{ skill.name }}</li>
+                {% endfor %}
+            </ul>
+        </li>
+        {% endif %}
+        {% if post.type_de_projet is not empty %}
+        <li class="single-folio__details__type">
+            {{ post.meta('type_de_projet') }}
+        </li>
+        {% endif %}
+        {% if folioUrl is not empty %}
+            <li class="single-folio__details__website">
+                <a href="{{ post.meta('url') }}" target="_blank">
+                    {{ folioUrl.host }}
+                </a>
+            </li>
+        {% endif %}
+    </ul>
+
+    <div class="single-folio__content wrapper wrapper--tiny">
+        {{ post.meta('contenu') }}
+    </div>
+
+    {% if post.meta('galerie') is not empty %}
+    <div class="folio-galerie single-folio__screenshot wrapper">
+        {% for img in post.meta('galerie') %}
+            <div class="folio-galerie__single">
+                <img src="{{ Image(img).src('') }}" alt="">
+            </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if post.prev is not empty %}
+        <div class="next-post">
+            <h2 class="wrapper portfolio__header__title">Projet précédent</h2>
+            <ul class="folios v-hidden">
+                {% include('template-parts/folio-in-list.twig') with { 'folio' : post.prev } %}
+            </ul>
+        </div>
+    {% endif %}
+
+{% endblock %}

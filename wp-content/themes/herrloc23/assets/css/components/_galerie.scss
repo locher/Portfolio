@@ -1,0 +1,36 @@
+.folio-galerie{
+  background-color: var(--color-brown);
+  border-radius: var(--radius-primary);
+  padding: clamp(2rem, 5vw, 7rem);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  list-style-type: none;
+  gap: var(--gap);
+
+  &__single{
+    padding: 3.5rem .5rem .5rem;
+    background-color: var(--color-white);
+    border-radius: var(--radius-primary);
+    position: relative;
+    box-shadow: 0 0 7rem rgba(#000, .14);
+
+    img{
+      border-radius: 0 0 var(--radius-secondary) var(--radius-secondary);
+    }
+
+    &::before{
+      --size: .8rem;
+      --gap: 1.5;
+      content: '';
+      display: block;
+      height: var(--size);
+      width: var(--size);
+      background-color: var(--color-brown);
+      border-radius: 100%;
+      position: absolute;
+      top: 1.4rem;
+      right: 2rem;
+      box-shadow: calc(var(--size) * var(--gap) * -1) 0 0 var(--color-brown), calc(var(--size) * var(--gap) * -1 * 2) 0 0 var(--color-brown);
+    }
+  }
+}

@@ -1,18 +1,5 @@
 const customAnimations = () => {
 
-    // global skills
-    const skills = document.querySelectorAll('.skills')
-
-    if (skills){
-        gsap.from(skills, {
-            autoAlpha: 0,
-            duration: 2,
-            delay: .3,
-            opacity: 0,
-            ease: "power4"
-        })
-    }
-
     // Skills Left
     const skillsLeft = document.querySelectorAll('.skill:nth-child(odd)')
 
@@ -77,9 +64,9 @@ const customAnimations = () => {
     if(headerHome){
         gsap.from(headerHome, {
             autoAlpha: 0,
-            duration: 2,
-            delay: .3,
-            yPercent: -80,
+            duration: 3,
+            delay: .5,
+            yPercent: -50,
             opacity: 0,
             ease: "power4"
         })
@@ -93,6 +80,20 @@ const customAnimations = () => {
             autoAlpha: 0,
             duration: 2,
             delay: .3,
+            y: '-80px',
+            opacity: 0,
+            ease: "power4"
+        })
+    }
+
+    // Skills
+    const skills = document.querySelector('.skills')
+
+    if (skills){
+        gsap.from(skills, {
+            autoAlpha: 0,
+            duration: 2,
+            delay: .9,
             y: '-80px',
             opacity: 0,
             ease: "power4"
