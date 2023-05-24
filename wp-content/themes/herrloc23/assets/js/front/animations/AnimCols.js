@@ -16,7 +16,7 @@ export class AnimCols{
                     start: '-=200%',
                     end: '125%'
                 },
-                y: '-=200',
+                y: '-=125',
             })
         })
 

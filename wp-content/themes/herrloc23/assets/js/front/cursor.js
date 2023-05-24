@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-
     const info = document.getElementById('info')
 
     let posX = 0, posY = 0

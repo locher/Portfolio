@@ -29,7 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
         buttons.forEach((button) => {
             // Copy mail and show message on click
             button.addEventListener('click', () => {
-                navigator.clipboard.writeText(button.innerHTML).then(() => {
+                navigator.clipboard.writeText(button.innerHTML)
+                .then(() => {
                     info.classList.add('show')
                 },() => {
                     console.error('Failed to copy');

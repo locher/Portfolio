@@ -7,15 +7,15 @@ export class Reveal {
     }
 
     animate(){
-        gsap.from(this.element, {
-            autoAlpha: 0,
-            duration: this.duration,
-            delay: this.delay,
-            y: -90,
-            opacity: 0,
-            ease: "power4"
-        })
+        if(document.querySelector(this.element)) {
+            gsap.from(this.element, {
+                autoAlpha: 0,
+                duration: this.duration,
+                delay: this.delay,
+                y: -90,
+                opacity: 0,
+                ease: "power4"
+            })
+        }
     }
-
-
 }
