@@ -5,7 +5,7 @@
         <h1>{{ post.title }}</h1>
     </div>
 
-    <ul class="single-folio__details wrapper wrapper--tiny">
+    <ul class="single-folio__details wrapper wrapper--tiny v-hidden">
         {% if post.terms('skills') is not empty %}
         <li class="single-folio__details__skills">
             <ul class="single-folio__details__skills__list">
@@ -29,12 +29,12 @@
         {% endif %}
     </ul>
 
-    <div class="single-folio__content wrapper wrapper--tiny">
+    <div class="single-folio__content wrapper wrapper--tiny v-hidden">
         {{ post.meta('contenu') }}
     </div>
 
     {% if post.meta('galerie') is not empty %}
-    <div class="folio-galerie single-folio__screenshot wrapper">
+    <div class="folio-galerie single-folio__screenshot wrapper v-hidden">
         {% for img in post.meta('galerie') %}
             <div class="folio-galerie__single">
                 <img src="{{ Image(img).src('') }}" alt="">
@@ -45,7 +45,7 @@
 
     {% if post.prev is not empty %}
         <div class="next-post">
-            <h2 class="wrapper portfolio__header__title">Projet précédent</h2>
+            <h2 class="wrapper portfolio__header__title v-hidden">Projet précédent</h2>
             <ul class="folios v-hidden">
                 {% include('template-parts/folio-in-list.twig') with { 'folio' : post.prev } %}
             </ul>

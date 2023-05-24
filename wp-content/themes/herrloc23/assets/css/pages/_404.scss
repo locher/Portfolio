@@ -1,0 +1,42 @@
+.error404 .global-wrapper{
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - calc(max(3vw, 2rem)) * 2);
+}
+
+.p404{
+  &__content{
+    flex: 1;
+    margin: auto;
+    display: flex;
+    position: relative;
+
+    &__wrapper{
+      margin: auto;
+      text-align: center;
+    }
+
+    h1{
+      text-transform: uppercase;
+      margin-bottom: .5em;
+    }
+  }
+
+  &__bg{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -1;
+    opacity: .35;
+
+    span{
+      font-size: clamp(12rem, 40vw, 50rem);
+      text-stroke: 2px var(--color-primary);
+      -webkit-text-stroke: 2px var(--color-primary);
+      color: transparent;
+      line-height: 1em;
+      font-weight: 600;
+    }
+  }
+}
