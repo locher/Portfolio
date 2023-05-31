@@ -7,8 +7,6 @@ body {
   font-weight: 400;
   background-color: var(--color-white);
   color: var(--color-primary);
-  padding-top: calc(max(3vw, 2rem));
-  padding-bottom: calc(max(3vw, 2rem));
 }
 
 .wrapper {
@@ -30,6 +28,8 @@ body {
 
 .global-wrapper{
   overflow-x: clip;
+  padding-top: var(--padding-global);
+  padding-bottom: var(--padding-global);
 }
 
 .v-hidden{

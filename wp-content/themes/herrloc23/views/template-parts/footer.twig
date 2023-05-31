@@ -4,7 +4,7 @@
     </div>
 
     <div class="footer__menus">
-        <ul>
+        <ul class="footer__menus__left">
             {% for el in menus.main.items %}
                 <li>
                     <a href="{{ el.link }}">{{ el.name }}</a>
@@ -12,7 +12,7 @@
             {% endfor %}
         </ul>
 
-        <ul>
+        <ul class="footer__menus__right">
             {% for el in menus.footer.items %}
                 <li>
                     <a href="{{ el.link }}">{{ el.name }}</a>

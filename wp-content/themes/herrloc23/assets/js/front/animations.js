@@ -5,14 +5,13 @@ import { Reveal } from "./animations/Reveal"
 const customAnimations = () => {
 
     // Global
-    new Reveal('.header', 2, 0.2)
+    new Reveal('.header', 1.5, 0.05)
     new ScrollReveal('footer.footer', 1, 0, '150%')
 
     // Home
     new Reveal('.header-home', 2, .4)
     new Reveal('.home .skills', 2, .6)
     new AnimCols('.home .skill')
-    new Reveal('.home .folios', 2, .8)
     const folios = document.querySelectorAll('.folio')
     folios?.forEach((elt) => {
         new ScrollReveal(elt, 2, 0)
@@ -27,7 +26,9 @@ const customAnimations = () => {
     new Reveal('.single-folio__details', 2, .6)
     new Reveal('.single-folio__content', 2, .8)
     new Reveal('.single-folio__screenshot', 2, 1)
-    new AnimCols('.folio-galerie__single')
+    if(window.matchMedia('(width >= 1100px)').matches){
+        new AnimCols('.folio-galerie__single')
+    }
     new Reveal('.portfolio__header__title', 2, 1.2)
     new Reveal('.single-portfolio .folios', 2, 1.4)
 

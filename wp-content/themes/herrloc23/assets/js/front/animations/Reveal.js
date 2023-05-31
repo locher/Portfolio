@@ -14,7 +14,8 @@ export class Reveal {
                 delay: this.delay,
                 y: -90,
                 opacity: 0,
-                ease: "power4"
+                ease: "power4",
+                clearProps:"transform"
             })
         }
     }

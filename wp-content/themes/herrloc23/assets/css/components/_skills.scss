@@ -1,9 +1,12 @@
 .skills{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
   list-style-type: none;
-  gap: var(--gap);
   padding-bottom: 25%;
+  display: grid;
+  gap: var(--gap);
+
+  @media (width > 550px){
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .skill{
@@ -13,7 +16,7 @@
   aspect-ratio: 1;
 
   &__abbr{
-    font-size: clamp(12rem, calc(.3rem + 5vw), 20rem);
+    font-size: clamp(7rem, 0.3rem + 13vw, 30rem);
     text-stroke: 2px var(--color-primary);
     -webkit-text-stroke: 2px var(--color-primary);
 

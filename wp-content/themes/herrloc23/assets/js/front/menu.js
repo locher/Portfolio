@@ -1,46 +1,31 @@
-// const menu = () => {
-//
-//     const menuElts = document.querySelectorAll('button[aria-expanded]')
-//
-//     if (menuElts) {
-//         menuElts.forEach((menu) => {
-//             menu.addEventListener('click', () => {
-//                 let isExpanded = JSON.parse(menu.getAttribute('aria-expanded'))
-//
-//                 // toggle button
-//                 menu.setAttribute('aria-expanded', !isExpanded)
-//
-//                 // toggle submenu
-//                 document.getElementById(menu.getAttribute('aria-controls')).setAttribute('aria-hidden', isExpanded)
-//             })
-//         })
-//     }
-// }
-//
-// document.addEventListener('DOMContentLoaded', () => {
-//     menu();
-// })
+import { shuffleString } from "./helper";
 
-// import { shuffleString } from "./helper";
-//
-// // Menu hover
-//
-// const menu = document.querySelectorAll('.menu-item a')
-//
-// if(menu){
-//     menu.forEach((elt) => {
-//         const t = gsap.timeline();
-//         const menuText = elt.innerHTML;
-//         elt.addEventListener('mouseenter', () => {
-//             t.to(elt, {duration: 2, text: shuffleString(menuText)})
-//                 .to(elt, {duration: 0.4,text: menuText})
-//         })
-//
-//         elt.addEventListener('mouseleave', () => {
-//             t.to(elt, {duration: 0.4, text: menuText})
-//         })
-//     })
-// }
+const menuBurger = () => {
+
+    const menuElts = document.querySelectorAll('button[aria-expanded]')
+
+    if (menuElts) {
+        menuElts.forEach((menu) => {
+            menu.addEventListener('click', () => {
+                let isExpanded = JSON.parse(menu.getAttribute('aria-expanded'))
+
+                // toggle button
+                menu.setAttribute('aria-expanded', !isExpanded)
+
+                // toggle submenu
+                document.getElementById(menu.getAttribute('aria-controls')).setAttribute('aria-hidden', isExpanded)
+            })
+        })
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    menuBurger();
+})
+
+// Menu hover
+
+const menu = document.querySelectorAll('.menu-item a')
 
 const menuElts = document.querySelectorAll('#menuMain .menu-item:not(.btn)')
 const hoverElt = document.getElementById('hoverElt')

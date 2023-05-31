@@ -11,6 +11,7 @@
     display: flex;
     align-items: center;
 
+
     &__link{
       --beforeWidth: .7rem;
       --beforeMargin: 2rem;
@@ -59,9 +60,16 @@
     margin-left: auto;
     margin-right: auto;
     display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
     padding: 1em 0;
     border-top: 1px solid var(--color-white);
+
+    &__left{
+      @media (width < 650px){
+        display: none !important;
+      }
+    }
 
     ul{
       display: contents;
