@@ -2,6 +2,8 @@ import { AnimCols } from "./animations/AnimCols"
 import { ScrollReveal } from "./animations/ScrollReveal"
 import { Reveal } from "./animations/Reveal"
 
+let colsFolio
+
 const customAnimations = () => {
 
     // Global
@@ -26,9 +28,11 @@ const customAnimations = () => {
     new Reveal('.single-folio__details', 2, .6)
     new Reveal('.single-folio__content', 2, .8)
     new Reveal('.single-folio__screenshot', 2, 1)
-    if(window.matchMedia('(width >= 1100px)').matches){
-        new AnimCols('.folio-galerie__single')
+
+    if(window.matchMedia('(width > 1000px)').matches){
+        colsFolio = new AnimCols('.folio-galerie__single')
     }
+
     new Reveal('.portfolio__header__title', 2, 1.2)
     new Reveal('.single-portfolio .folios', 2, 1.4)
 
@@ -40,6 +44,10 @@ const customAnimations = () => {
     // Contact
     new Reveal('.contact .page-title', 2, .4)
     new Reveal('.contact .wp-block-hloc-wrapper', 2, .6)
+
+    // Legal
+    new Reveal('.page-template-default .page-title', 2, .4)
+    new Reveal('.page-template-default .wp-block-hloc-wrapper', 2, .6)
 
     //404
     new Reveal('.p404__content__wrapper', 2, .6)
@@ -56,8 +64,6 @@ const customAnimations = () => {
             ease: "power4"
         })
     }
-
-
 }
 
 window.addEventListener('load', () => {

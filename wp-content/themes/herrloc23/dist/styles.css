@@ -551,7 +551,7 @@ body {
   aspect-ratio: 1;
 }
 .skill__abbr {
-  font-size: clamp(7rem, 0.3rem + 13vw, 30rem);
+  font-size: clamp(7rem, 0.3rem + 10vw, 30rem);
   text-stroke: 2px var(--color-primary);
   -webkit-text-stroke: 2px var(--color-primary);
   color: transparent;
