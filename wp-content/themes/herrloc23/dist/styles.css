@@ -85,7 +85,7 @@ body {
 
 .wrapper {
   width: 100%;
-  max-width: max(500px, 90vw);
+  max-width: min(1800px, 90vw);
   padding-left: var(--gap);
   padding-right: var(--gap);
   margin-left: auto;

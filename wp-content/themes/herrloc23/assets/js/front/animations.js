@@ -37,7 +37,6 @@ const customAnimations = () => {
     new Reveal('.single-portfolio .folios', 2, 1.4)
 
     // Skills
-    new Reveal('.competences .page-title', 2, .4)
     new Reveal('.competences .skills', 2, .6)
     new AnimCols('.competences .skill')
 
