@@ -1,13 +1,7 @@
 .folio-galerie{
   padding: clamp(2rem, 5vw, 7rem);
-  display: grid;
   list-style-type: none;
-  gap: var(--gap);
   position: relative;
-
-  @media (width > 1000px){
-    grid-template-columns: repeat(2, 1fr);
-  }
 
   &::before{
     content: '';
@@ -31,6 +25,8 @@
 
     img{
       border-radius: 0 0 var(--radius-secondary) var(--radius-secondary);
+      width: 100%;
+      height: auto;
     }
 
     &::before{
