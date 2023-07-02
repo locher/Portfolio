@@ -1,6 +1,10 @@
 html {
 }
 
+.grecaptcha-badge{
+  display: none;
+}
+
 body {
   font-size: var(--p-font-size);
   font-family: var(--font-primary), 'Arial', sans-serif;

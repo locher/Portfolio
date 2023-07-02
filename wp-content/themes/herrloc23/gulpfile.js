@@ -12,6 +12,7 @@ const eslint = require('gulp-eslint');
 const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
 const webpack = require('webpack-stream');
+const minmax = require('postcss-media-minmax')
 
 // Files path
 const src = './assets';
@@ -28,7 +29,7 @@ gulp.task('sass', function () {
         .pipe(sass({
             includePaths: ["./node_modules"]
         }).on('error', sass.logError))
-        .pipe(postcss([ autoprefixer() ]))
+        .pipe(postcss([ autoprefixer(), minmax() ]))
         .pipe(sourcemaps.write('./maps'))
         .pipe(gulp.dest(dest));
 });
