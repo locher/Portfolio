@@ -23,6 +23,18 @@ body {
 
   p{
     max-width: 90rem;
+
+    a{
+      transition: all ease .3s;
+      color: inherit;
+      font-weight: bolder;
+      text-underline-offset: 6px;
+
+      &:hover{
+        text-underline-offset: 10px;
+        text-decoration-thickness: 2px;
+      }
+    }
   }
 }
 
