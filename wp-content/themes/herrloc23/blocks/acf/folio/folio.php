@@ -5,13 +5,13 @@ $context_Timber['block'] = $block;
 $context_Timber['fields'] = get_fields();
 
 // On créé des posts pour chaque skill, pour pouvoir facilement récupérer les champs ACF liés
-if(is_array(get_field('portfolio')) && !is_null(get_field('skills')) ){
+if(is_array(get_field('portfolio')) && !is_null(get_field('portfolio')) ){
 
 	// On vire l'actuel champ ACF skill pour le remplacer par un plus complet
 	$context_Timber['fields']['folio'] = [];
 
-	foreach (get_field('portfolio') as $skill){
-		$context_Timber['fields']['folio'][] = new Timber\Post($skill);
+	foreach (get_field('portfolio') as $folio){
+		$context_Timber['fields']['folio'][] = new Timber\Post($folio);
 	}
 }
 
