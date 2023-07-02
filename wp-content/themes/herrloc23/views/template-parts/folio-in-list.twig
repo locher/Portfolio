@@ -19,7 +19,7 @@
 
         {% if folio.thumbnail is not empty %}
             <div class="folio__thumbnail">
-                <img src="{{ Image(folio.thumbnail).src('folio-thumbnail') }}" alt="{{ folio.thumbnail.alt }}">
+                <img src="{{ Image(folio.thumbnail).src('folioLandscape_xl') }}" alt="{{ folio.thumbnail.alt }}" srcset="{{ Image(folio.thumbnail).src('folioLandscape_xl') }} 1920w, {{ Image(folio.thumbnail).src('folioLandscape_l') }} 1200w, {{ Image(folio.thumbnail).src('folioLandscape_m') }} 600w">
             </div>
         {% endif %}
     </a>

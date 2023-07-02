@@ -37,7 +37,7 @@
     <div class="folio-galerie single-folio__screenshot wrapper v-hidden">
         {% for img in post.meta('galerie') %}
             <div class="folio-galerie__single">
-                <img src="{{ Image(img).src('') }}" alt="">
+                <img src="{{ Image(img).src('folioScreenshot_l') }}" alt="" srcset="{{ Image(img).src('folioScreenshot_l') }} 1000w, {{ Image(img).src('folioScreenshot_m') }} 500w">
             </div>
         {% endfor %}
     </div>

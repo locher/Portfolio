@@ -7,22 +7,12 @@ if (function_exists('add_theme_support')) {
     add_theme_support('menus');
 
     //Custom image size
-    //Landscape
-    add_image_size('l_large', 1920, '');
-    add_image_size('l_medium', 960, '');
-    add_image_size('l_small', 480, '');
+    add_image_size('folioLandscape_xl', 1920, 350, array('center', 'center'));
+    add_image_size('folioLandscape_l', 1200, 200, array('center', 'center'));
+    add_image_size('folioLandscape_m', 600, 100, array('center', 'center'));
 
-    //Portrait
-    add_image_size('p_medium', '', 960);
-    add_image_size('p_medium_crop', 720, 960, array('center', 'center'));
-    add_image_size('p_small', '', 480);
-    add_image_size('p_small_crop', 360, 480, array('center', 'center'));
-
-    //Square
-    add_image_size('s_medium', 960, 960, array('center', 'center'));
-    add_image_size('s_small', 480, 480, array('center', 'center'));
-    add_image_size('s_tiny', 150, 150, array('center', 'center'));
-    
+    add_image_size('folioScreenshot_l', 1000, '', false);
+    add_image_size('folioScreenshot_m', 500, '', false);
 }
 
 //Disable unused images sizes
