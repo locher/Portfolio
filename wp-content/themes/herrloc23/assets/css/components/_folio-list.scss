@@ -69,15 +69,13 @@
   &__details{
     text-transform: uppercase;
 
-
     @media (width >= 1000px){
       text-align: right;
     }
 
-
-
     &__skill{
       display: flex;
+      justify-content: flex-end;
       list-style-type: none;
       font-size: .8em;
     }
