@@ -7,6 +7,7 @@ if (function_exists('add_theme_support')) {
     add_theme_support('menus');
 
     //Custom image size
+    add_image_size('folioLandscape_xxl', 2500, 460, array('center', 'center'));
     add_image_size('folioLandscape_xl', 1920, 350, array('center', 'center'));
     add_image_size('folioLandscape_l', 1200, 200, array('center', 'center'));
     add_image_size('folioLandscape_m', 600, 100, array('center', 'center'));
