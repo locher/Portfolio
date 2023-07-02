@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@300;400;600&display=swap");
 html, body {
   min-height: 100%;
 }
@@ -59,7 +60,7 @@ p, h1, h2, h3, h4, h5, h6 {
   --main-gradient: linear-gradient(90deg, var(--color-pink) 0%, var(--color-primary) 100%);
   --main-gradient-hover: linear-gradient(90deg, var(--color-pink) 99%, var(--color-primary) 100%);
   --font-sansserif: "Wotfard";
-  --font-serif: "Source Serif Pro";
+  --font-serif: "Source Serif 4";
   --font-primary: var(--font-sansserif);
   --font-secondary: var(--font-serif);
   --p-font-size: clamp(1.8rem, calc(.3rem + 1vw), 2.8rem);
@@ -75,6 +76,34 @@ p, h1, h2, h3, h4, h5, h6 {
   --gap: clamp(3rem, 2vw, 5rem);
 }
 
+@font-face {
+  font-family: "Wotfard";
+  src: url("../assets/fonts/wotfard-bold-webfont.eot");
+  src: url("../assets/fonts/wotfard-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/wotfard-bold-webfont.woff2") format("woff2"), url("../assets/fonts/wotfard-bold-webfont.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Wotfard";
+  src: url("../assets/fonts/wotfard-medium-webfont.eot");
+  src: url("../assets/fonts/wotfard-medium-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/wotfard-medium-webfont.woff2") format("woff2"), url("../assets/fonts/wotfard-medium-webfont.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Wotfard";
+  src: url("../assets/fonts/wotfard-regular-webfont.eot");
+  src: url("../assets/fonts/wotfard-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/wotfard-regular-webfont.woff2") format("woff2"), url("../assets/fonts/wotfard-regular-webfont.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Wotfard";
+  src: url("../assets/fonts/wotfard-semibold-webfont.eot");
+  src: url("../assets/fonts/wotfard-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/wotfard-semibold-webfont.woff2") format("woff2"), url("../assets/fonts/wotfard-semibold-webfont.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
 .grecaptcha-badge {
   display: none;
 }
